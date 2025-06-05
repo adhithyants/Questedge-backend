@@ -12,6 +12,8 @@ from .serializers import UserDetailSerializer, AttemptSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
+from rest_framework import generics
+from django.contrib.auth import authenticate    
 
 logger = logging.getLogger(__name__)
 
@@ -144,3 +146,35 @@ class Leaderboard(APIView):
                 'error': 'Server error',
                 'message': 'Failed to fetch leaderboard data'
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+class AttemptListView(generics.ListAPIView):
+    queryset = Attempt.objects.all()
+    serializer_class = AttemptSerializer
+
+class SignupView(APIView):
+    def post(self, request):
+        serializer = UserDetailSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "User created successfully"}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class LoginView(APIView):
+    def post(self, request):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        if not email or not password:
+            return Response(
+                {"error": "Email and password are required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        user = authenticate(username=email, password=password)
+        if user:
+            return Response(
+                {"message": "Login successful", "user_id": user.id, "name": user.user_detail.name},
+                status=status.HTTP_200_OK
+            )
+        return Response(
+            {"error": "Invalid email or password"},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
