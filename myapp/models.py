@@ -24,14 +24,19 @@ class UserDetail(models.Model):
 
 class Attempt(models.Model):
     user = models.ForeignKey(UserDetail, related_name='attempts', on_delete=models.CASCADE)
-    auth_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attempts_direct', null=True, blank=True)  # Renamed to avoid conflict
+    auth_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attempts_direct', null=True, blank=True)
     technical_marks = models.IntegerField(help_text="Technical marks")
     aptitude_marks = models.IntegerField(help_text="Aptitude marks")
+    marks = models.IntegerField(help_text="Total marks (auto-calculated)", null=True, blank=True)
     attempt_date = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        self.marks = self.technical_marks + self.aptitude_marks
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.user} - Attempt on {self.attempt_date}"
 
     class Meta:
         verbose_name = "Attempt"
-        verbose_name_plural = "Attempts"
+        verbose_name_plural = "Attempts"    
