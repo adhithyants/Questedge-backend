@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Java Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the correct syntax for the main method in a Java program?",
+                "options": [
+                    {"text": "public void main(String[] args)", "correct": false},
+                    {"text": "public static void main(String[] args)", "correct": true},
+                    {"text": "void main(String args)", "correct": false},
+                    {"text": "static main(String[] args)", "correct": false}
+                ],
+                "explanation": "The main method in Java must be public, static, void, and take a String array as an argument, written as 'public static void main(String[] args)'."
+            },
+            {
+                "id": 2,
+                "text": "Which keyword is used to define a class in Java?",
+                "options": [
+                    {"text": "struct", "correct": false},
+                    {"text": "class", "correct": true},
+                    {"text": "object", "correct": false},
+                    {"text": "type", "correct": false}
+                ],
+                "explanation": "The 'class' keyword is used to define a class in Java, followed by the class name."
+            },
+            {
+                "id": 3,
+                "text": "What is the default value of an instance variable of type int in Java?",
+                "options": [
+                    {"text": "0", "correct": true},
+                    {"text": "1", "correct": false},
+                    {"text": "null", "correct": false},
+                    {"text": "undefined", "correct": false}
+                ],
+                "explanation": "Instance variables of type int in Java are automatically initialized to 0 if not explicitly set."
+            },
+            {
+                "id": 4,
+                "text": "Which of the following is a valid Java identifier?",
+                "options": [
+                    {"text": "2variable", "correct": false},
+                    {"text": "my_variable", "correct": true},
+                    {"text": "class", "correct": false},
+                    {"text": "$variable#", "correct": false}
+                ],
+                "explanation": "A valid Java identifier starts with a letter, underscore, or dollar sign, followed by letters, digits, underscores, or dollar signs. 'my_variable' is valid, while '2variable' starts with a digit, 'class' is a keyword, and '$variable#' contains an invalid character."
+            },
+            {
+                "id": 5,
+                "text": "What does the 'public' access modifier mean in Java?",
+                "options": [
+                    {"text": "Accessible only within the same class", "correct": false},
+                    {"text": "Accessible from everywhere", "correct": true},
+                    {"text": "Accessible only within the same package", "correct": false},
+                    {"text": "Accessible only to subclasses", "correct": false}
+                ],
+                "explanation": "The 'public' access modifier allows a class, method, or variable to be accessible from any other class."
+            },
+            {
+                "id": 6,
+                "text": "Which data type is used to store a single character in Java?",
+                "options": [
+                    {"text": "char", "correct": true},
+                    {"text": "String", "correct": false},
+                    {"text": "byte", "correct": false},
+                    {"text": "int", "correct": false}
+                ],
+                "explanation": "The 'char' data type in Java is used to store a single Unicode character, enclosed in single quotes."
+            },
+            {
+                "id": 7,
+                "text": "What is the output of the following code? \nint x = 5; \nSystem.out.println(x++);",
+                "options": [
+                    {"text": "5", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "4", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "The post-increment operator (x++) returns the current value of x (5) and then increments x to 6. Thus, the output is 5."
+            },
+            {
+                "id": 8,
+                "text": "Which loop is guaranteed to execute at least once in Java?",
+                "options": [
+                    {"text": "for", "correct": false},
+                    {"text": "while", "correct": false},
+                    {"text": "do-while", "correct": true},
+                    {"text": "foreach", "correct": false}
+                ],
+                "explanation": "The do-while loop executes its body at least once before checking the condition."
+            },
+            {
+                "id": 9,
+                "text": "What keyword is used to exit a loop in Java?",
+                "options": [
+                    {"text": "exit", "correct": false},
+                    {"text": "break", "correct": true},
+                    {"text": "stop", "correct": false},
+                    {"text": "return", "correct": false}
+                ],
+                "explanation": "The 'break' keyword terminates the enclosing loop immediately."
+            },
+            {
+                "id": 10,
+                "text": "Which of the following is a reference data type in Java?",
+                "options": [
+                    {"text": "int", "correct": false},
+                    {"text": "String", "correct": true},
+                    {"text": "double", "correct": false},
+                    {"text": "boolean", "correct": false}
+                ],
+                "explanation": "String is a reference type (a class), while int, double, and boolean are primitive types."
+            },
+            {
+                "id": 11,
+                "text": "What does the 'new' keyword do in Java?",
+                "options": [
+                    {"text": "Declares a variable", "correct": false},
+                    {"text": "Creates an object", "correct": true},
+                    {"text": "Defines a method", "correct": false},
+                    {"text": "Imports a package", "correct": false}
+                ],
+                "explanation": "The 'new' keyword allocates memory for a new object and calls its constructor."
+            },
+            {
+                "id": 12,
+                "text": "Which keyword is used to inherit a class in Java?",
+                "options": [
+                    {"text": "extends", "correct": true},
+                    {"text": "implements", "correct": false},
+                    {"text": "super", "correct": false},
+                    {"text": "this", "correct": false}
+                ],
+                "explanation": "The 'extends' keyword is used to make a class inherit from another class."
+            },
+            {
+                "id": 13,
+                "text": "What is the parent class of all classes in Java?",
+                "options": [
+                    {"text": "Class", "correct": false},
+                    {"text": "Object", "correct": true},
+                    {"text": "Main", "correct": false},
+                    {"text": "System", "correct": false}
+                ],
+                "explanation": "All classes in Java implicitly inherit from the 'Object' class."
+            },
+            {
+                "id": 14,
+                "text": "Which keyword is used to call a superclass constructor?",
+                "options": [
+                    {"text": "this", "correct": false},
+                    {"text": "super", "correct": true},
+                    {"text": "extends", "correct": false},
+                    {"text": "new", "correct": false}
+                ],
+                "explanation": "The 'super' keyword is used to call a constructor of the parent class."
+            },
+            {
+                "id": 15,
+                "text": "What is the output of the following code? \nString s = \"Hello\"; \nSystem.out.println(s.length());",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "The 'length()' method returns the number of characters in the String 'Hello', which is 5."
+            },
+            {
+                "id": 16,
+                "text": "Which of the following is not a Java access modifier?",
+                "options": [
+                    {"text": "public", "correct": false},
+                    {"text": "private", "correct": false},
+                    {"text": "protected", "correct": false},
+                    {"text": "static", "correct": true}
+                ],
+                "explanation": "'static' is a non-access modifier, while 'public', 'private', and 'protected' control access."
+            },
+            {
+                "id": 17,
+                "text": "What does the 'static' keyword mean for a method?",
+                "options": [
+                    {"text": "It can only be called by subclasses", "correct": false},
+                    {"text": "It belongs to the class, not instances", "correct": true},
+                    {"text": "It cannot be overridden", "correct": false},
+                    {"text": "It is abstract", "correct": false}
+                ],
+                "explanation": "A 'static' method belongs to the class and can be called without creating an instance."
+            },
+            {
+                "id": 18,
+                "text": "Which interface must a class implement to be iterable in a for-each loop?",
+                "options": [
+                    {"text": "Serializable", "correct": false},
+                    {"text": "Iterable", "correct": true},
+                    {"text": "Comparable", "correct": false},
+                    {"text": "Cloneable", "correct": false}
+                ],
+                "explanation": "A class must implement the 'Iterable' interface to be used in a for-each loop."
+            },
+            {
+                "id": 19,
+                "text": "What is the purpose of the 'final' keyword in Java?",
+                "options": [
+                    {"text": "To make a variable constant", "correct": true},
+                    {"text": "To end a program", "correct": false},
+                    {"text": "To start a loop", "correct": false},
+                    {"text": "To define an interface", "correct": false}
+                ],
+                "explanation": "The 'final' keyword makes variables constant, prevents method overriding, and blocks class inheritance."
+            },
+            {
+                "id": 20,
+                "text": "Which collection class allows duplicate elements and maintains insertion order?",
+                "options": [
+                    {"text": "HashSet", "correct": false},
+                    {"text": "ArrayList", "correct": true},
+                    {"text": "HashMap", "correct": false},
+                    {"text": "TreeSet", "correct": false}
+                ],
+                "explanation": "'ArrayList' allows duplicates and maintains the order of elements as they are inserted."
+            },
+            {
+                "id": 21,
+                "text": "What is the output of the following code? \nint[] arr = {1, 2, 3}; \nSystem.out.println(arr[1]);",
+                "options": [
+                    {"text": "1", "correct": false},
+                    {"text": "2", "correct": true},
+                    {"text": "3", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "Array indices start at 0, so arr[1] accesses the second element, which is 2."
+            },
+            {
+                "id": 22,
+                "text": "Which keyword is used to handle exceptions in Java?",
+                "options": [
+                    {"text": "try", "correct": true},
+                    {"text": "throw", "correct": false},
+                    {"text": "catch", "correct": false},
+                    {"text": "finally", "correct": false}
+                ],
+                "explanation": "The 'try' keyword is used to define a block of code that may throw exceptions, followed by 'catch' or 'finally'."
+            },
+            {
+                "id": 23,
+                "text": "What does the 'throw' keyword do in Java?",
+                "options": [
+                    {"text": "Catches an exception", "correct": false},
+                    {"text": "Throws an exception", "correct": true},
+                    {"text": "Declares a method", "correct": false},
+                    {"text": "Ignores an exception", "correct": false}
+                ],
+                "explanation": "The 'throw' keyword is used to explicitly throw an exception."
+            },
+            {
+                "id": 24,
+                "text": "Which class is the superclass of all exceptions in Java?",
+                "options": [
+                    {"text": "Error", "correct": false},
+                    {"text": "Throwable", "correct": true},
+                    {"text": "Exception", "correct": false},
+                    {"text": "RuntimeException", "correct": false}
+                ],
+                "explanation": "'Throwable' is the superclass of all exceptions and errors in Java."
+            },
+            {
+                "id": 25,
+                "text": "What is the output of the following code? \ntry { \n    int x = 10 / 0; \n} catch (ArithmeticException e) { \n    System.out.println(\"Error\"); \n}",
+                "options": [
+                    {"text": "10", "correct": false},
+                    {"text": "Error", "correct": true},
+                    {"text": "0", "correct": false},
+                    {"text": "Exception", "correct": false}
+                ],
+                "explanation": "Dividing by zero throws an ArithmeticException, which is caught, printing 'Error'."
+            },
+            {
+                "id": 26,
+                "text": "Which keyword defines an interface in Java?",
+                "options": [
+                    {"text": "class", "correct": false},
+                    {"text": "interface", "correct": true},
+                    {"text": "abstract", "correct": false},
+                    {"text": "implements", "correct": false}
+                ],
+                "explanation": "The 'interface' keyword is used to define an interface in Java."
+            },
+            {
+                "id": 27,
+                "text": "Which keyword is used to implement an interface?",
+                "options": [
+                    {"text": "extends", "correct": false},
+                    {"text": "implements", "correct": true},
+                    {"text": "super", "correct": false},
+                    {"text": "interface", "correct": false}
+                ],
+                "explanation": "The 'implements' keyword is used by a class to implement an interface."
+            },
+            {
+                "id": 28,
+                "text": "What is the default value of an object reference in Java?",
+                "options": [
+                    {"text": "0", "correct": false},
+                    {"text": "null", "correct": true},
+                    {"text": "undefined", "correct": false},
+                    {"text": "false", "correct": false}
+                ],
+                "explanation": "Object references in Java are initialized to 'null' if not explicitly set."
+            },
+            {
+                "id": 29,
+                "text": "Which method is called when an object is garbage collected?",
+                "options": [
+                    {"text": "delete()", "correct": false},
+                    {"text": "finalize()", "correct": true},
+                    {"text": "destroy()", "correct": false},
+                    {"text": "clean()", "correct": false}
+                ],
+                "explanation": "The 'finalize()' method is called by the garbage collector before an object is reclaimed."
+            },
+            {
+                "id": 30,
+                "text": "What does the 'this' keyword refer to in Java?",
+                "options": [
+                    {"text": "The parent class", "correct": false},
+                    {"text": "The current object", "correct": true},
+                    {"text": "A static method", "correct": false},
+                    {"text": "An interface", "correct": false}
+                ],
+                "explanation": "The 'this' keyword refers to the current instance of the class."
+            },
+            {
+                "id": 31,
+                "text": "Which class is used to read input from the console in Java?",
+                "options": [
+                    {"text": "Scanner", "correct": true},
+                    {"text": "Reader", "correct": false},
+                    {"text": "InputStream", "correct": false},
+                    {"text": "Console", "correct": false}
+                ],
+                "explanation": "The 'Scanner' class in the java.util package is commonly used to read console input."
+            },
+            {
+                "id": 32,
+                "text": "What is the output of the following code? \nboolean b = true; \nif (b) System.out.println(\"Yes\"); \nelse System.out.println(\"No\");",
+                "options": [
+                    {"text": "Yes", "correct": true},
+                    {"text": "No", "correct": false},
+                    {"text": "true", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "Since b is true, the if branch executes, printing 'Yes'."
+            },
+            {
+                "id": 33,
+                "text": "Which collection does not allow duplicate elements?",
+                "options": [
+                    {"text": "ArrayList", "correct": false},
+                    {"text": "HashSet", "correct": true},
+                    {"text": "LinkedList", "correct": false},
+                    {"text": "HashMap", "correct": false}
+                ],
+                "explanation": "'HashSet' does not allow duplicate elements, unlike 'ArrayList' and 'LinkedList'."
+            },
+            {
+                "id": 34,
+                "text": "What does the 'instanceof' operator do in Java?",
+                "options": [
+                    {"text": "Creates a new instance", "correct": false},
+                    {"text": "Checks if an object is of a specific type", "correct": true},
+                    {"text": "Compares two objects", "correct": false},
+                    {"text": "Casts an object", "correct": false}
+                ],
+                "explanation": "The 'instanceof' operator checks if an object is an instance of a specific class or interface."
+            },
+            {
+                "id": 35,
+                "text": "Which keyword prevents a method from being overridden?",
+                "options": [
+                    {"text": "static", "correct": false},
+                    {"text": "final", "correct": true},
+                    {"text": "abstract", "correct": false},
+                    {"text": "protected", "correct": false}
+                ],
+                "explanation": "A 'final' method cannot be overridden by subclasses."
+            },
+            {
+                "id": 36,
+                "text": "What is the output of the following code? \nString s1 = \"Java\"; \nString s2 = \"Java\"; \nSystem.out.println(s1 == s2);",
+                "options": [
+                    {"text": "true", "correct": true},
+                    {"text": "false", "correct": false},
+                    {"text": "Error", "correct": false},
+                    {"text": "null", "correct": false}
+                ],
+                "explanation": "String literals are interned in Java, so s1 and s2 refer to the same object in the string pool, making '==' return true."
+            },
+            {
+                "id": 37,
+                "text": "Which package contains the String class in Java?",
+                "options": [
+                    {"text": "java.util", "correct": false},
+                    {"text": "java.lang", "correct": true},
+                    {"text": "java.io", "correct": false},
+                    {"text": "java.text", "correct": false}
+                ],
+                "explanation": "The 'String' class is part of the 'java.lang' package, automatically imported."
+            },
+            {
+                "id": 38,
+                "text": "What does the 'abstract' keyword mean for a class?",
+                "options": [
+                    {"text": "It cannot be instantiated", "correct": true},
+                    {"text": "It must be static", "correct": false},
+                    {"text": "It cannot have methods", "correct": false},
+                    {"text": "It is final", "correct": false}
+                ],
+                "explanation": "An 'abstract' class cannot be instantiated and may contain abstract methods."
+            },
+            {
+                "id": 39,
+                "text": "Which method compares two strings for equality in Java?",
+                "options": [
+                    {"text": "==", "correct": false},
+                    {"text": "equals()", "correct": true},
+                    {"text": "compareTo()", "correct": false},
+                    {"text": "equalsIgnoreCase()", "correct": false}
+                ],
+                "explanation": "The 'equals()' method checks if two strings have the same characters, while '==' checks for reference equality."
+            },
+            {
+                "id": 40,
+                "text": "What is the output of the following code? \nfor (int i = 0; i < 3; i++) { \n    System.out.print(i + \" \"); \n}",
+                "options": [
+                    {"text": "0 1 2", "correct": true},
+                    {"text": "1 2 3", "correct": false},
+                    {"text": "0 1", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "The for loop iterates from i=0 to i=2, printing each value followed by a space, resulting in '0 1 2'."
+            }
+        ]
+    }
+}

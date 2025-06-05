@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Abstract Reasoning Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "In the sequence 2, 4, 8, 16, what is the next number?",
+                "options": [
+                    {"text": "24", "correct": false},
+                    {"text": "32", "correct": true},
+                    {"text": "48", "correct": false},
+                    {"text": "64", "correct": false}
+                ],
+                "explanation": "The sequence 2, 4, 8, 16 follows a pattern where each number is multiplied by 2 to get the next: 2 × 2 = 4, 4 × 2 = 8, 8 × 2 = 16. Thus, the next number is 16 × 2 = 32."
+            },
+            {
+                "id": 2,
+                "text": "What is the next number in the sequence 1, 3, 6, 10, 15?",
+                "options": [
+                    {"text": "20", "correct": true},
+                    {"text": "21", "correct": false},
+                    {"text": "22", "correct": false},
+                    {"text": "25", "correct": false}
+                ],
+                "explanation": "The sequence 1, 3, 6, 10, 15 represents triangular numbers, where each term is calculated as n(n+1)/2. The terms correspond to n=1, 2, 3, 4, 5. For n=6, the next number is 6(6+1)/2 = 21."
+            },
+            {
+                "id": 3,
+                "text": "In the sequence 5, 10, 20, 40, what is the next number?",
+                "options": [
+                    {"text": "60", "correct": false},
+                    {"text": "80", "correct": true},
+                    {"text": "100", "correct": false},
+                    {"text": "120", "correct": false}
+                ],
+                "explanation": "Each term in the sequence 5, 10, 20, 40 is obtained by multiplying the previous term by 2: 5 × 2 = 10, 10 × 2 = 20, 20 × 2 = 40. Thus, the next number is 40 × 2 = 80."
+            },
+            {
+                "id": 4,
+                "text": "What comes next in the sequence 1, 4, 9, 16, 25?",
+                "options": [
+                    {"text": "30", "correct": false},
+                    {"text": "36", "correct": true},
+                    {"text": "49", "correct": false},
+                    {"text": "64", "correct": false}
+                ],
+                "explanation": "The sequence 1, 4, 9, 16, 25 represents perfect squares: 1², 2², 3², 4², 5². The next term corresponds to 6² = 36."
+            },
+            {
+                "id": 5,
+                "text": "In the sequence 3, 6, 12, 24, what is the next number?",
+                "options": [
+                    {"text": "36", "correct": false},
+                    {"text": "48", "correct": true},
+                    {"text": "72", "correct": false},
+                    {"text": "96", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 2 to get the next: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24. Thus, the next number is 24 × 2 = 48."
+            },
+            {
+                "id": 6,
+                "text": "What is the next number in the sequence 2, 5, 11, 23?",
+                "options": [
+                    {"text": "47", "correct": true},
+                    {"text": "46", "correct": false},
+                    {"text": "48", "correct": false},
+                    {"text": "50", "correct": false}
+                ],
+                "explanation": "The sequence 2, 5, 11, 23 follows a pattern where each term is obtained by doubling the previous term and adding 1: 2 × 2 + 1 = 5, 5 × 2 + 1 = 11, 11 × 2 + 1 = 23. Thus, the next number is 23 × 2 + 1 = 47."
+            },
+            {
+                "id": 7,
+                "text": "In the sequence 100, 50, 25, 12.5, what is the next number?",
+                "options": [
+                    {"text": "6.25", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "12", "correct": false},
+                    {"text": "3.125", "correct": false}
+                ],
+                "explanation": "Each term is obtained by dividing the previous term by 2: 100 ÷ 2 = 50, 50 ÷ 2 = 25, 25 ÷ 2 = 12.5. Thus, the next number is 12.5 ÷ 2 = 6.25."
+            },
+            {
+                "id": 8,
+                "text": "What is the next number in the sequence 1, 2, 4, 7, 11?",
+                "options": [
+                    {"text": "16", "correct": true},
+                    {"text": "14", "correct": false},
+                    {"text": "18", "correct": false},
+                    {"text": "20", "correct": false}
+                ],
+                "explanation": "The sequence 1, 2, 4, 7, 11 has differences between terms: 1, 2, 3, 4. The differences increase by 1 each time. The next difference is 5, so 11 + 5 = 16."
+            },
+            {
+                "id": 9,
+                "text": "In the sequence 1, 3, 9, 27, what is the next number?",
+                "options": [
+                    {"text": "54", "correct": false},
+                    {"text": "81", "correct": true},
+                    {"text": "108", "correct": false},
+                    {"text": "243", "correct": false}
+                ],
+                "explanation": "The sequence 1, 3, 9, 27 is a geometric sequence where each term is multiplied by 3: 1 × 3 = 3, 3 × 3 = 9, 9 × 3 = 27. Thus, the next number is 27 × 3 = 81."
+            },
+            {
+                "id": 10,
+                "text": "What is the next number in the sequence 7, 14, 28, 56?",
+                "options": [
+                    {"text": "84", "correct": false},
+                    {"text": "112", "correct": true},
+                    {"text": "168", "correct": false},
+                    {"text": "224", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 2: 7 × 2 = 14, 14 × 2 = 28, 28 × 2 = 56. Thus, the next number is 56 × 2 = 112."
+            },
+            {
+                "id": 11,
+                "text": "In the sequence 1, 1, 2, 3, 5, what is the next number?",
+                "options": [
+                    {"text": "6", "correct": false},
+                    {"text": "7", "correct": false},
+                    {"text": "8", "correct": true},
+                    {"text": "9", "correct": false}
+                ],
+                "explanation": "The sequence 1, 1, 2, 3, 5 is the Fibonacci sequence, where each term is the sum of the two preceding ones: 1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5. Thus, the next number is 3 + 5 = 8."
+            },
+            {
+                "id": 12,
+                "text": "What is the next number in the sequence 10, 20, 30, 40?",
+                "options": [
+                    {"text": "45", "correct": false},
+                    {"text": "50", "correct": true},
+                    {"text": "60", "correct": false},
+                    {"text": "70", "correct": false}
+                ],
+                "explanation": "The sequence 10, 20, 30, 40 is an arithmetic sequence with a common difference of 10. The next number is 40 + 10 = 50."
+            },
+            {
+                "id": 13,
+                "text": "In the sequence 2, 6, 18, 54, what is the next number?",
+                "options": [
+                    {"text": "108", "correct": false},
+                    {"text": "162", "correct": true},
+                    {"text": "216", "correct": false},
+                    {"text": "324", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 3: 2 × 3 = 6, 6 × 3 = 18, 18 × 3 = 54. Thus, the next number is 54 × 3 = 162."
+            },
+            {
+                "id": 14,
+                "text": "What is the next number in the sequence 4, 8, 14, 22?",
+                "options": [
+                    {"text": "28", "correct": false},
+                    {"text": "30", "correct": false},
+                    {"text": "32", "correct": true},
+                    {"text": "34", "correct": false}
+                ],
+                "explanation": "The differences between terms are 4, 6, 8. The differences increase by 2 each time. The next difference is 10, so 22 + 10 = 32."
+            },
+            {
+                "id": 15,
+                "text": "In the sequence 64, 32, 16, 8, what is the next number?",
+                "options": [
+                    {"text": "4", "correct": true},
+                    {"text": "2", "correct": false},
+                    {"text": "6", "correct": false},
+                    {"text": "1", "correct": false}
+                ],
+                "explanation": "Each term is divided by 2: 64 ÷ 2 = 32, 32 ÷ 2 = 16, 16 ÷ 2 = 8. Thus, the next number is 8 ÷ 2 = 4."
+            },
+            {
+                "id": 16,
+                "text": "What is the next number in the sequence 3, 7, 12, 18?",
+                "options": [
+                    {"text": "24", "correct": false},
+                    {"text": "26", "correct": true},
+                    {"text": "28", "correct": false},
+                    {"text": "30", "correct": false}
+                ],
+                "explanation": "The differences between terms are 4, 5, 6. The differences increase by 1 each time. The next difference is 7, so 18 + 7 = 26."
+            },
+            {
+                "id": 17,
+                "text": "In the sequence 1, 5, 25, 125, what is the next number?",
+                "options": [
+                    {"text": "625", "correct": true},
+                    {"text": "500", "correct": false},
+                    {"text": "750", "correct": false},
+                    {"text": "1000", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 5: 1 × 5 = 5, 5 × 5 = 25, 25 × 5 = 125. Thus, the next number is 125 × 5 = 625."
+            },
+            {
+                "id": 18,
+                "text": "What is the next number in the sequence 8, 16, 24, 32?",
+                "options": [
+                    {"text": "36", "correct": false},
+                    {"text": "40", "correct": true},
+                    {"text": "48", "correct": false},
+                    {"text": "56", "correct": false}
+                ],
+                "explanation": "The sequence 8, 16, 24, 32 is an arithmetic sequence with a common difference of 8. The next number is 32 + 8 = 40."
+            },
+            {
+                "id": 19,
+                "text": "In the sequence 9, 18, 36, 72, what is the next number?",
+                "options": [
+                    {"text": "108", "correct": false},
+                    {"text": "144", "correct": true},
+                    {"text": "216", "correct": false},
+                    {"text": "288", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 2: 9 × 2 = 18, 18 × 2 = 36, 36 × 2 = 72. Thus, the next number is 72 × 2 = 144."
+            },
+            {
+                "id": 20,
+                "text": "What is the next number in the sequence 2, 3, 5, 8?",
+                "options": [
+                    {"text": "11", "correct": false},
+                    {"text": "12", "correct": true},
+                    {"text": "13", "correct": false},
+                    {"text": "14", "correct": false}
+                ],
+                "explanation": "The differences between terms are 1, 2, 3. The differences increase by 1 each time. The next difference is 4, so 8 + 4 = 12."
+            },
+            {
+                "id": 21,
+                "text": "In the sequence 16, 8, 4, 2, what is the next number?",
+                "options": [
+                    {"text": "1", "correct": true},
+                    {"text": "0.5", "correct": false},
+                    {"text": "2", "correct": false},
+                    {"text": "4", "correct": false}
+                ],
+                "explanation": "Each term is divided by 2: 16 ÷ 2 = 8, 8 ÷ 2 = 4, 4 ÷ 2 = 2. Thus, the next number is 2 ÷ 2 = 1."
+            },
+            {
+                "id": 22,
+                "text": "What is the next number in the sequence 1, 2, 6, 24?",
+                "options": [
+                    {"text": "48", "correct": false},
+                    {"text": "72", "correct": false},
+                    {"text": "120", "correct": true},
+                    {"text": "144", "correct": false}
+                ],
+                "explanation": "The sequence 1, 2, 6, 24 represents factorials: 1 = 1!, 2 = 2!, 6 = 3!, 24 = 4!. The next term is 5! = 120."
+            },
+            {
+                "id": 23,
+                "text": "In the sequence 4, 12, 36, 108, what is the next number?",
+                "options": [
+                    {"text": "216", "correct": false},
+                    {"text": "324", "correct": true},
+                    {"text": "432", "correct": false},
+                    {"text": "648", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 3: 4 × 3 = 12, 12 × 3 = 36, 36 × 3 = 108. Thus, the next number is 108 × 3 = 324."
+            },
+            {
+                "id": 24,
+                "text": "What is the next number in the sequence 5, 9, 14, 20?",
+                "options": [
+                    {"text": "24", "correct": false},
+                    {"text": "26", "correct": false},
+                    {"text": "28", "correct": true},
+                    {"text": "30", "correct": false}
+                ],
+                "explanation": "The differences between terms are 4, 5, 6. The differences increase by 1 each time. The next difference is 7, so 20 + 7 = 28."
+            },
+            {
+                "id": 25,
+                "text": "In the sequence 81, 27, 9, 3, what is the next number?",
+                "options": [
+                    {"text": "1", "correct": true},
+                    {"text": "0.5", "correct": false},
+                    {"text": "2", "correct": false},
+                    {"text": "3", "correct": false}
+                ],
+                "explanation": "Each term is divided by 3: 81 ÷ 3 = 27, 27 ÷ 3 = 9, 9 ÷ 3 = 3. Thus, the next number is 3 ÷ 3 = 1."
+            },
+            {
+                "id": 26,
+                "text": "What is the next number in the sequence 2, 8, 18, 32?",
+                "options": [
+                    {"text": "48", "correct": false},
+                    {"text": "50", "correct": true},
+                    {"text": "64", "correct": false},
+                    {"text": "72", "correct": false}
+                ],
+                "explanation": "The sequence 2, 8, 18, 32 corresponds to 1²+1, 2²+4, 3²+9, 4²+16. The pattern is n² + n² = 2n². For n=5, the next number is 2 × 5² = 2 × 25 = 50."
+            },
+            {
+                "id": 27,
+                "text": "In the sequence 1, 4, 10, 22, what is the next number?",
+                "options": [
+                    {"text": "40", "correct": false},
+                    {"text": "46", "correct": true},
+                    {"text": "50", "correct": false},
+                    {"text": "52", "correct": false}
+                ],
+                "explanation": "The differences between terms are 3, 6, 12. The differences double each time: 3 × 2 = 6, 6 × 2 = 12. The next difference is 12 × 2 = 24, so 22 + 24 = 46."
+            },
+            {
+                "id": 28,
+                "text": "What is the next number in the sequence 3, 12, 48, 192?",
+                "options": [
+                    {"text": "384", "correct": false},
+                    {"text": "576", "correct": false},
+                    {"text": "768", "correct": true},
+                    {"text": "960", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 4: 3 × 4 = 12, 12 × 4 = 48, 48 × 4 = 192. Thus, the next number is 192 × 4 = 768."
+            },
+            {
+                "id": 29,
+                "text": "In the sequence 100, 90, 80, 70, what is the next number?",
+                "options": [
+                    {"text": "60", "correct": true},
+                    {"text": "50", "correct": false},
+                    {"text": "65", "correct": false},
+                    {"text": "55", "correct": false}
+                ],
+                "explanation": "The sequence 100, 90, 80, 70 is an arithmetic sequence with a common difference of -10. The next number is 70 - 10 = 60."
+            },
+            {
+                "id": 30,
+                "text": "What is the next number in the sequence 1, 3, 7, 15?",
+                "options": [
+                    {"text": "31", "correct": true},
+                    {"text": "30", "correct": false},
+                    {"text": "32", "correct": false},
+                    {"text": "28", "correct": false}
+                ],
+                "explanation": "Each term is obtained by doubling the previous term and adding 1: 1 × 2 + 1 = 3, 3 × 2 + 1 = 7, 7 × 2 + 1 = 15. Thus, the next number is 15 × 2 + 1 = 31."
+            },
+            {
+                "id": 31,
+                "text": "In the sequence 4, 16, 64, 256, what is the next number?",
+                "options": [
+                    {"text": "512", "correct": false},
+                    {"text": "768", "correct": false},
+                    {"text": "1024", "correct": true},
+                    {"text": "2048", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 4: 4 × 4 = 16, 16 × 4 = 64, 64 × 4 = 256. Thus, the next number is 256 × 4 = 1024."
+            },
+            {
+                "id": 32,
+                "text": "What is the next number in the sequence 2, 5, 9, 14?",
+                "options": [
+                    {"text": "18", "correct": false},
+                    {"text": "20", "correct": true},
+                    {"text": "22", "correct": false},
+                    {"text": "24", "correct": false}
+                ],
+                "explanation": "The differences between terms are 3, 4, 5. The differences increase by 1 each time. The next difference is 6, so 14 + 6 = 20."
+            },
+            {
+                "id": 33,
+                "text": "In the sequence 128, 64, 32, 16, what is the next number?",
+                "options": [
+                    {"text": "8", "correct": true},
+                    {"text": "4", "correct": false},
+                    {"text": "12", "correct": false},
+                    {"text": "6", "correct": false}
+                ],
+                "explanation": "Each term is divided by 2: 128 ÷ 2 = 64, 64 ÷ 2 = 32, 32 ÷ 2 = 16. Thus, the next number is 16 ÷ 2 = 8."
+            },
+            {
+                "id": 34,
+                "text": "What is the next number in the sequence 6, 12, 18, 24?",
+                "options": [
+                    {"text": "28", "correct": false},
+                    {"text": "30", "correct": true},
+                    {"text": "36", "correct": false},
+                    {"text": "42", "correct": false}
+                ],
+                "explanation": "The sequence 6, 12, 18, 24 is an arithmetic sequence with a common difference of 6. The next number is 24 + 6 = 30."
+            },
+            {
+                "id": 35,
+                "text": "In the sequence 1, 8, 27, 64, what is the next number?",
+                "options": [
+                    {"text": "81", "correct": false},
+                    {"text": "100", "correct": false},
+                    {"text": "125", "correct": true},
+                    {"text": "216", "correct": false}
+                ],
+                "explanation": "The sequence 1, 8, 27, 64 represents perfect cubes: 1³, 2³, 3³, 4³. The next term is 5³ = 125."
+            },
+            {
+                "id": 36,
+                "text": "What is the next number in the sequence 10, 11, 13, 16?",
+                "options": [
+                    {"text": "18", "correct": false},
+                    {"text": "20", "correct": true},
+                    {"text": "22", "correct": false},
+                    {"text": "24", "correct": false}
+                ],
+                "explanation": "The differences between terms are 1, 2, 3. The differences increase by 1 each time. The next difference is 4, so 16 + 4 = 20."
+            },
+            {
+                "id": 37,
+                "text": "In the sequence 5, 15, 45, 135, what is the next number?",
+                "options": [
+                    {"text": "270", "correct": false},
+                    {"text": "405", "correct": true},
+                    {"text": "540", "correct": false},
+                    {"text": "675", "correct": false}
+                ],
+                "explanation": "Each term is multiplied by 3: 5 × 3 = 15, 15 × 3 = 45, 45 × 3 = 135. Thus, the next number is 135 × 3 = 405."
+            },
+            {
+                "id": 38,
+                "text": "What is the next number in the sequence 7, 8, 10, 13?",
+                "options": [
+                    {"text": "15", "correct": false},
+                    {"text": "16", "correct": false},
+                    {"text": "18", "correct": true},
+                    {"text": "20", "correct": false}
+                ],
+                "explanation": "The differences between terms are 1, 2, 3. The differences increase by 1 each time. The next difference is 4, so 13 + 4 = 18."
+            },
+            {
+                "id": 39,
+                "text": "In the sequence 256, 128, 64, 32, what is the next number?",
+                "options": [
+                    {"text": "16", "correct": true},
+                    {"text": "8", "correct": false},
+                    {"text": "24", "correct": false},
+                    {"text": "12", "correct": false}
+                ],
+                "explanation": "Each term is divided by 2: 256 ÷ 2 = 128, 128 ÷ 2 = 64, 64 ÷ 2 = 32. Thus, the next number is 32 ÷ 2 = 16."
+            },
+            {
+                "id": 40,
+                "text": "What is the next number in the sequence 2, 6, 12, 20?",
+                "options": [
+                    {"text": "28", "correct": false},
+                    {"text": "30", "correct": true},
+                    {"text": "32", "correct": false},
+                    {"text": "36", "correct": false}
+                ],
+                "explanation": "The sequence 2, 6, 12, 20 corresponds to n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20. For n=5, the next number is 5 × 6 = 30."
+            }
+        ]
+    }
+}

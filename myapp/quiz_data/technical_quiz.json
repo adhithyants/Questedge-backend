@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Technical Reasoning Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the primary function of a CPU in a computer?",
+                "options": [
+                    {"text": "Store data permanently", "correct": false},
+                    {"text": "Execute instructions", "correct": true},
+                    {"text": "Display graphics", "correct": false},
+                    {"text": "Manage network connections", "correct": false}
+                ],
+                "explanation": "The CPU (Central Processing Unit) executes instructions by performing fetch, decode, and execute cycles, acting as the computer's 'brain'."
+            },
+            {
+                "id": 2,
+                "text": "Which of the following is a volatile memory?",
+                "options": [
+                    {"text": "ROM", "correct": false},
+                    {"text": "Hard Disk", "correct": false},
+                    {"text": "RAM", "correct": true},
+                    {"text": "Flash Drive", "correct": false}
+                ],
+                "explanation": "RAM (Random Access Memory) is volatile, meaning it loses its data when power is turned off, unlike non-volatile storage like ROM or hard disks."
+            },
+            {
+                "id": 3,
+                "text": "What does HTTP stand for in web technology?",
+                "options": [
+                    {"text": "HyperText Transfer Protocol", "correct": true},
+                    {"text": "High Transfer Text Protocol", "correct": false},
+                    {"text": "Hyper Terminal Transport Protocol", "correct": false},
+                    {"text": "Host Text Transmission Protocol", "correct": false}
+                ],
+                "explanation": "HTTP (HyperText Transfer Protocol) is the protocol used for transferring web pages and data over the internet."
+            },
+            {
+                "id": 4,
+                "text": "Which programming language is known for its use in web development and is primarily client-side?",
+                "options": [
+                    {"text": "Python", "correct": false},
+                    {"text": "JavaScript", "correct": true},
+                    {"text": "C++", "correct": false},
+                    {"text": "SQL", "correct": false}
+                ],
+                "explanation": "JavaScript is widely used for client-side web development, enabling interactive elements on websites."
+            },
+            {
+                "id": 5,
+                "text": "What is the binary equivalent of the decimal number 10?",
+                "options": [
+                    {"text": "1010", "correct": true},
+                    {"text": "1100", "correct": false},
+                    {"text": "1001", "correct": false},
+                    {"text": "1111", "correct": false}
+                ],
+                "explanation": "The decimal number 10 is represented as 1010 in binary, calculated by dividing by 2 and noting remainders."
+            },
+            {
+                "id": 6,
+                "text": "Which component connects a computer to a network?",
+                "options": [
+                    {"text": "CPU", "correct": false},
+                    {"text": "RAM", "correct": false},
+                    {"text": "Network Interface Card", "correct": true},
+                    {"text": "Power Supply", "correct": false}
+                ],
+                "explanation": "A Network Interface Card (NIC) enables a computer to connect to a network, wired or wireless."
+            },
+            {
+                "id": 7,
+                "text": "What is the purpose of an operating system?",
+                "options": [
+                    {"text": "Run applications only", "correct": false},
+                    {"text": "Manage hardware and software resources", "correct": true},
+                    {"text": "Store user data", "correct": false},
+                    {"text": "Design websites", "correct": false}
+                ],
+                "explanation": "An operating system manages hardware, software, and provides services for computer programs."
+            },
+            {
+                "id": 8,
+                "text": "Which of these is a loop structure in programming?",
+                "options": [
+                    {"text": "if-else", "correct": false},
+                    {"text": "for", "correct": true},
+                    {"text": "switch", "correct": false},
+                    {"text": "function", "correct": false}
+                ],
+                "explanation": "A 'for' loop is used to repeat a block of code a specified number of times in programming."
+            },
+            {
+                "id": 9,
+                "text": "What does SSD stand for in storage technology?",
+                "options": [
+                    {"text": "Solid State Drive", "correct": true},
+                    {"text": "System Storage Device", "correct": false},
+                    {"text": "Serial State Disk", "correct": false},
+                    {"text": "Standard Storage Drive", "correct": false}
+                ],
+                "explanation": "SSD (Solid State Drive) uses flash memory for faster data storage and retrieval compared to traditional hard drives."
+            },
+            {
+                "id": 10,
+                "text": "Which protocol is used for secure web browsing?",
+                "options": [
+                    {"text": "FTP", "correct": false},
+                    {"text": "HTTP", "correct": false},
+                    {"text": "HTTPS", "correct": true},
+                    {"text": "SMTP", "correct": false}
+                ],
+                "explanation": "HTTPS (HyperText Transfer Protocol Secure) encrypts data for secure web communication."
+            },
+            {
+                "id": 11,
+                "text": "What is the purpose of a firewall?",
+                "options": [
+                    {"text": "Increase internet speed", "correct": false},
+                    {"text": "Protect against unauthorized access", "correct": true},
+                    {"text": "Store backups", "correct": false},
+                    {"text": "Run applications", "correct": false}
+                ],
+                "explanation": "A firewall monitors and controls network traffic to protect systems from unauthorized access."
+            },
+            {
+                "id": 12,
+                "text": "Which of these is a relational database management system?",
+                "options": [
+                    {"text": "MySQL", "correct": true},
+                    {"text": "MongoDB", "correct": false},
+                    {"text": "Redis", "correct": false},
+                    {"text": "Cassandra", "correct": false}
+                ],
+                "explanation": "MySQL is a relational database management system that organizes data into tables with relationships."
+            },
+            {
+                "id": 13,
+                "text": "What is the hexadecimal equivalent of the binary number 1111?",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "B", "correct": false},
+                    {"text": "F", "correct": true},
+                    {"text": "E", "correct": false}
+                ],
+                "explanation": "The binary number 1111 equals 15 in decimal, which is represented as F in hexadecimal."
+            },
+            {
+                "id": 14,
+                "text": "Which of the following is an example of an input device?",
+                "options": [
+                    {"text": "Monitor", "correct": false},
+                    {"text": "Printer", "correct": false},
+                    {"text": "Keyboard", "correct": true},
+                    {"text": "Speaker", "correct": false}
+                ],
+                "explanation": "A keyboard is an input device that allows users to enter data into a computer."
+            },
+            {
+                "id": 15,
+                "text": "What does GUI stand for?",
+                "options": [
+                    {"text": "General Utility Interface", "correct": false},
+                    {"text": "Graphical User Interface", "correct": true},
+                    {"text": "Global User Integration", "correct": false},
+                    {"text": "Generic User Input", "correct": false}
+                ],
+                "explanation": "GUI (Graphical User Interface) allows users to interact with devices through visual elements like icons and windows."
+            },
+            {
+                "id": 16,
+                "text": "Which data structure follows the Last In, First Out (LIFO) principle?",
+                "options": [
+                    {"text": "Queue", "correct": false},
+                    {"text": "Stack", "correct": true},
+                    {"text": "Array", "correct": false},
+                    {"text": "Linked List", "correct": false}
+                ],
+                "explanation": "A stack follows the LIFO principle, where the last element added is the first to be removed."
+            },
+            {
+                "id": 17,
+                "text": "What is the purpose of a compiler?",
+                "options": [
+                    {"text": "Execute code directly", "correct": false},
+                    {"text": "Translate source code to machine code", "correct": true},
+                    {"text": "Debug code errors", "correct": false},
+                    {"text": "Store program data", "correct": false}
+                ],
+                "explanation": "A compiler translates high-level source code into machine code that a computer can execute."
+            },
+            {
+                "id": 18,
+                "text": "Which of these is a markup language?",
+                "options": [
+                    {"text": "Python", "correct": false},
+                    {"text": "HTML", "correct": true},
+                    {"text": "Java", "correct": false},
+                    {"text": "C#", "correct": false}
+                ],
+                "explanation": "HTML (HyperText Markup Language) is used to structure content on the web, unlike programming languages."
+            },
+            {
+                "id": 19,
+                "text": "What does IP stand for in networking?",
+                "options": [
+                    {"text": "Internet Protocol", "correct": true},
+                    {"text": "Internal Process", "correct": false},
+                    {"text": "Integrated Packet", "correct": false},
+                    {"text": "Interface Program", "correct": false}
+                ],
+                "explanation": "IP (Internet Protocol) is a set of rules for addressing and routing data packets across networks."
+            },
+            {
+                "id": 20,
+                "text": "Which of these is a type of software testing?",
+                "options": [
+                    {"text": "Unit Testing", "correct": true},
+                    {"text": "Data Sorting", "correct": false},
+                    {"text": "Code Compilation", "correct": false},
+                    {"text": "File Compression", "correct": false}
+                ],
+                "explanation": "Unit Testing involves testing individual components of software to ensure they work correctly."
+            },
+            {
+                "id": 21,
+                "text": "What is the function of a router in a network?",
+                "options": [
+                    {"text": "Store data", "correct": false},
+                    {"text": "Forward data packets between networks", "correct": true},
+                    {"text": "Execute programs", "correct": false},
+                    {"text": "Display web pages", "correct": false}
+                ],
+                "explanation": "A router directs data packets between networks, connecting devices to the internet or other networks."
+            },
+            {
+                "id": 22,
+                "text": "Which of these is a cloud computing service model?",
+                "options": [
+                    {"text": "SaaS", "correct": true},
+                    {"text": "HTTP", "correct": false},
+                    {"text": "SQL", "correct": false},
+                    {"text": "API", "correct": false}
+                ],
+                "explanation": "SaaS (Software as a Service) is a cloud computing model where software is provided over the internet."
+            },
+            {
+                "id": 23,
+                "text": "What is the purpose of a variable in programming?",
+                "options": [
+                    {"text": "Store data temporarily", "correct": true},
+                    {"text": "Execute functions", "correct": false},
+                    {"text": "Create loops", "correct": false},
+                    {"text": "Design interfaces", "correct": false}
+                ],
+                "explanation": "Variables store data values that can be used and modified during program execution."
+            },
+            {
+                "id": 24,
+                "text": "Which of these is an example of an output device?",
+                "options": [
+                    {"text": "Mouse", "correct": false},
+                    {"text": "Scanner", "correct": false},
+                    {"text": "Monitor", "correct": true},
+                    {"text": "Keyboard", "correct": false}
+                ],
+                "explanation": "A monitor is an output device that displays information visually to the user."
+            },
+            {
+                "id": 25,
+                "text": "What does DNS stand for?",
+                "options": [
+                    {"text": "Domain Name System", "correct": true},
+                    {"text": "Dynamic Network Service", "correct": false},
+                    {"text": "Data Node System", "correct": false},
+                    {"text": "Digital Name Server", "correct": false}
+                ],
+                "explanation": "DNS (Domain Name System) translates domain names into IP addresses for network communication."
+            },
+            {
+                "id": 26,
+                "text": "Which of these is a logic gate?",
+                "options": [
+                    {"text": "AND", "correct": true},
+                    {"text": "IF", "correct": false},
+                    {"text": "WHILE", "correct": false},
+                    {"text": "SWITCH", "correct": false}
+                ],
+                "explanation": "AND is a logic gate that outputs true only if all inputs are true, used in digital circuits."
+            },
+            {
+                "id": 27,
+                "text": "What is the main function of a GPU?",
+                "options": [
+                    {"text": "Process general instructions", "correct": false},
+                    {"text": "Render graphics", "correct": true},
+                    {"text": "Store data", "correct": false},
+                    {"text": "Manage memory", "correct": false}
+                ],
+                "explanation": "A GPU (Graphics Processing Unit) is specialized for rendering images, videos, and animations."
+            },
+            {
+                "id": 28,
+                "text": "Which of these is a version control system?",
+                "options": [
+                    {"text": "Git", "correct": true},
+                    {"text": "SQL", "correct": false},
+                    {"text": "HTML", "correct": false},
+                    {"text": "CSS", "correct": false}
+                ],
+                "explanation": "Git is a version control system used to track changes in source code during software development."
+            },
+            {
+                "id": 29,
+                "text": "What is the purpose of a primary key in a database?",
+                "options": [
+                    {"text": "Encrypt data", "correct": false},
+                    {"text": "Uniquely identify records", "correct": true},
+                    {"text": "Sort data", "correct": false},
+                    {"text": "Compress data", "correct": false}
+                ],
+                "explanation": "A primary key uniquely identifies each record in a database table, ensuring data integrity."
+            },
+            {
+                "id": 30,
+                "text": "Which of these is a type of cyber attack?",
+                "options": [
+                    {"text": "Phishing", "correct": true},
+                    {"text": "Compiling", "correct": false},
+                    {"text": "Formatting", "correct": false},
+                    {"text": "Indexing", "correct": false}
+                ],
+                "explanation": "Phishing is a cyber attack where attackers trick users into revealing sensitive information."
+            },
+            {
+                "id": 31,
+                "text": "What is the purpose of an algorithm?",
+                "options": [
+                    {"text": "Store data", "correct": false},
+                    {"text": "Solve problems systematically", "correct": true},
+                    {"text": "Design hardware", "correct": false},
+                    {"text": "Create networks", "correct": false}
+                ],
+                "explanation": "An algorithm is a set of steps designed to solve a problem or perform a task efficiently."
+            },
+            {
+                "id": 32,
+                "text": "Which of these is a non-volatile storage device?",
+                "options": [
+                    {"text": "RAM", "correct": false},
+                    {"text": "SSD", "correct": true},
+                    {"text": "Cache", "correct": false},
+                    {"text": "Registers", "correct": false}
+                ],
+                "explanation": "An SSD (Solid State Drive) retains data without power, making it non-volatile."
+            },
+            {
+                "id": 33,
+                "text": "What does API stand for?",
+                "options": [
+                    {"text": "Application Programming Interface", "correct": true},
+                    {"text": "Advanced Processing Interface", "correct": false},
+                    {"text": "Automated Program Integration", "correct": false},
+                    {"text": "Application Protocol Interface", "correct": false}
+                ],
+                "explanation": "An API (Application Programming Interface) allows different software applications to communicate."
+            },
+            {
+                "id": 34,
+                "text": "Which of these is a sorting algorithm?",
+                "options": [
+                    {"text": "Bubble Sort", "correct": true},
+                    {"text": "Linear Search", "correct": false},
+                    {"text": "Binary Tree", "correct": false},
+                    {"text": "Hash Function", "correct": false}
+                ],
+                "explanation": "Bubble Sort is an algorithm that sorts data by repeatedly comparing and swapping adjacent elements."
+            },
+            {
+                "id": 35,
+                "text": "What is the purpose of a modem?",
+                "options": [
+                    {"text": "Convert digital signals to analog and vice versa", "correct": true},
+                    {"text": "Store network data", "correct": false},
+                    {"text": "Execute programs", "correct": false},
+                    {"text": "Display graphics", "correct": false}
+                ],
+                "explanation": "A modem converts digital signals to analog and vice versa to connect networks to the internet."
+            },
+            {
+                "id": 36,
+                "text": "Which of these is an object-oriented programming language?",
+                "options": [
+                    {"text": "C", "correct": false},
+                    {"text": "Java", "correct": true},
+                    {"text": "Assembly", "correct": false},
+                    {"text": "SQL", "correct": false}
+                ],
+                "explanation": "Java is an object-oriented programming language that uses objects and classes for modularity."
+            },
+            {
+                "id": 37,
+                "text": "What is the purpose of a cache memory?",
+                "options": [
+                    {"text": "Store permanent data", "correct": false},
+                    {"text": "Speed up data access", "correct": true},
+                    {"text": "Execute programs", "correct": false},
+                    {"text": "Connect networks", "correct": false}
+                ],
+                "explanation": "Cache memory stores frequently accessed data to speed up processing by reducing access time."
+            },
+            {
+                "id": 38,
+                "text": "Which of these is a wireless networking standard?",
+                "options": [
+                    {"text": "Wi-Fi", "correct": true},
+                    {"text": "USB", "correct": false},
+                    {"text": "HDMI", "correct": false},
+                    {"text": "Ethernet", "correct": false}
+                ],
+                "explanation": "Wi-Fi is a wireless networking standard that allows devices to connect to the internet without cables."
+            },
+            {
+                "id": 39,
+                "text": "What does SQL stand for?",
+                "options": [
+                    {"text": "Structured Query Language", "correct": true},
+                    {"text": "System Query Language", "correct": false},
+                    {"text": "Sequential Query Logic", "correct": false},
+                    {"text": "Standard Query Level", "correct": false}
+                ],
+                "explanation": "SQL (Structured Query Language) is used to manage and query data in relational databases."
+            },
+            {
+                "id": 40,
+                "text": "Which of these is a benefit of virtualization?",
+                "options": [
+                    {"text": "Increased hardware costs", "correct": false},
+                    {"text": "Improved resource utilization", "correct": true},
+                    {"text": "Slower processing speeds", "correct": false},
+                    {"text": "Reduced security", "correct": false}
+                ],
+                "explanation": "Virtualization allows multiple virtual machines to run on a single physical machine, improving resource utilization."
+            }
+        ]
+    }
+}

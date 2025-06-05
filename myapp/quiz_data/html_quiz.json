@@ -1,0 +1,448 @@
+{
+    
+    "quiz": {
+        "title": "HTML Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What does HTML stand for?",
+                "options": [
+                    {"text": "Hyper Text Markup Language", "correct": true},
+                    {"text": "High Text Markup Language", "correct": false},
+                    {"text": "Hyperlink Text Markup Language", "correct": false},
+                    {"text": "Home Tool Markup Language", "correct": false}
+                ],
+                "explanation": "HTML stands for Hyper Text Markup Language, used for structuring content on the web."
+            },
+            {
+                "id": 2,
+                "text": "Which tag is used to define an HTML document's root element?",
+                "options": [
+                    {"text": "<body>", "correct": false},
+                    {"text": "<html>", "correct": true},
+                    {"text": "<head>", "correct": false},
+                    {"text": "<doctype>", "correct": false}
+                ],
+                "explanation": "The <html> tag is the root element of an HTML document, containing all other elements."
+            },
+            {
+                "id": 3,
+                "text": "What is the correct HTML element for the largest heading?",
+                "options": [
+                    {"text": "<h6>", "correct": false},
+                    {"text": "<h1>", "correct": true},
+                    {"text": "<heading>", "correct": false},
+                    {"text": "<header>", "correct": false}
+                ],
+                "explanation": "The <h1> tag defines the largest and most important heading in HTML."
+            },
+            {
+                "id": 4,
+                "text": "Which tag is used to create a hyperlink?",
+                "options": [
+                    {"text": "<link>", "correct": false},
+                    {"text": "<a>", "correct": true},
+                    {"text": "<href>", "correct": false},
+                    {"text": "<url>", "correct": false}
+                ],
+                "explanation": "The <a> tag, with the href attribute, creates a hyperlink to another page or resource."
+            },
+            {
+                "id": 5,
+                "text": "What does the <br> tag do?",
+                "options": [
+                    {"text": "Creates a bold text", "correct": false},
+                    {"text": "Inserts a line break", "correct": true},
+                    {"text": "Defines a paragraph", "correct": false},
+                    {"text": "Adds a border", "correct": false}
+                ],
+                "explanation": "The <br> tag inserts a single line break in the text."
+            },
+            {
+                "id": 6,
+                "text": "Which attribute specifies an image source in the <img> tag?",
+                "options": [
+                    {"text": "src", "correct": true},
+                    {"text": "href", "correct": false},
+                    {"text": "alt", "correct": false},
+                    {"text": "link", "correct": false}
+                ],
+                "explanation": "The src attribute specifies the path to the image in an <img> tag."
+            },
+            {
+                "id": 7,
+                "text": "What is the purpose of the alt attribute in an <img> tag?",
+                "options": [
+                    {"text": "Specifies the image size", "correct": false},
+                    {"text": "Provides alternative text for accessibility", "correct": true},
+                    {"text": "Links to another page", "correct": false},
+                    {"text": "Sets the image border", "correct": false}
+                ],
+                "explanation": "The alt attribute provides alternative text for an image, used by screen readers for accessibility."
+            },
+            {
+                "id": 8,
+                "text": "Which tag defines a paragraph in HTML?",
+                "options": [
+                    {"text": "<p>", "correct": true},
+                    {"text": "<para>", "correct": false},
+                    {"text": "<text>", "correct": false},
+                    {"text": "<div>", "correct": false}
+                ],
+                "explanation": "The <p> tag defines a paragraph of text in an HTML document."
+            },
+            {
+                "id": 9,
+                "text": "Which HTML element is used to define a table?",
+                "options": [
+                    {"text": "<table>", "correct": true},
+                    {"text": "<tab>", "correct": false},
+                    {"text": "<tr>", "correct": false},
+                    {"text": "<td>", "correct": false}
+                ],
+                "explanation": "The <table> tag defines a table, with <tr> for rows and <td> for cells."
+            },
+            {
+                "id": 10,
+                "text": "What does the <tr> tag represent in a table?",
+                "options": [
+                    {"text": "Table column", "correct": false},
+                    {"text": "Table row", "correct": true},
+                    {"text": "Table data", "correct": false},
+                    {"text": "Table header", "correct": false}
+                ],
+                "explanation": "The <tr> tag defines a table row within a <table> element."
+            },
+            {
+                "id": 11,
+                "text": "Which tag is used for a table header cell?",
+                "options": [
+                    {"text": "<td>", "correct": false},
+                    {"text": "<th>", "correct": true},
+                    {"text": "<tr>", "correct": false},
+                    {"text": "<thead>", "correct": false}
+                ],
+                "explanation": "The <th> tag defines a header cell in a table, typically bold and centered."
+            },
+            {
+                "id": 12,
+                "text": "What is the purpose of the <head> element?",
+                "options": [
+                    {"text": "Contains the main content", "correct": false},
+                    {"text": "Contains metadata and links", "correct": true},
+                    {"text": "Defines a heading", "correct": false},
+                    {"text": "Creates a footer", "correct": false}
+                ],
+                "explanation": "The <head> element contains metadata, such as the title and links to stylesheets."
+            },
+            {
+                "id": 13,
+                "text": "Which tag specifies the document's title in the browser tab?",
+                "options": [
+                    {"text": "<title>", "correct": true},
+                    {"text": "<head>", "correct": false},
+                    {"text": "<meta>", "correct": false},
+                    {"text": "<header>", "correct": false}
+                ],
+                "explanation": "The <title> tag, placed in the <head>, sets the document's title shown in the browser tab."
+            },
+            {
+                "id": 14,
+                "text": "Which HTML element is used for unordered lists?",
+                "options": [
+                    {"text": "<ol>", "correct": false},
+                    {"text": "<ul>", "correct": true},
+                    {"text": "<li>", "correct": false},
+                    {"text": "<list>", "correct": false}
+                ],
+                "explanation": "The <ul> tag defines an unordered (bulleted) list, with <li> for list items."
+            },
+            {
+                "id": 15,
+                "text": "Which tag is used for ordered lists?",
+                "options": [
+                    {"text": "<ul>", "correct": false},
+                    {"text": "<ol>", "correct": true},
+                    {"text": "<li>", "correct": false},
+                    {"text": "<dl>", "correct": false}
+                ],
+                "explanation": "The <ol> tag defines an ordered (numbered) list, with <li> for list items."
+            },
+            {
+                "id": 16,
+                "text": "What does the <li> tag represent?",
+                "options": [
+                    {"text": "List item", "correct": true},
+                    {"text": "List index", "correct": false},
+                    {"text": "List identifier", "correct": false},
+                    {"text": "List inline", "correct": false}
+                ],
+                "explanation": "The <li> tag defines an individual item in an ordered or unordered list."
+            },
+            {
+                "id": 17,
+                "text": "Which tag is used to include an external stylesheet?",
+                "options": [
+                    {"text": "<style>", "correct": false},
+                    {"text": "<link>", "correct": true},
+                    {"text": "<css>", "correct": false},
+                    {"text": "<script>", "correct": false}
+                ],
+                "explanation": "The <link> tag, with rel='stylesheet' and href, includes an external CSS file."
+            },
+            {
+                "id": 18,
+                "text": "Which tag embeds a JavaScript file?",
+                "options": [
+                    {"text": "<script>", "correct": true},
+                    {"text": "<js>", "correct": false},
+                    {"text": "<link>", "correct": false},
+                    {"text": "<code>", "correct": false}
+                ],
+                "explanation": "The <script> tag, with the src attribute, embeds an external JavaScript file."
+            },
+            {
+                "id": 19,
+                "text": "What is the purpose of the <meta> tag?",
+                "options": [
+                    {"text": "Defines a paragraph", "correct": false},
+                    {"text": "Provides metadata about the document", "correct": true},
+                    {"text": "Creates a hyperlink", "correct": false},
+                    {"text": "Embeds a script", "correct": false}
+                ],
+                "explanation": "The <meta> tag provides metadata, such as charset or viewport settings, in the <head>."
+            },
+            {
+                "id": 20,
+                "text": "Which attribute specifies the character encoding of an HTML document?",
+                "options": [
+                    {"text": "charset", "correct": true},
+                    {"text": "encoding", "correct": false},
+                    {"text": "lang", "correct": false},
+                    {"text": "type", "correct": false}
+                ],
+                "explanation": "The charset attribute in a <meta> tag specifies the document’s character encoding, like UTF-8."
+            },
+            {
+                "id": 21,
+                "text": "Which HTML5 element defines a navigation section?",
+                "options": [
+                    {"text": "<header>", "correct": false},
+                    {"text": "<nav>", "correct": true},
+                    {"text": "<section>", "correct": false},
+                    {"text": "<footer>", "correct": false}
+                ],
+                "explanation": "The <nav> tag defines a section for navigation links in HTML5."
+            },
+            {
+                "id": 22,
+                "text": "Which tag is used for a semantic header section?",
+                "options": [
+                    {"text": "<head>", "correct": false},
+                    {"text": "<header>", "correct": true},
+                    {"text": "<h1>", "correct": false},
+                    {"text": "<top>", "correct": false}
+                ],
+                "explanation": "The <header> tag defines a semantic header section, often containing headings or logos."
+            },
+            {
+                "id": 23,
+                "text": "Which HTML5 element defines a self-contained content section?",
+                "options": [
+                    {"text": "<article>", "correct": true},
+                    {"text": "<div>", "correct": false},
+                    {"text": "<section>", "correct": false},
+                    {"text": "<aside>", "correct": false}
+                ],
+                "explanation": "The <article> tag defines independent, self-contained content, like a blog post."
+            },
+            {
+                "id": 24,
+                "text": "What does the <footer> tag represent?",
+                "options": [
+                    {"text": "Main content", "correct": false},
+                    {"text": "Footer section", "correct": true},
+                    {"text": "Navigation links", "correct": false},
+                    {"text": "Sidebar content", "correct": false}
+                ],
+                "explanation": "The <footer> tag defines a footer section, typically containing copyright or contact info."
+            },
+            {
+                "id": 25,
+                "text": "Which tag creates a form for user input?",
+                "options": [
+                    {"text": "<form>", "correct": true},
+                    {"text": "<input>", "correct": false},
+                    {"text": "<fieldset>", "correct": false},
+                    {"text": "<button>", "correct": false}
+                ],
+                "explanation": "The <form> tag creates a form to collect user input, containing elements like <input>."
+            },
+            {
+                "id": 26,
+                "text": "Which attribute specifies where to send form data?",
+                "options": [
+                    {"text": "action", "correct": true},
+                    {"text": "method", "correct": false},
+                    {"text": "href", "correct": false},
+                    {"text": "target", "correct": false}
+                ],
+                "explanation": "The action attribute in a <form> tag specifies the URL where form data is sent."
+            },
+            {
+                "id": 27,
+                "text": "Which attribute defines how form data is sent?",
+                "options": [
+                    {"text": "action", "correct": false},
+                    {"text": "method", "correct": true},
+                    {"text": "type", "correct": false},
+                    {"text": "name", "correct": false}
+                ],
+                "explanation": "The method attribute specifies the HTTP method (e.g., GET or POST) for sending form data."
+            },
+            {
+                "id": 28,
+                "text": "Which input type creates a text field?",
+                "options": [
+                    {"text": "type='text'", "correct": true},
+                    {"text": "type='submit'", "correct": false},
+                    {"text": "type='radio'", "correct": false},
+                    {"text": "type='checkbox'", "correct": false}
+                ],
+                "explanation": "The type='text' attribute in an <input> tag creates a single-line text field."
+            },
+            {
+                "id": 29,
+                "text": "Which input type creates a submit button?",
+                "options": [
+                    {"text": "type='text'", "correct": false},
+                    {"text": "type='submit'", "correct": true},
+                    {"text": "type='button'", "correct": false},
+                    {"text": "type='reset'", "correct": false}
+                ],
+                "explanation": "The type='submit' attribute creates a button to submit form data."
+            },
+            {
+                "id": 30,
+                "text": "What does the <label> tag do?",
+                "options": [
+                    {"text": "Styles text", "correct": false},
+                    {"text": "Associates text with a form control", "correct": true},
+                    {"text": "Creates a button", "correct": false},
+                    {"text": "Defines a heading", "correct": false}
+                ],
+                "explanation": "The <label> tag associates text with a form control, improving accessibility."
+            },
+            {
+                "id": 31,
+                "text": "Which attribute links a <label> to an <input> element?",
+                "options": [
+                    {"text": "id", "correct": false},
+                    {"text": "for", "correct": true},
+                    {"text": "name", "correct": false},
+                    {"text": "link", "correct": false}
+                ],
+                "explanation": "The for attribute in a <label> matches the id of an <input> to link them."
+            },
+            {
+                "id": 32,
+                "text": "Which HTML5 input type is used for email addresses?",
+                "options": [
+                    {"text": "type='text'", "correct": false},
+                    {"text": "type='email'", "correct": true},
+                    {"text": "type='url'", "correct": false},
+                    {"text": "type='tel'", "correct": false}
+                ],
+                "explanation": "The type='email' input validates email addresses in HTML5 forms."
+            },
+            {
+                "id": 33,
+                "text": "What does the <div> tag do?",
+                "options": [
+                    {"text": "Defines a form", "correct": false},
+                    {"text": "Groups content for styling", "correct": true},
+                    {"text": "Creates a hyperlink", "correct": false},
+                    {"text": "Embeds media", "correct": false}
+                ],
+                "explanation": "The <div> tag is a block container used to group content for styling or scripting."
+            },
+            {
+                "id": 34,
+                "text": "Which tag embeds a video in HTML5?",
+                "options": [
+                    {"text": "<video>", "correct": true},
+                    {"text": "<media>", "correct": false},
+                    {"text": "<embed>", "correct": false},
+                    {"text": "<object>", "correct": false}
+                ],
+                "explanation": "The <video> tag embeds video content in HTML5, with attributes like src and controls."
+            },
+            {
+                "id": 35,
+                "text": "Which tag embeds audio in HTML5?",
+                "options": [
+                    {"text": "<audio>", "correct": true},
+                    {"text": "<sound>", "correct": false},
+                    {"text": "<media>", "correct": false},
+                    {"text": "<track>", "correct": false}
+                ],
+                "explanation": "The <audio> tag embeds audio content in HTML5, with attributes like src and controls."
+            },
+            {
+                "id": 36,
+                "text": "What is the purpose of the <canvas> tag?",
+                "options": [
+                    {"text": "Embeds images", "correct": false},
+                    {"text": "Draws graphics via JavaScript", "correct": true},
+                    {"text": "Creates forms", "correct": false},
+                    {"text": "Defines a table", "correct": false}
+                ],
+                "explanation": "The <canvas> tag provides a drawing surface for graphics using JavaScript."
+            },
+            {
+                "id": 37,
+                "text": "Which attribute makes an input field mandatory?",
+                "options": [
+                    {"text": "required", "correct": true},
+                    {"text": "mandatory", "correct": false},
+                    {"text": "validate", "correct": false},
+                    {"text": "needed", "correct": false}
+                ],
+                "explanation": "The required attribute ensures a form input must be filled before submission."
+            },
+            {
+                "id": 38,
+                "text": "What does the <aside> tag represent?",
+                "options": [
+                    {"text": "Main content", "correct": false},
+                    {"text": "Supplementary content", "correct": true},
+                    {"text": "Navigation links", "correct": false},
+                    {"text": "Footer section", "correct": false}
+                ],
+                "explanation": "The <aside> tag defines content related to the main content, like sidebars."
+            },
+            {
+                "id": 39,
+                "text": "Which attribute specifies the language of an HTML document?",
+                "options": [
+                    {"text": "lang", "correct": true},
+                    {"text": "language", "correct": false},
+                    {"text": "locale", "correct": false},
+                    {"text": "dir", "correct": false}
+                ],
+                "explanation": "The lang attribute in the <html> tag specifies the document’s language, like en for English."
+            },
+            {
+                "id": 40,
+                "text": "What is the DOCTYPE declaration used for?",
+                "options": [
+                    {"text": "Styles the document", "correct": false},
+                    {"text": "Specifies the HTML version", "correct": true},
+                    {"text": "Embeds JavaScript", "correct": false},
+                    {"text": "Defines metadata", "correct": false}
+                ],
+                "explanation": "The <!DOCTYPE html> declaration specifies that the document is HTML5."
+            }
+        ]
+    }
+} 

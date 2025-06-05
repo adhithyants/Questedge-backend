@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Quantitative Reasoning Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the value of 15% of 200?",
+                "options": [
+                    {"text": "20", "correct": false},
+                    {"text": "30", "correct": true},
+                    {"text": "25", "correct": false},
+                    {"text": "35", "correct": false}
+                ],
+                "explanation": "To find 15% of 200, calculate (15/100) × 200 = 0.15 × 200 = 30."
+            },
+            {
+                "id": 2,
+                "text": "If a car travels 240 km in 4 hours, what is its speed in km/h?",
+                "options": [
+                    {"text": "40", "correct": false},
+                    {"text": "60", "correct": true},
+                    {"text": "80", "correct": false},
+                    {"text": "50", "correct": false}
+                ],
+                "explanation": "Speed = Distance ÷ Time = 240 km ÷ 4 hours = 60 km/h."
+            },
+            {
+                "id": 3,
+                "text": "Solve for x: 2x + 5 = 13",
+                "options": [
+                    {"text": "3", "correct": false},
+                    {"text": "4", "correct": true},
+                    {"text": "5", "correct": false},
+                    {"text": "6", "correct": false}
+                ],
+                "explanation": "Subtract 5 from both sides: 2x = 13 - 5 = 8. Divide by 2: x = 8 ÷ 2 = 4."
+            },
+            {
+                "id": 4,
+                "text": "What is the area of a rectangle with length 8 cm and width 5 cm?",
+                "options": [
+                    {"text": "30 cm²", "correct": false},
+                    {"text": "40 cm²", "correct": true},
+                    {"text": "13 cm²", "correct": false},
+                    {"text": "25 cm²", "correct": false}
+                ],
+                "explanation": "Area of a rectangle = length × width = 8 × 5 = 40 cm²."
+            },
+            {
+                "id": 5,
+                "text": "If the ratio of boys to girls in a class is 3:2 and there are 30 students, how many boys are there?",
+                "options": [
+                    {"text": "12", "correct": false},
+                    {"text": "15", "correct": false},
+                    {"text": "18", "correct": true},
+                    {"text": "20", "correct": false}
+                ],
+                "explanation": "The ratio 3:2 means 3 parts boys, 2 parts girls, total 5 parts. Each part = 30 ÷ 5 = 6 students. Boys = 3 × 6 = 18."
+            },
+            {
+                "id": 6,
+                "text": "What is the simple interest on $1000 at 5% per annum for 2 years?",
+                "options": [
+                    {"text": "$50", "correct": false},
+                    {"text": "$100", "correct": true},
+                    {"text": "$150", "correct": false},
+                    {"text": "$200", "correct": false}
+                ],
+                "explanation": "Simple Interest = (Principal × Rate × Time) ÷ 100 = (1000 × 5 × 2) ÷ 100 = $100."
+            },
+            {
+                "id": 7,
+                "text": "If 4 workers can complete a job in 12 days, how many days will 6 workers take?",
+                "options": [
+                    {"text": "8", "correct": true},
+                    {"text": "10", "correct": false},
+                    {"text": "6", "correct": false},
+                    {"text": "9", "correct": false}
+                ],
+                "explanation": "Total work = 4 workers × 12 days = 48 worker-days. With 6 workers, days = 48 ÷ 6 = 8 days."
+            },
+            {
+                "id": 8,
+                "text": "What is the value of 2³ × 3²?",
+                "options": [
+                    {"text": "36", "correct": false},
+                    {"text": "72", "correct": true},
+                    {"text": "18", "correct": false},
+                    {"text": "54", "correct": false}
+                ],
+                "explanation": "Calculate 2³ = 8 and 3² = 9. Then, 8 × 9 = 72."
+            },
+            {
+                "id": 9,
+                "text": "A shirt costs $40 after a 20% discount. What was the original price?",
+                "options": [
+                    {"text": "$48", "correct": false},
+                    {"text": "$50", "correct": true},
+                    {"text": "$44", "correct": false},
+                    {"text": "$60", "correct": false}
+                ],
+                "explanation": "Let original price = x. After 20% discount, price = 80% of x = 0.8x = 40. Solve: x = 40 ÷ 0.8 = 50."
+            },
+            {
+                "id": 10,
+                "text": "What is the perimeter of a square with side length 7 cm?",
+                "options": [
+                    {"text": "14 cm", "correct": false},
+                    {"text": "21 cm", "correct": false},
+                    {"text": "28 cm", "correct": true},
+                    {"text": "49 cm", "correct": false}
+                ],
+                "explanation": "Perimeter of a square = 4 × side length = 4 × 7 = 28 cm."
+            },
+            {
+                "id": 11,
+                "text": "If x + y = 10 and x - y = 4, what is the value of x?",
+                "options": [
+                    {"text": "3", "correct": false},
+                    {"text": "5", "correct": false},
+                    {"text": "7", "correct": true},
+                    {"text": "8", "correct": false}
+                ],
+                "explanation": "Add the equations: (x + y) + (x - y) = 10 + 4 → 2x = 14 → x = 7."
+            },
+            {
+                "id": 12,
+                "text": "A train travels 300 km in 5 hours. How far will it travel in 3 hours at the same speed?",
+                "options": [
+                    {"text": "150 km", "correct": false},
+                    {"text": "180 km", "correct": true},
+                    {"text": "200 km", "correct": false},
+                    {"text": "120 km", "correct": false}
+                ],
+                "explanation": "Speed = 300 ÷ 5 = 60 km/h. Distance in 3 hours = 60 × 3 = 180 km."
+            },
+            {
+                "id": 13,
+                "text": "What is the probability of rolling a 3 on a fair six-sided die?",
+                "options": [
+                    {"text": "1/3", "correct": false},
+                    {"text": "1/6", "correct": true},
+                    {"text": "1/2", "correct": false},
+                    {"text": "1/4", "correct": false}
+                ],
+                "explanation": "A fair die has 6 equally likely outcomes. Probability of rolling a 3 = 1 ÷ 6 = 1/6."
+            },
+            {
+                "id": 14,
+                "text": "If a shop offers a 25% discount on a $80 item, what is the sale price?",
+                "options": [
+                    {"text": "$60", "correct": true},
+                    {"text": "$65", "correct": false},
+                    {"text": "$55", "correct": false},
+                    {"text": "$70", "correct": false}
+                ],
+                "explanation": "Discount = 25% of 80 = 0.25 × 80 = 20. Sale price = 80 - 20 = $60."
+            },
+            {
+                "id": 15,
+                "text": "What is the value of (4!)?",
+                "options": [
+                    {"text": "12", "correct": false},
+                    {"text": "24", "correct": true},
+                    {"text": "16", "correct": false},
+                    {"text": "20", "correct": false}
+                ],
+                "explanation": "Factorial 4! = 4 × 3 × 2 × 1 = 24."
+            },
+            {
+                "id": 16,
+                "text": "If the sum of two numbers is 20 and their difference is 8, what is the smaller number?",
+                "options": [
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": false},
+                    {"text": "12", "correct": true},
+                    {"text": "10", "correct": false}
+                ],
+                "explanation": "Let the numbers be x and y, x + y = 20, x - y = 8. Solve: x = 14, y = 6. The smaller number is 6."
+            },
+            {
+                "id": 17,
+                "text": "What is the area of a circle with radius 3 cm? (Use π ≈ 3.14)",
+                "options": [
+                    {"text": "18.84 cm²", "correct": false},
+                    {"text": "28.26 cm²", "correct": true},
+                    {"text": "9.42 cm²", "correct": false},
+                    {"text": "12.56 cm²", "correct": false}
+                ],
+                "explanation": "Area of a circle = πr² = 3.14 × 3² = 3.14 × 9 = 28.26 cm²."
+            },
+            {
+                "id": 18,
+                "text": "If 3 pens and 2 pencils cost $13, and 2 pens and 3 pencils cost $12, what is the cost of one pen?",
+                "options": [
+                    {"text": "$3", "correct": false},
+                    {"text": "$4", "correct": true},
+                    {"text": "$2", "correct": false},
+                    {"text": "$5", "correct": false}
+                ],
+                "explanation": "Let pen = P, pencil = C. Equations: 3P + 2C = 13, 2P + 3C = 12. Solve: P = 4."
+            },
+            {
+                "id": 19,
+                "text": "What is the next number in the sequence: 1, 3, 6, 10, 15, __?",
+                "options": [
+                    {"text": "18", "correct": false},
+                    {"text": "20", "correct": false},
+                    {"text": "21", "correct": true},
+                    {"text": "24", "correct": false}
+                ],
+                "explanation": "The sequence represents triangular numbers: 1, 1+2=3, 1+2+3=6, etc. The next term is 15+6=21."
+            },
+            {
+                "id": 20,
+                "text": "If a boat travels 60 km downstream in 3 hours, what is the speed of the boat in still water if the stream speed is 5 km/h?",
+                "options": [
+                    {"text": "15 km/h", "correct": true},
+                    {"text": "20 km/h", "correct": false},
+                    {"text": "10 km/h", "correct": false},
+                    {"text": "25 km/h", "correct": false}
+                ],
+                "explanation": "Downstream speed = 60 ÷ 3 = 20 km/h. Boat speed = Downstream speed - Stream speed = 20 - 5 = 15 km/h."
+            },
+            {
+                "id": 21,
+                "text": "What is the value of 25% of 1/4 of 80?",
+                "options": [
+                    {"text": "5", "correct": true},
+                    {"text": "10", "correct": false},
+                    {"text": "15", "correct": false},
+                    {"text": "20", "correct": false}
+                ],
+                "explanation": "1/4 of 80 = 20. Then, 25% of 20 = 0.25 × 20 = 5."
+            },
+            {
+                "id": 22,
+                "text": "If a man can do a job in 15 days, how many days will it take for 3 men to do the same job?",
+                "options": [
+                    {"text": "5", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": false},
+                    {"text": "10", "correct": false}
+                ],
+                "explanation": "Work rate of 1 man = 1/15 job/day. For 3 men, rate = 3/15 = 1/5 job/day. Time = 1 ÷ (1/5) = 5 days."
+            },
+            {
+                "id": 23,
+                "text": "What is the volume of a cube with side length 4 cm?",
+                "options": [
+                    {"text": "16 cm³", "correct": false},
+                    {"text": "64 cm³", "correct": true},
+                    {"text": "32 cm³", "correct": false},
+                    {"text": "48 cm³", "correct": false}
+                ],
+                "explanation": "Volume of a cube = side³ = 4³ = 64 cm³."
+            },
+            {
+                "id": 24,
+                "text": "If a:b = 2:3 and b:c = 4:5, what is the ratio a:c?",
+                "options": [
+                    {"text": "2:5", "correct": false},
+                    {"text": "3:5", "correct": false},
+                    {"text": "8:15", "correct": true},
+                    {"text": "6:7", "correct": false}
+                ],
+                "explanation": "Align ratios by making b common. a:b = 2:3, b:c = 4:5 → a:b = 8:12, b:c = 12:15. Thus, a:c = 8:15."
+            },
+            {
+                "id": 25,
+                "text": "What is the probability of drawing a red card from a standard deck of 52 cards?",
+                "options": [
+                    {"text": "1/4", "correct": false},
+                    {"text": "1/2", "correct": true},
+                    {"text": "1/3", "correct": false},
+                    {"text": "2/3", "correct": false}
+                ],
+                "explanation": "A deck has 26 red cards (hearts and diamonds). Probability = 26 ÷ 52 = 1/2."
+            },
+            {
+                "id": 26,
+                "text": "If 5x - 3 = 12, what is the value of x?",
+                "options": [
+                    {"text": "2", "correct": false},
+                    {"text": "3", "correct": true},
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": false}
+                ],
+                "explanation": "Add 3 to both sides: 5x = 15. Divide by 5: x = 15 ÷ 5 = 3."
+            },
+            {
+                "id": 27,
+                "text": "What is the compound interest on $2000 at 10% per annum for 1 year, compounded annually?",
+                "options": [
+                    {"text": "$200", "correct": true},
+                    {"text": "$220", "correct": false},
+                    {"text": "$180", "correct": false},
+                    {"text": "$240", "correct": false}
+                ],
+                "explanation": "Compound Interest = P(1 + r/n)^(nt) - P = 2000(1 + 0.1)^1 - 2000 = 2000 × 1.1 - 2000 = 2200 - 2000 = $200."
+            },
+            {
+                "id": 28,
+                "text": "What is the next number in the sequence: 2, 5, 11, 23, __?",
+                "options": [
+                    {"text": "44", "correct": false},
+                    {"text": "47", "correct": true},
+                    {"text": "50", "correct": false},
+                    {"text": "35", "correct": false}
+                ],
+                "explanation": "The sequence follows the pattern: multiply by 2 and add 1. 2×2+1=5, 5×2+1=11, 11×2+1=23, 23×2+1=47."
+            },
+            {
+                "id": 29,
+                "text": "If a bicycle’s wheel has a diameter of 70 cm, how far will it travel in 10 revolutions? (Use π ≈ 3.14)",
+                "options": [
+                    {"text": "2198 cm", "correct": true},
+                    {"text": "2100 cm", "correct": false},
+                    {"text": "2300 cm", "correct": false},
+                    {"text": "2000 cm", "correct": false}
+                ],
+                "explanation": "Circumference = π × diameter = 3.14 × 70 ≈ 219.8 cm. Distance for 10 revolutions = 219.8 × 10 = 2198 cm."
+            },
+            {
+                "id": 30,
+                "text": "If 2/3 of a number is 18, what is the number?",
+                "options": [
+                    {"text": "12", "correct": false},
+                    {"text": "24", "correct": false},
+                    {"text": "27", "correct": true},
+                    {"text": "30", "correct": false}
+                ],
+                "explanation": "Let the number be x. Then, (2/3)x = 18. Solve: x = 18 × (3/2) = 27."
+            },
+            {
+                "id": 31,
+                "text": "What is the average of the numbers 10, 20, 30, 40, 50?",
+                "options": [
+                    {"text": "25", "correct": false},
+                    {"text": "30", "correct": true},
+                    {"text": "35", "correct": false},
+                    {"text": "40", "correct": false}
+                ],
+                "explanation": "Average = (10 + 20 + 30 + 40 + 50) ÷ 5 = 150 ÷ 5 = 30."
+            },
+            {
+                "id": 32,
+                "text": "If a tank is filled by a pipe in 6 hours, how long will it take for 3 such pipes to fill the tank?",
+                "options": [
+                    {"text": "2 hours", "correct": true},
+                    {"text": "3 hours", "correct": false},
+                    {"text": "4 hours", "correct": false},
+                    {"text": "1.5 hours", "correct": false}
+                ],
+                "explanation": "One pipe’s rate = 1/6 tank/hour. Three pipes’ rate = 3/6 = 1/2 tank/hour. Time = 1 ÷ (1/2) = 2 hours."
+            },
+            {
+                "id": 33,
+                "text": "What is the sum of the interior angles of a pentagon?",
+                "options": [
+                    {"text": "360°", "correct": false},
+                    {"text": "540°", "correct": true},
+                    {"text": "720°", "correct": false},
+                    {"text": "180°", "correct": false}
+                ],
+                "explanation": "Sum of interior angles of a polygon = (n-2) × 180°. For a pentagon (n=5), sum = (5-2) × 180 = 540°."
+            },
+            {
+                "id": 34,
+                "text": "If a number is increased by 20% and then decreased by 20%, what is the net percentage change?",
+                "options": [
+                    {"text": "0%", "correct": false},
+                    {"text": "-4%", "correct": true},
+                    {"text": "+4%", "correct": false},
+                    {"text": "-2%", "correct": false}
+                ],
+                "explanation": "Let the number be 100. Increase by 20%: 100 × 1.2 = 120. Decrease by 20%: 120 × 0.8 = 96. Net change = (96-100)/100 = -4%."
+            },
+            {
+                "id": 35,
+                "text": "What is the least common multiple (LCM) of 6 and 8?",
+                "options": [
+                    {"text": "12", "correct": false},
+                    {"text": "24", "correct": true},
+                    {"text": "16", "correct": false},
+                    {"text": "48", "correct": false}
+                ],
+                "explanation": "LCM is found by prime factorization: 6 = 2 × 3, 8 = 2³. LCM = 2³ × 3 = 24."
+            },
+            {
+                "id": 36,
+                "text": "If a bag contains 3 red and 2 blue balls, what is the probability of drawing a red ball?",
+                "options": [
+                    {"text": "2/5", "correct": false},
+                    {"text": "3/5", "correct": true},
+                    {"text": "1/2", "correct": false},
+                    {"text": "3/4", "correct": false}
+                ],
+                "explanation": "Total balls = 3 + 2 = 5. Probability of red = 3 ÷ 5 = 3/5."
+            },
+            {
+                "id": 37,
+                "text": "What is the value of √(16 + 9)?",
+                "options": [
+                    {"text": "5", "correct": true},
+                    {"text": "7", "correct": false},
+                    {"text": "4", "correct": false},
+                    {"text": "6", "correct": false}
+                ],
+                "explanation": "Calculate inside the root: 16 + 9 = 25. Then, √25 = 5."
+            },
+            {
+                "id": 38,
+                "text": "If a clock shows 3:00 now, what time will it show after 150 minutes?",
+                "options": [
+                    {"text": "5:00", "correct": false},
+                    {"text": "5:30", "correct": true},
+                    {"text": "6:00", "correct": false},
+                    {"text": "4:30", "correct": false}
+                ],
+                "explanation": "150 minutes = 2 hours 30 minutes. From 3:00, add 2 hours to get 5:00, then add 30 minutes to get 5:30."
+            },
+            {
+                "id": 39,
+                "text": "What is the median of the numbers: 4, 7, 2, 9, 5?",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "7", "correct": false}
+                ],
+                "explanation": "Sort the numbers: 2, 4, 5, 7, 9. The median is the middle number, which is 5."
+            },
+            {
+                "id": 40,
+                "text": "If a sum of money doubles in 4 years at simple interest, what is the annual interest rate?",
+                "options": [
+                    {"text": "25%", "correct": true},
+                    {"text": "20%", "correct": false},
+                    {"text": "15%", "correct": false},
+                    {"text": "30%", "correct": false}
+                ],
+                "explanation": "Let principal = P. Interest = 2P - P = P. Simple Interest = PRT/100. So, P = (P × R × 4)/100 → R = 25%."
+            }
+        ]
+    }
+}

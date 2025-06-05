@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Verbal Ability Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Choose the synonym for 'big'.",
+                "options": [
+                    {"text": "Small", "correct": false},
+                    {"text": "Large", "correct": true},
+                    {"text": "Tiny", "correct": false},
+                    {"text": "Short", "correct": false}
+                ],
+                "explanation": "'Big' means having a large size, and 'large' is a synonym with a similar meaning."
+            },
+            {
+                "id": 2,
+                "text": "Choose the antonym for 'happy'.",
+                "options": [
+                    {"text": "Joyful", "correct": false},
+                    {"text": "Sad", "correct": true},
+                    {"text": "Excited", "correct": false},
+                    {"text": "Cheerful", "correct": false}
+                ],
+                "explanation": "'Happy' means experiencing joy, and 'sad' is its opposite, meaning sorrowful."
+            },
+            {
+                "id": 3,
+                "text": "Complete the analogy: Big is to small as tall is to ____.",
+                "options": [
+                    {"text": "High", "correct": false},
+                    {"text": "Short", "correct": true},
+                    {"text": "Large", "correct": false},
+                    {"text": "Wide", "correct": false}
+                ],
+                "explanation": "Big and small are opposites in size, as are tall and short in height."
+            },
+            {
+                "id": 4,
+                "text": "Choose the correct word to complete the sentence: She was ____ tired after the long journey.",
+                "options": [
+                    {"text": "Very", "correct": true},
+                    {"text": "Much", "correct": false},
+                    {"text": "Many", "correct": false},
+                    {"text": "Few", "correct": false}
+                ],
+                "explanation": "'Very' is an adverb that correctly modifies the adjective 'tired' to indicate degree."
+            },
+            {
+                "id": 5,
+                "text": "Identify the error in the sentence: He go to school every day.",
+                "options": [
+                    {"text": "He", "correct": false},
+                    {"text": "go", "correct": true},
+                    {"text": "to", "correct": false},
+                    {"text": "every", "correct": false}
+                ],
+                "explanation": "The verb 'go' should be 'goes' to agree with the singular subject 'He' in present tense."
+            },
+            {
+                "id": 6,
+                "text": "What is the meaning of the word 'benevolent'?",
+                "options": [
+                    {"text": "Kind and generous", "correct": true},
+                    {"text": "Angry and harsh", "correct": false},
+                    {"text": "Sad and lonely", "correct": false},
+                    {"text": "Fast and efficient", "correct": false}
+                ],
+                "explanation": "'Benevolent' means showing kindness and generosity, often with a desire to help others."
+            },
+            {
+                "id": 7,
+                "text": "Choose the synonym for 'quick'.",
+                "options": [
+                    {"text": "Slow", "correct": false},
+                    {"text": "Fast", "correct": true},
+                    {"text": "Heavy", "correct": false},
+                    {"text": "Dull", "correct": false}
+                ],
+                "explanation": "'Quick' means moving or done rapidly, and 'fast' is a synonym with a similar meaning."
+            },
+            {
+                "id": 8,
+                "text": "Choose the antonym for 'generous'.",
+                "options": [
+                    {"text": "Kind", "correct": false},
+                    {"text": "Selfish", "correct": true},
+                    {"text": "Friendly", "correct": false},
+                    {"text": "Helpful", "correct": false}
+                ],
+                "explanation": "'Generous' means giving freely, and 'selfish' is its opposite, meaning concerned only with oneself."
+            },
+            {
+                "id": 9,
+                "text": "Complete the analogy: Pen is to write as knife is to ____.",
+                "options": [
+                    {"text": "Cut", "correct": true},
+                    {"text": "Eat", "correct": false},
+                    {"text": "Draw", "correct": false},
+                    {"text": "Read", "correct": false}
+                ],
+                "explanation": "A pen is used to write, and a knife is used to cut, following the tool-to-action relationship."
+            },
+            {
+                "id": 10,
+                "text": "Choose the correct word to complete the sentence: They ____ to the park yesterday.",
+                "options": [
+                    {"text": "Go", "correct": false},
+                    {"text": "Went", "correct": true},
+                    {"text": "Gone", "correct": false},
+                    {"text": "Going", "correct": false}
+                ],
+                "explanation": "'Went' is the past tense of 'go,' correctly fitting the sentence's past time frame."
+            },
+            {
+                "id": 11,
+                "text": "Identify the error in the sentence: The book are on the table.",
+                "options": [
+                    {"text": "The", "correct": false},
+                    {"text": "book", "correct": false},
+                    {"text": "are", "correct": true},
+                    {"text": "table", "correct": false}
+                ],
+                "explanation": "The verb 'are' should be 'is' to agree with the singular subject 'book'."
+            },
+            {
+                "id": 12,
+                "text": "What is the meaning of the word 'cautious'?",
+                "options": [
+                    {"text": "Careful and alert", "correct": true},
+                    {"text": "Reckless and bold", "correct": false},
+                    {"text": "Happy and carefree", "correct": false},
+                    {"text": "Tired and slow", "correct": false}
+                ],
+                "explanation": "'Cautious' means being careful to avoid risks, indicating alertness and prudence."
+            },
+            {
+                "id": 13,
+                "text": "Choose the synonym for 'beautiful'.",
+                "options": [
+                    {"text": "Ugly", "correct": false},
+                    {"text": "Lovely", "correct": true},
+                    {"text": "Plain", "correct": false},
+                    {"text": "Ordinary", "correct": false}
+                ],
+                "explanation": "'Beautiful' means pleasing to the senses, and 'lovely' is a synonym with a similar meaning."
+            },
+            {
+                "id": 14,
+                "text": "Choose the antonym for 'difficult'.",
+                "options": [
+                    {"text": "Hard", "correct": false},
+                    {"text": "Easy", "correct": true},
+                    {"text": "Complex", "correct": false},
+                    {"text": "Challenging", "correct": false}
+                ],
+                "explanation": "'Difficult' means requiring effort, and 'easy' is its opposite, meaning not hard."
+            },
+            {
+                "id": 15,
+                "text": "Complete the analogy: Cat is to meow as dog is to ____.",
+                "options": [
+                    {"text": "Bark", "correct": true},
+                    {"text": "Purr", "correct": false},
+                    {"text": "Hiss", "correct": false},
+                    {"text": "Roar", "correct": false}
+                ],
+                "explanation": "A cat produces a meow sound, and a dog produces a bark sound, following the animal-to-sound relationship."
+            },
+            {
+                "id": 16,
+                "text": "Choose the correct word to complete the sentence: He is ____ than his brother.",
+                "options": [
+                    {"text": "Tall", "correct": false},
+                    {"text": "Taller", "correct": true},
+                    {"text": "Tallest", "correct": false},
+                    {"text": "More tall", "correct": false}
+                ],
+                "explanation": "'Taller' is the comparative form of 'tall,' used to compare two people."
+            },
+            {
+                "id": 17,
+                "text": "Identify the error in the sentence: She don’t like to read books.",
+                "options": [
+                    {"text": "She", "correct": false},
+                    {"text": "don’t", "correct": true},
+                    {"text": "like", "correct": false},
+                    {"text": "books", "correct": false}
+                ],
+                "explanation": "The verb 'don’t' should be 'doesn’t' to agree with the singular subject 'She' in present tense."
+            },
+            {
+                "id": 18,
+                "text": "What is the meaning of the word 'diligent'?",
+                "options": [
+                    {"text": "Lazy and careless", "correct": false},
+                    {"text": "Hardworking and careful", "correct": true},
+                    {"text": "Angry and impatient", "correct": false},
+                    {"text": "Sad and quiet", "correct": false}
+                ],
+                "explanation": "'Diligent' means showing persistent effort and care in one’s work."
+            },
+            {
+                "id": 19,
+                "text": "Choose the synonym for 'calm'.",
+                "options": [
+                    {"text": "Angry", "correct": false},
+                    {"text": "Peaceful", "correct": true},
+                    {"text": "Loud", "correct": false},
+                    {"text": "Busy", "correct": false}
+                ],
+                "explanation": "'Calm' means free from agitation, and 'peaceful' is a synonym with a similar meaning."
+            },
+            {
+                "id": 20,
+                "text": "Choose the antonym for 'strong'.",
+                "options": [
+                    {"text": "Powerful", "correct": false},
+                    {"text": "Weak", "correct": true},
+                    {"text": "Tough", "correct": false},
+                    {"text": "Sturdy", "correct": false}
+                ],
+                "explanation": "'Strong' means having power or force, and 'weak' is its opposite, meaning lacking strength."
+            },
+            {
+                "id": 21,
+                "text": "Complete the analogy: Book is to read as piano is to ____.",
+                "options": [
+                    {"text": "Play", "correct": true},
+                    {"text": "Write", "correct": false},
+                    {"text": "Sing", "correct": false},
+                    {"text": "Listen", "correct": false}
+                ],
+                "explanation": "A book is used to read, and a piano is used to play, following the object-to-action relationship."
+            },
+            {
+                "id": 22,
+                "text": "Choose the correct word to complete the sentence: The children ____ playing in the park.",
+                "options": [
+                    {"text": "Is", "correct": false},
+                    {"text": "Are", "correct": true},
+                    {"text": "Was", "correct": false},
+                    {"text": "Were", "correct": false}
+                ],
+                "explanation": "'Are' is the present tense verb that agrees with the plural subject 'children'."
+            },
+            {
+                "id": 23,
+                "text": "Identify the error in the sentence: Me and my friend is going to the movie.",
+                "options": [
+                    {"text": "Me", "correct": true},
+                    {"text": "is", "correct": false},
+                    {"text": "friend", "correct": false},
+                    {"text": "movie", "correct": false}
+                ],
+                "explanation": "'Me' should be 'I' as the subject of the sentence. Additionally, 'is' should be 'are' for the plural subject, but the question focuses on one error."
+            },
+            {
+                "id": 24,
+                "text": "What is the meaning of the word 'vivid'?",
+                "options": [
+                    {"text": "Bright and clear", "correct": true},
+                    {"text": "Dull and boring", "correct": false},
+                    {"text": "Sad and gloomy", "correct": false},
+                    {"text": "Slow and tired", "correct": false}
+                ],
+                "explanation": "'Vivid' means strikingly bright or clear, often used for colors or memories."
+            },
+            {
+                "id": 25,
+                "text": "Choose the synonym for 'smart'.",
+                "options": [
+                    {"text": "Dull", "correct": false},
+                    {"text": "Intelligent", "correct": true},
+                    {"text": "Slow", "correct": false},
+                    {"text": "Weak", "correct": false}
+                ],
+                "explanation": "'Smart' means having quick intelligence, and 'intelligent' is a synonym with a similar meaning."
+            },
+            {
+                "id": 26,
+                "text": "Choose the antonym for 'open'.",
+                "options": [
+                    {"text": "Wide", "correct": false},
+                    {"text": "Closed", "correct": true},
+                    {"text": "Clear", "correct": false},
+                    {"text": "Free", "correct": false}
+                ],
+                "explanation": "'Open' means accessible or uncovered, and 'closed' is its opposite, meaning shut or blocked."
+            },
+            {
+                "id": 27,
+                "text": "Complete the analogy: Sun is to day as moon is to ____.",
+                "options": [
+                    {"text": "Morning", "correct": false},
+                    {"text": "Night", "correct": true},
+                    {"text": "Evening", "correct": false},
+                    {"text": "Afternoon", "correct": false}
+                ],
+                "explanation": "The sun is associated with day (when it shines), and the moon is associated with night (when it is visible)."
+            },
+            {
+                "id": 28,
+                "text": "Choose the correct word to complete the sentence: This is the ____ book I have ever read.",
+                "options": [
+                    {"text": "Good", "correct": false},
+                    {"text": "Better", "correct": false},
+                    {"text": "Best", "correct": true},
+                    {"text": "More good", "correct": false}
+                ],
+                "explanation": "'Best' is the superlative form of 'good,' used to indicate the highest quality among all books."
+            },
+            {
+                "id": 29,
+                "text": "Identify the error in the sentence: The dog chased it’s tail.",
+                "options": [
+                    {"text": "dog", "correct": false},
+                    {"text": "it’s", "correct": true},
+                    {"text": "chased", "correct": false},
+                    {"text": "tail", "correct": false}
+                ],
+                "explanation": "'It’s' should be 'its' (possessive pronoun) as 'it’s' means 'it is' or 'it has'."
+            },
+            {
+                "id": 30,
+                "text": "What is the meaning of the word 'ambiguous'?",
+                "options": [
+                    {"text": "Clear and precise", "correct": false},
+                    {"text": "Unclear or having multiple meanings", "correct": true},
+                    {"text": "Loud and bold", "correct": false},
+                    {"text": "Simple and plain", "correct": false}
+                ],
+                "explanation": "'Ambiguous' means open to more than one interpretation, often unclear."
+            },
+            {
+                "id": 31,
+                "text": "Choose the synonym for 'brave'.",
+                "options": [
+                    {"text": "Cowardly", "correct": false},
+                    {"text": "Courageous", "correct": true},
+                    {"text": "Weak", "correct": false},
+                    {"text": "Timid", "correct": false}
+                ],
+                "explanation": "'Brave' means showing courage, and 'courageous' is a synonym with a similar meaning."
+            },
+            {
+                "id": 32,
+                "text": "Choose the antonym for 'ancient'.",
+                "options": [
+                    {"text": "Old", "correct": false},
+                    {"text": "Modern", "correct": true},
+                    {"text": "Historic", "correct": false},
+                    {"text": "Traditional", "correct": false}
+                ],
+                "explanation": "'Ancient' means very old, and 'modern' is its opposite, meaning current or new."
+            },
+            {
+                "id": 33,
+                "text": "Complete the analogy: Teacher is to classroom as chef is to ____.",
+                "options": [
+                    {"text": "Kitchen", "correct": true},
+                    {"text": "Bedroom", "correct": false},
+                    {"text": "Office", "correct": false},
+                    {"text": "Garden", "correct": false}
+                ],
+                "explanation": "A teacher works in a classroom, and a chef works in a kitchen, following the profession-to-workplace relationship."
+            },
+            {
+                "id": 34,
+                "text": "Choose the correct word to complete the sentence: I have two cats, and ____ are very playful.",
+                "options": [
+                    {"text": "They", "correct": true},
+                    {"text": "Them", "correct": false},
+                    {"text": "Their", "correct": false},
+                    {"text": "There", "correct": false}
+                ],
+                "explanation": "'They' is the correct subject pronoun for the plural noun 'cats' in this sentence."
+            },
+            {
+                "id": 35,
+                "text": "Identify the error in the sentence: The team plays good in every match.",
+                "options": [
+                    {"text": "team", "correct": false},
+                    {"text": "plays", "correct": false},
+                    {"text": "good", "correct": true},
+                    {"text": "match", "correct": false}
+                ],
+                "explanation": "'Good' should be 'well,' an adverb modifying the verb 'plays' to describe how the team performs."
+            },
+            {
+                "id": 36,
+                "text": "What is the meaning of the word 'eloquent'?",
+                "options": [
+                    {"text": "Silent and reserved", "correct": false},
+                    {"text": "Expressive and persuasive in speech", "correct": true},
+                    {"text": "Clumsy and awkward", "correct": false},
+                    {"text": "Tired and slow", "correct": false}
+                ],
+                "explanation": "'Eloquent' means fluent and persuasive in speaking or writing."
+            },
+            {
+                "id": 37,
+                "text": "Choose the synonym for 'tired'.",
+                "options": [
+                    {"text": "Energetic", "correct": false},
+                    {"text": "Exhausted", "correct": true},
+                    {"text": "Active", "correct": false},
+                    {"text": "Lively", "correct": false}
+                ],
+                "explanation": "'Tired' means lacking energy, and 'exhausted' is a synonym indicating extreme fatigue."
+            },
+            {
+                "id": 38,
+                "text": "Choose the antonym for 'polite'.",
+                "options": [
+                    {"text": "Courteous", "correct": false},
+                    {"text": "Rude", "correct": true},
+                    {"text": "Kind", "correct": false},
+                    {"text": "Friendly", "correct": false}
+                ],
+                "explanation": "'Polite' means showing good manners, and 'rude' is its opposite, meaning discourteous."
+            },
+            {
+                "id": 39,
+                "text": "Complete the analogy: Bird is to fly as fish is to ____.",
+                "options": [
+                    {"text": "Swim", "correct": true},
+                    {"text": "Walk", "correct": false},
+                    {"text": "Jump", "correct": false},
+                    {"text": "Run", "correct": false}
+                ],
+                "explanation": "A bird moves by flying, and a fish moves by swimming, following the animal-to-movement relationship."
+            },
+            {
+                "id": 40,
+                "text": "Choose the correct word to complete the sentence: The movie was so ____ that I cried.",
+                "options": [
+                    {"text": "Happy", "correct": false},
+                    {"text": "Sad", "correct": true},
+                    {"text": "Funny", "correct": false},
+                    {"text": "Boring", "correct": false}
+                ],
+                "explanation": "'Sad' is the adjective that logically fits, as it explains why the movie caused crying."
+            }
+        ]
+    }
+}

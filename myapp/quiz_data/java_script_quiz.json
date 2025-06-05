@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "JavaScript Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the correct way to declare a variable in JavaScript?",
+                "options": [
+                    {"text": "variable x;", "correct": false},
+                    {"text": "let x;", "correct": true},
+                    {"text": "v x;", "correct": false},
+                    {"text": "int x;", "correct": false}
+                ],
+                "explanation": "In JavaScript, variables are declared using `let`, `const`, or `var`. `let x;` is a correct declaration for a variable."
+            },
+            {
+                "id": 2,
+                "text": "What is the output of `console.log(typeof 42);`?",
+                "options": [
+                    {"text": "number", "correct": true},
+                    {"text": "string", "correct": false},
+                    {"text": "boolean", "correct": false},
+                    {"text": "object", "correct": false}
+                ],
+                "explanation": "The `typeof` operator returns the type of a value. For the number `42`, it returns `'number'`."
+            },
+            {
+                "id": 3,
+                "text": "Which keyword is used to define a constant in JavaScript?",
+                "options": [
+                    {"text": "let", "correct": false},
+                    {"text": "var", "correct": false},
+                    {"text": "const", "correct": true},
+                    {"text": "static", "correct": false}
+                ],
+                "explanation": "The `const` keyword defines a constant, which cannot be reassigned after its initial declaration."
+            },
+            {
+                "id": 4,
+                "text": "What does the following code output: `console.log(2 + '2');`?",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "22", "correct": true},
+                    {"text": "NaN", "correct": false},
+                    {"text": "Error", "correct": false}
+                ],
+                "explanation": "JavaScript performs string concatenation when a number is added to a string. `2 + '2'` results in the string `'22'`."
+            },
+            {
+                "id": 5,
+                "text": "How do you write a single-line comment in JavaScript?",
+                "options": [
+                    {"text": "# Comment", "correct": false},
+                    {"text": "// Comment", "correct": true},
+                    {"text": "<!-- Comment -->", "correct": false},
+                    {"text": "/* Comment */", "correct": false}
+                ],
+                "explanation": "Single-line comments in JavaScript start with `//`. `/* */` is for multi-line comments."
+            },
+            {
+                "id": 6,
+                "text": "What is the correct way to create a function in JavaScript?",
+                "options": [
+                    {"text": "function myFunc() {}", "correct": true},
+                    {"text": "def myFunc() {}", "correct": false},
+                    {"text": "func myFunc() {}", "correct": false},
+                    {"text": "function: myFunc() {}", "correct": false}
+                ],
+                "explanation": "A function is declared using the `function` keyword, followed by the name and parentheses: `function myFunc() {}`."
+            },
+            {
+                "id": 7,
+                "text": "What is the output of `console.log(5 === '5');`?",
+                "options": [
+                    {"text": "true", "correct": false},
+                    {"text": "false", "correct": true},
+                    {"text": "undefined", "correct": false},
+                    {"text": "NaN", "correct": false}
+                ],
+                "explanation": "The strict equality operator `===` checks value and type. Since `5` (number) and `'5'` (string) have different types, the result is `false`."
+            },
+            {
+                "id": 8,
+                "text": "Which method adds an element to the end of an array?",
+                "options": [
+                    {"text": "pop()", "correct": false},
+                    {"text": "push()", "correct": true},
+                    {"text": "shift()", "correct": false},
+                    {"text": "unshift()", "correct": false}
+                ],
+                "explanation": "The `push()` method adds one or more elements to the end of an array and returns the new length."
+            },
+            {
+                "id": 9,
+                "text": "What is the purpose of the `return` statement in a function?",
+                "options": [
+                    {"text": "To declare a variable", "correct": false},
+                    {"text": "To output a value from the function", "correct": true},
+                    {"text": "To loop through code", "correct": false},
+                    {"text": "To call another function", "correct": false}
+                ],
+                "explanation": "The `return` statement ends a function and specifies the value to be returned to the caller."
+            },
+            {
+                "id": 10,
+                "text": "What does `NaN` stand for in JavaScript?",
+                "options": [
+                    {"text": "Not a Number", "correct": true},
+                    {"text": "Null and None", "correct": false},
+                    {"text": "New Array Number", "correct": false},
+                    {"text": "No Action Needed", "correct": false}
+                ],
+                "explanation": "`NaN` stands for 'Not a Number' and is a value representing an invalid or unrepresentable number."
+            },
+            {
+                "id": 11,
+                "text": "How do you access the first element of an array called `arr`?",
+                "options": [
+                    {"text": "arr[0]", "correct": true},
+                    {"text": "arr[1]", "correct": false},
+                    {"text": "arr.first()", "correct": false},
+                    {"text": "arr.get(0)", "correct": false}
+                ],
+                "explanation": "Array elements are accessed using zero-based indexing. The first element is at `arr[0]`."
+            },
+            {
+                "id": 12,
+                "text": "What is the output of `console.log(['a', 'b', 'c'].length);`?",
+                "options": [
+                    {"text": "2", "correct": false},
+                    {"text": "3", "correct": true},
+                    {"text": "4", "correct": false},
+                    {"text": "undefined", "correct": false}
+                ],
+                "explanation": "The `length` property returns the number of elements in an array. The array `['a', 'b', 'c']` has 3 elements."
+            },
+            {
+                "id": 13,
+                "text": "Which operator is used for string concatenation in JavaScript?",
+                "options": [
+                    {"text": "&", "correct": false},
+                    {"text": "+", "correct": true},
+                    {"text": "*", "correct": false},
+                    {"text": "||", "correct": false}
+                ],
+                "explanation": "The `+` operator concatenates strings in JavaScript, e.g., `'hello' + 'world'` results in `'helloworld'`."
+            },
+            {
+                "id": 14,
+                "text": "What is the correct syntax for a `for` loop in JavaScript?",
+                "options": [
+                    {"text": "for (i = 0; i < 5; i++) {}", "correct": true},
+                    {"text": "for (i = 0, i < 5, i++) {}", "correct": false},
+                    {"text": "for i = 0 to 5 {}", "correct": false},
+                    {"text": "for (i < 5; i++) {}", "correct": false}
+                ],
+                "explanation": "A `for` loop uses the syntax `for (initialization; condition; increment) {}`. The correct form is `for (i = 0; i < 5; i++) {}`."
+            },
+            {
+                "id": 15,
+                "text": "What does the `undefined` value represent in JavaScript?",
+                "options": [
+                    {"text": "A variable that has not been assigned a value", "correct": true},
+                    {"text": "A syntax error", "correct": false},
+                    {"text": "A null value", "correct": false},
+                    {"text": "An empty string", "correct": false}
+                ],
+                "explanation": "`undefined` indicates a variable that has been declared but not assigned a value."
+            },
+            {
+                "id": 16,
+                "text": "Which method removes the last element from an array?",
+                "options": [
+                    {"text": "pop()", "correct": true},
+                    {"text": "push()", "correct": false},
+                    {"text": "shift()", "correct": false},
+                    {"text": "splice()", "correct": false}
+                ],
+                "explanation": "The `pop()` method removes and returns the last element of an array, reducing its length by 1."
+            },
+            {
+                "id": 17,
+                "text": "What is the output of `console.log(!!'hello');`?",
+                "options": [
+                    {"text": "true", "correct": true},
+                    {"text": "false", "correct": false},
+                    {"text": "'hello'", "correct": false},
+                    {"text": "undefined", "correct": false}
+                ],
+                "explanation": "The double negation `!!` converts a value to its boolean equivalent. The string `'hello'` is truthy, so `!!'hello'` is `true`."
+            },
+            {
+                "id": 18,
+                "text": "How do you create an object in JavaScript?",
+                "options": [
+                    {"text": "let obj = {};", "correct": true},
+                    {"text": "let obj = [];", "correct": false},
+                    {"text": "let obj = new Object[];", "correct": false},
+                    {"text": "let obj = Object();", "correct": false}
+                ],
+                "explanation": "An object is created using curly braces: `let obj = {};`. Square brackets `[]` create an array."
+            },
+            {
+                "id": 19,
+                "text": "What is the purpose of the `this` keyword in JavaScript?",
+                "options": [
+                    {"text": "To refer to the current object", "correct": true},
+                    {"text": "To create a new variable", "correct": false},
+                    {"text": "To define a loop", "correct": false},
+                    {"text": "To call a function", "correct": false}
+                ],
+                "explanation": "`this` refers to the current object in the context where it is used, such as within a method."
+            },
+            {
+                "id": 20,
+                "text": "What does the `querySelector()` method do?",
+                "options": [
+                    {"text": "Selects the first element matching a CSS selector", "correct": true},
+                    {"text": "Selects all elements matching a CSS selector", "correct": false},
+                    {"text": "Creates a new HTML element", "correct": false},
+                    {"text": "Removes an element from the DOM", "correct": false}
+                ],
+                "explanation": "`querySelector()` returns the first element in the document that matches the specified CSS selector."
+            },
+            {
+                "id": 21,
+                "text": "What is the output of `console.log([1, 2, 3].includes(2));`?",
+                "options": [
+                    {"text": "true", "correct": true},
+                    {"text": "false", "correct": false},
+                    {"text": "2", "correct": false},
+                    {"text": "undefined", "correct": false}
+                ],
+                "explanation": "The `includes()` method checks if an array contains a specified value, returning `true` if found. Since `2` is in `[1, 2, 3]`, it returns `true`."
+            },
+            {
+                "id": 22,
+                "text": "Which event is triggered when a user clicks an HTML element?",
+                "options": [
+                    {"text": "onhover", "correct": false},
+                    {"text": "onclick", "correct": true},
+                    {"text": "onchange", "correct": false},
+                    {"text": "onload", "correct": false}
+                ],
+                "explanation": "The `onclick` event is triggered when an element is clicked by the user."
+            },
+            {
+                "id": 23,
+                "text": "What is the correct way to write an arrow function in ES6?",
+                "options": [
+                    {"text": "() => {}", "correct": true},
+                    {"text": "function => {}", "correct": false},
+                    {"text": "=> () {}", "correct": false},
+                    {"text": "func () => {}", "correct": false}
+                ],
+                "explanation": "An arrow function in ES6 uses the syntax `() => {}`, with parameters in parentheses and the body in braces."
+            },
+            {
+                "id": 24,
+                "text": "What does the `map()` method do to an array?",
+                "options": [
+                    {"text": "Removes elements", "correct": false},
+                    {"text": "Creates a new array with transformed elements", "correct": true},
+                    {"text": "Sorts the array", "correct": false},
+                    {"text": "Joins elements into a string", "correct": false}
+                ],
+                "explanation": "The `map()` method creates a new array with the results of calling a function on every element in the original array."
+            },
+            {
+                "id": 25,
+                "text": "What is the output of `console.log('hello'.toUpperCase());`?",
+                "options": [
+                    {"text": "hello", "correct": false},
+                    {"text": "HELLO", "correct": true},
+                    {"text": "Hello", "correct": false},
+                    {"text": "undefined", "correct": false}
+                ],
+                "explanation": "The `toUpperCase()` method converts a string to uppercase, so `'hello'` becomes `'HELLO'`."
+            },
+            {
+                "id": 26,
+                "text": "How do you add an event listener to an element in JavaScript?",
+                "options": [
+                    {"text": "element.addEventListener('click', func);", "correct": true},
+                    {"text": "element.on('click', func);", "correct": false},
+                    {"text": "element.listen('click', func);", "correct": false},
+                    {"text": "element.event('click', func);", "correct": false}
+                ],
+                "explanation": "The `addEventListener()` method attaches an event handler to an element, e.g., `element.addEventListener('click', func);`."
+            },
+            {
+                "id": 27,
+                "text": "What is the output of `console.log(0 == '0');`?",
+                "options": [
+                    {"text": "true", "correct": true},
+                    {"text": "false", "correct": false},
+                    {"text": "undefined", "correct": false},
+                    {"text": "NaN", "correct": false}
+                ],
+                "explanation": "The loose equality operator `==` performs type coercion. `'0'` is converted to `0`, so `0 == '0'` is `true`."
+            },
+            {
+                "id": 28,
+                "text": "Which method joins all elements of an array into a string?",
+                "options": [
+                    {"text": "join()", "correct": true},
+                    {"text": "concat()", "correct": false},
+                    {"text": "slice()", "correct": false},
+                    {"text": "split()", "correct": false}
+                ],
+                "explanation": "The `join()` method combines all array elements into a string, optionally using a separator."
+            },
+            {
+                "id": 29,
+                "text": "What is a closure in JavaScript?",
+                "options": [
+                    {"text": "A function that retains access to its outer scope", "correct": true},
+                    {"text": "A loop that runs indefinitely", "correct": false},
+                    {"text": "A method to close a browser window", "correct": false},
+                    {"text": "A type of error", "correct": false}
+                ],
+                "explanation": "A closure is a function that retains access to variables from its outer scope, even after the outer function has finished executing."
+            },
+            {
+                "id": 30,
+                "text": "What is the output of `console.log([1, 2, 3].slice(1, 2));`?",
+                "options": [
+                    {"text": "[2]", "correct": true},
+                    {"text": "[1, 2]", "correct": false},
+                    {"text": "[2, 3]", "correct": false},
+                    {"text": "2", "correct": false}
+                ],
+                "explanation": "The `slice(1, 2)` method returns a new array from index 1 up to (but not including) index 2, so `[1, 2, 3].slice(1, 2)` returns `[2]`."
+            },
+            {
+                "id": 31,
+                "text": "What does the `let` keyword provide compared to `var`?",
+                "options": [
+                    {"text": "Block scope", "correct": true},
+                    {"text": "Global scope", "correct": false},
+                    {"text": "Function scope", "correct": false},
+                    {"text": "No scope", "correct": false}
+                ],
+                "explanation": "`let` provides block scope, limiting the variable’s visibility to the block it’s declared in, unlike `var` which has function scope."
+            },
+            {
+                "id": 32,
+                "text": "What is the purpose of the `setTimeout()` function?",
+                "options": [
+                    {"text": "Execute a function after a delay", "correct": true},
+                    {"text": "Loop a function repeatedly", "correct": false},
+                    {"text": "Stop a function", "correct": false},
+                    {"text": "Run a function immediately", "correct": false}
+                ],
+                "explanation": "`setTimeout()` schedules a function to execute after a specified delay in milliseconds."
+            },
+            {
+                "id": 33,
+                "text": "What is the output of `console.log(typeof null);`?",
+                "options": [
+                    {"text": "object", "correct": true},
+                    {"text": "null", "correct": false},
+                    {"text": "undefined", "correct": false},
+                    {"text": "string", "correct": false}
+                ],
+                "explanation": "In JavaScript, `typeof null` returns `'object'` due to a historical bug, even though `null` is a primitive value."
+            },
+            {
+                "id": 34,
+                "text": "Which method reverses the order of elements in an array?",
+                "options": [
+                    {"text": "sort()", "correct": false},
+                    {"text": "reverse()", "correct": true},
+                    {"text": "flip()", "correct": false},
+                    {"text": "invert()", "correct": false}
+                ],
+                "explanation": "The `reverse()` method reverses the order of elements in an array in place."
+            },
+            {
+                "id": 35,
+                "text": "What is the correct way to check if a variable `x` is undefined?",
+                "options": [
+                    {"text": "x == null", "correct": false},
+                    {"text": "typeof x === 'undefined'", "correct": true},
+                    {"text": "x === null", "correct": false},
+                    {"text": "x = undefined", "correct": false}
+                ],
+                "explanation": "The safest way to check if a variable is undefined is `typeof x === 'undefined'`, as it avoids issues with undeclared variables."
+            },
+            {
+                "id": 36,
+                "text": "What does the `filter()` method do to an array?",
+                "options": [
+                    {"text": "Creates a new array with elements that pass a test", "correct": true},
+                    {"text": "Sorts the array", "correct": false},
+                    {"text": "Joins elements into a string", "correct": false},
+                    {"text": "Removes the first element", "correct": false}
+                ],
+                "explanation": "The `filter()` method creates a new array with elements that satisfy the provided test function."
+            },
+            {
+                "id": 37,
+                "text": "What is the output of `console.log({a: 1}.hasOwnProperty('a'));`?",
+                "options": [
+                    {"text": "true", "correct": true},
+                    {"text": "false", "correct": false},
+                    {"text": "undefined", "correct": false},
+                    {"text": "1", "correct": false}
+                ],
+                "explanation": "The `hasOwnProperty('a')` method checks if an object has a specified property as its own property. Since `{a: 1}` has property `'a'`, it returns `true`."
+            },
+            {
+                "id": 38,
+                "text": "What is the purpose of the `JSON.parse()` method?",
+                "options": [
+                    {"text": "Convert a string to a JSON object", "correct": true},
+                    {"text": "Convert a JSON object to a string", "correct": false},
+                    {"text": "Validate a JSON file", "correct": false},
+                    {"text": "Create a new JSON file", "correct": false}
+                ],
+                "explanation": "`JSON.parse()` converts a JSON-formatted string into a JavaScript object."
+            },
+            {
+                "id": 39,
+                "text": "What is the output of `console.log(1 + true);`?",
+                "options": [
+                    {"text": "2", "correct": true},
+                    {"text": "true", "correct": false},
+                    {"text": "11", "correct": false},
+                    {"text": "NaN", "correct": false}
+                ],
+                "explanation": "The boolean `true` is coerced to `1` in numeric operations, so `1 + true` equals `1 + 1 = 2`."
+            },
+            {
+                "id": 40,
+                "text": "What does the `class` keyword do in ES6?",
+                "options": [
+                    {"text": "Defines a blueprint for objects", "correct": true},
+                    {"text": "Declares a variable", "correct": false},
+                    {"text": "Creates a loop", "correct": false},
+                    {"text": "Imports a module", "correct": false}
+                ],
+                "explanation": "The `class` keyword in ES6 defines a blueprint for creating objects with shared properties and methods, supporting object-oriented programming."
+            }
+        ]
+    }
+}

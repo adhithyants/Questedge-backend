@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "SQL Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What does SQL stand for?",
+                "options": [
+                    {"text": "Structured Query Language", "correct": true},
+                    {"text": "Simple Query Language", "correct": false},
+                    {"text": "Sequential Query Language", "correct": false},
+                    {"text": "Standard Query Language", "correct": false}
+                ],
+                "explanation": "SQL stands for Structured Query Language, used for managing and manipulating relational databases."
+            },
+            {
+                "id": 2,
+                "text": "Which SQL statement is used to retrieve data from a database?",
+                "options": [
+                    {"text": "INSERT", "correct": false},
+                    {"text": "SELECT", "correct": true},
+                    {"text": "UPDATE", "correct": false},
+                    {"text": "DELETE", "correct": false}
+                ],
+                "explanation": "The SELECT statement is used to retrieve data from one or more tables in a database."
+            },
+            {
+                "id": 3,
+                "text": "What is the output of the following SQL query? \nSELECT * FROM employees WHERE salary > 50000;",
+                "options": [
+                    {"text": "All columns for employees with salary greater than 50000", "correct": true},
+                    {"text": "All columns for employees with salary less than 50000", "correct": false},
+                    {"text": "Only the salary column for all employees", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The query selects all columns (*) from the employees table where the salary is greater than 50000."
+            },
+            {
+                "id": 4,
+                "text": "Which SQL clause is used to filter rows in a query?",
+                "options": [
+                    {"text": "ORDER BY", "correct": false},
+                    {"text": "WHERE", "correct": true},
+                    {"text": "GROUP BY", "correct": false},
+                    {"text": "HAVING", "correct": false}
+                ],
+                "explanation": "The WHERE clause filters rows based on a specified condition before the result is returned."
+            },
+            {
+                "id": 5,
+                "text": "Which SQL statement is used to add new rows to a table?",
+                "options": [
+                    {"text": "ADD", "correct": false},
+                    {"text": "INSERT", "correct": true},
+                    {"text": "UPDATE", "correct": false},
+                    {"text": "CREATE", "correct": false}
+                ],
+                "explanation": "The INSERT statement adds new rows of data to a table."
+            },
+            {
+                "id": 6,
+                "text": "What does the following SQL query do? \nINSERT INTO students (name, age) VALUES ('Alice', 20);",
+                "options": [
+                    {"text": "Updates a student's name and age", "correct": false},
+                    {"text": "Adds a new student with name 'Alice' and age 20", "correct": true},
+                    {"text": "Deletes a student named 'Alice'", "correct": false},
+                    {"text": "Creates a new table called students", "correct": false}
+                ],
+                "explanation": "The INSERT INTO statement adds a new row to the students table with the specified values."
+            },
+            {
+                "id": 7,
+                "text": "Which SQL statement is used to modify existing data in a table?",
+                "options": [
+                    {"text": "SELECT", "correct": false},
+                    {"text": "UPDATE", "correct": true},
+                    {"text": "DELETE", "correct": false},
+                    {"text": "ALTER", "correct": false}
+                ],
+                "explanation": "The UPDATE statement modifies existing rows in a table based on a condition."
+            },
+            {
+                "id": 8,
+                "text": "What is the output of the following SQL query? \nUPDATE employees SET salary = 60000 WHERE id = 1;",
+                "options": [
+                    {"text": "Sets the salary of employee with id 1 to 60000", "correct": true},
+                    {"text": "Sets the salary of all employees to 60000", "correct": false},
+                    {"text": "Deletes the employee with id 1", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The UPDATE statement changes the salary column for the employee where id equals 1."
+            },
+            {
+                "id": 9,
+                "text": "Which SQL statement is used to remove rows from a table?",
+                "options": [
+                    {"text": "REMOVE", "correct": false},
+                    {"text": "DELETE", "correct": true},
+                    {"text": "DROP", "correct": false},
+                    {"text": "TRUNCATE", "correct": false}
+                ],
+                "explanation": "The DELETE statement removes rows from a table based on a condition."
+            },
+            {
+                "id": 10,
+                "text": "What does the following SQL query do? \nDELETE FROM customers WHERE country = 'Canada';",
+                "options": [
+                    {"text": "Removes all customers from Canada", "correct": true},
+                    {"text": "Removes all customers", "correct": false},
+                    {"text": "Updates customers in Canada", "correct": false},
+                    {"text": "Creates a table for Canadian customers", "correct": false}
+                ],
+                "explanation": "The DELETE statement removes rows from the customers table where the country is 'Canada'."
+            },
+            {
+                "id": 11,
+                "text": "Which SQL clause is used to sort query results?",
+                "options": [
+                    {"text": "WHERE", "correct": false},
+                    {"text": "ORDER BY", "correct": true},
+                    {"text": "GROUP BY", "correct": false},
+                    {"text": "HAVING", "correct": false}
+                ],
+                "explanation": "The ORDER BY clause sorts the result set based on specified columns, in ascending or descending order."
+            },
+            {
+                "id": 12,
+                "text": "What is the output of the following SQL query? \nSELECT name FROM employees ORDER BY name ASC;",
+                "options": [
+                    {"text": "Names of employees sorted alphabetically", "correct": true},
+                    {"text": "Names of employees sorted in reverse order", "correct": false},
+                    {"text": "All columns sorted by name", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The query selects the name column and sorts it in ascending order (alphabetically) using ORDER BY ASC."
+            },
+            {
+                "id": 13,
+                "text": "Which SQL keyword is used to group rows with similar values?",
+                "options": [
+                    {"text": "GROUP BY", "correct": true},
+                    {"text": "ORDER BY", "correct": false},
+                    {"text": "WHERE", "correct": false},
+                    {"text": "JOIN", "correct": false}
+                ],
+                "explanation": "The GROUP BY clause groups rows with identical values in specified columns for aggregate calculations."
+            },
+            {
+                "id": 14,
+                "text": "What does the following SQL query do? \nSELECT department, COUNT(*) FROM employees GROUP BY department;",
+                "options": [
+                    {"text": "Counts the number of employees in each department", "correct": true},
+                    {"text": "Lists all employees sorted by department", "correct": false},
+                    {"text": "Updates the department column", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The query groups employees by department and counts the number of employees in each group."
+            },
+            {
+                "id": 15,
+                "text": "Which SQL function counts the number of rows in a result set?",
+                "options": [
+                    {"text": "SUM()", "correct": false},
+                    {"text": "COUNT()", "correct": true},
+                    {"text": "AVG()", "correct": false},
+                    {"text": "MAX()", "correct": false}
+                ],
+                "explanation": "The COUNT() function returns the number of rows in a query result."
+            },
+            {
+                "id": 16,
+                "text": "What is the output of the following SQL query? \nSELECT COUNT(*) FROM products WHERE price > 100;",
+                "options": [
+                    {"text": "Number of products with price greater than 100", "correct": true},
+                    {"text": "Total price of products over 100", "correct": false},
+                    {"text": "All products with price over 100", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The query counts the number of rows in the products table where the price exceeds 100."
+            },
+            {
+                "id": 17,
+                "text": "Which SQL function calculates the average of a numeric column?",
+                "options": [
+                    {"text": "SUM()", "correct": false},
+                    {"text": "AVG()", "correct": true},
+                    {"text": "COUNT()", "correct": false},
+                    {"text": "MIN()", "correct": false}
+                ],
+                "explanation": "The AVG() function computes the average value of a numeric column."
+            },
+            {
+                "id": 18,
+                "text": "What is the purpose of the HAVING clause in SQL?",
+                "options": [
+                    {"text": "Filters rows before grouping", "correct": false},
+                    {"text": "Filters groups after GROUP BY", "correct": true},
+                    {"text": "Sorts the result set", "correct": false},
+                    {"text": "Joins tables", "correct": false}
+                ],
+                "explanation": "The HAVING clause filters groups created by GROUP BY based on a condition."
+            },
+            {
+                "id": 19,
+                "text": "What does the following SQL query do? \nSELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) > 50000;",
+                "options": [
+                    {"text": "Lists departments where the average salary is greater than 50000", "correct": true},
+                    {"text": "Lists all employees with salary over 50000", "correct": false},
+                    {"text": "Updates salaries in departments", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The query groups employees by department, calculates the average salary, and filters for departments where the average exceeds 50000."
+            },
+            {
+                "id": 20,
+                "text": "Which type of SQL join returns all rows from both tables, with NULLs where there is no match?",
+                "options": [
+                    {"text": "INNER JOIN", "correct": false},
+                    {"text": "LEFT JOIN", "correct": false},
+                    {"text": "RIGHT JOIN", "correct": false},
+                    {"text": "FULL JOIN", "correct": true}
+                ],
+                "explanation": "A FULL JOIN (or FULL OUTER JOIN) returns all rows from both tables, with NULLs for non-matching rows."
+            },
+            {
+                "id": 21,
+                "text": "What does the following SQL query do? \nSELECT employees.name, departments.dept_name FROM employees INNER JOIN departments ON employees.dept_id = departments.id;",
+                "options": [
+                    {"text": "Joins employee names with department names where dept_id matches", "correct": true},
+                    {"text": "Lists all employees and all departments", "correct": false},
+                    {"text": "Updates employee department IDs", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The INNER JOIN returns rows where the dept_id in employees matches the id in departments."
+            },
+            {
+                "id": 22,
+                "text": "Which SQL statement creates a new table?",
+                "options": [
+                    {"text": "CREATE TABLE", "correct": true},
+                    {"text": "NEW TABLE", "correct": false},
+                    {"text": "ADD TABLE", "correct": false},
+                    {"text": "INSERT TABLE", "correct": false}
+                ],
+                "explanation": "The CREATE TABLE statement defines a new table with specified columns and data types."
+            },
+            {
+                "id": 23,
+                "text": "What does the following SQL statement do? \nCREATE TABLE users (id INT, name VARCHAR(50));",
+                "options": [
+                    {"text": "Creates a table with id and name columns", "correct": true},
+                    {"text": "Inserts data into the users table", "correct": false},
+                    {"text": "Deletes the users table", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The statement creates a table named users with an integer id column and a name column of up to 50 characters."
+            },
+            {
+                "id": 24,
+                "text": "Which SQL statement modifies the structure of an existing table?",
+                "options": [
+                    {"text":"-DROP", "correct": false},
+                    {"text": "ALTER TABLE", "correct": true},
+                    {"text": "UPDATE", "correct": false},
+                    {"text": "DELETE", "correct": false}
+                ],
+                "explanation": "The ALTER TABLE statement modifies a table’s structure, such as adding or removing columns."
+            },
+            {
+                "id": 25,
+                "text": "What does the following SQL statement do? \nALTER TABLE employees ADD email VARCHAR(100);",
+                "options": [
+                    {"text": "Adds an email column to the employees table", "correct": true},
+                    {"text": "Removes the email column", "correct": false},
+                    {"text": "Updates email values", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The ALTER TABLE statement adds a new email column of type VARCHAR(100) to the employees table."
+            },
+            {
+                "id": 26,
+                "text": "Which SQL statement deletes an entire table?",
+                "options": [
+                    {"text": "DELETE", "correct": false},
+                    {"text": "DROP TABLE", "correct": true},
+                    {"text": "TRUNCATE", "correct": false},
+                    {"text": "REMOVE TABLE", "correct": false}
+                ],
+                "explanation": "The DROP TABLE statement removes a table and all its data from the database."
+            },
+            {
+                "id": 27,
+                "text": "What is the purpose of the PRIMARY KEY constraint in SQL?",
+                "options": [
+                    {"text": "Allows duplicate values", "correct": false},
+                    {"text": "Uniquely identifies each row", "correct": true},
+                    {"text": "Links two tables", "correct": false},
+                    {"text": "Sorts the table", "correct": false}
+                ],
+                "explanation": "A PRIMARY KEY uniquely identifies each row in a table and cannot contain NULL or duplicate values."
+            },
+            {
+                "id": 28,
+                "text": "Which SQL keyword is used to ensure a column cannot have NULL values?",
+                "options": [
+                    {"text": "UNIQUE", "correct": false},
+                    {"text": "NOT NULL", "correct": true},
+                    {"text": "PRIMARY KEY", "correct": false},
+                    {"text": "FOREIGN KEY", "correct": false}
+                ],
+                "explanation": "The NOT NULL constraint ensures that a column must have a value for every row."
+            },
+            {
+                "id": 29,
+                "text": "What does the FOREIGN KEY constraint do in SQL?",
+                "options": [
+                    {"text": "Uniquely identifies rows", "correct": false},
+                    {"text": "Links a column to a primary key in another table", "correct": true},
+                    {"text": "Prevents NULL values", "correct": false},
+                    {"text": "Sorts the table", "correct": false}
+                ],
+                "explanation": "A FOREIGN KEY links a column in one table to a PRIMARY KEY in another, enforcing referential integrity."
+            },
+            {
+                "id": 30,
+                "text": "What is the output of the following SQL query? \nSELECT MAX(salary) FROM employees;",
+                "options": [
+                    {"text": "The highest salary in the employees table", "correct": true},
+                    {"text": "The average salary", "correct": false},
+                    {"text": "All salaries in descending order", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The MAX() function returns the highest value in the salary column."
+            },
+            {
+                "id": 31,
+                "text": "Which SQL operator is used to combine multiple conditions in a WHERE clause?",
+                "options": [
+                    {"text": "OR", "correct": true},
+                    {"text": "JOIN", "correct": false},
+                    {"text": "IN", "correct": false},
+                    {"text": "LIKE", "correct": false}
+                ],
+                "explanation": "The OR operator combines conditions, returning rows where at least one condition is true."
+            },
+            {
+                "id": 32,
+                "text": "What does the LIKE operator do in SQL?",
+                "options": [
+                    {"text": "Compares exact values", "correct": false},
+                    {"text": "Searches for a pattern in a column", "correct": true},
+                    {"text": "Joins tables", "correct": false},
+                    {"text": "Groups rows", "correct": false}
+                ],
+                "explanation": "The LIKE operator is used with WHERE to search for a specified pattern, using wildcards like % and _."
+            },
+            {
+                "id": 33,
+                "text": "What is the output of the following SQL query? \nSELECT name FROM employees WHERE name LIKE 'A%';",
+                "options": [
+                    {"text": "Names starting with 'A'", "correct": true},
+                    {"text": "Names ending with 'A'", "correct": false},
+                    {"text": "Names containing 'A'", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The LIKE 'A%' pattern matches names that start with 'A' followed by any characters."
+            },
+            {
+                "id": 34,
+                "text": "Which SQL keyword is used to retrieve unique values?",
+                "options": [
+                    {"text": "UNIQUE", "correct": false},
+                    {"text": "DISTINCT", "correct": true},
+                    {"text": "ONLY", "correct": false},
+                    {"text": "SINGLE", "correct": false}
+                ],
+                "explanation": "The DISTINCT keyword eliminates duplicate rows from the result set."
+            },
+            {
+                "id": 35,
+                "text": "What is the output of the following SQL query? \nSELECT DISTINCT country FROM customers;",
+                "options": [
+                    {"text": "Unique country names from the customers table", "correct": true},
+                    {"text": "All country names, including duplicates", "correct": false},
+                    {"text": "The total number of countries", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The DISTINCT keyword ensures only unique country values are returned."
+            },
+            {
+                "id": 36,
+                "text": "What does a subquery in SQL do?",
+                "options": [
+                    {"text": "Joins two tables", "correct": false},
+                    {"text": "Executes a query within another query", "correct": true},
+                    {"text": "Groups rows", "correct": false},
+                    {"text": "Sorts the result set", "correct": false}
+                ],
+                "explanation": "A subquery is a query nested inside another query, often used in WHERE or SELECT clauses."
+            },
+            {
+                "id": 37,
+                "text": "What is the output of the following SQL query? \nSELECT name FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);",
+                "options": [
+                    {"text": "Names of employees with above-average salary", "correct": true},
+                    {"text": "Names of employees with below-average salary", "correct": false},
+                    {"text": "All employee names", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The subquery calculates the average salary, and the outer query selects names of employees with salaries above that average."
+            },
+            {
+                "id": 38,
+                "text": "Which SQL statement creates a new database?",
+                "options": [
+                    {"text": "CREATE DATABASE", "correct": true},
+                    {"text": "NEW DATABASE", "correct": false},
+                    {"text": "ADD DATABASE", "correct": false},
+                    {"text": "INSERT DATABASE", "correct": false}
+                ],
+                "explanation": "The CREATE DATABASE statement creates a new database in the SQL server."
+            },
+            {
+                "id": 39,
+                "text": "What does the IN operator do in SQL?",
+                "options": [
+                    {"text": "Checks if a value matches any in a list", "correct": true},
+                    {"text": "Joins tables", "correct": false},
+                    {"text": "Sorts the result set", "correct": false},
+                    {"text": "Groups rows", "correct": false}
+                ],
+                "explanation": "The IN operator checks if a value matches any value in a specified list or subquery."
+            },
+            {
+                "id": 40,
+                "text": "What is the output of the following SQL query? \nSELECT name FROM customers WHERE country IN ('USA', 'Canada');",
+                "options": [
+                    {"text": "Names of customers from USA or Canada", "correct": true},
+                    {"text": "Names of customers not in USA or Canada", "correct": false},
+                    {"text": "All customer names", "correct": false},
+                    {"text": "An error", "correct": false}
+                ],
+                "explanation": "The IN operator filters for customers whose country is either 'USA' or 'Canada'."
+            }
+        ]
+    }
+}

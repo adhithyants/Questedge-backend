@@ -1,0 +1,447 @@
+{
+    "quiz": {
+        "title": "Spatial Reasoning Beginner to Intermediate Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "A square is rotated 90 degrees clockwise. Which corner of the original square is now in the top-left position?",
+                "options": [
+                    {"text": "Top-left", "correct": false},
+                    {"text": "Top-right", "correct": true},
+                    {"text": "Bottom-left", "correct": false},
+                    {"text": "Bottom-right", "correct": false}
+                ],
+                "explanation": "In a 90-degree clockwise rotation, the top-left corner moves to the top-right, the top-right to the bottom-right, and so on. Thus, the original top-right corner is now in the top-left position."
+            },
+            {
+                "id": 2,
+                "text": "A cube has faces numbered 1 to 6. If face 1 is on top and face 2 is on the front, which face is on the bottom?",
+                "options": [
+                    {"text": "3", "correct": false},
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": false},
+                    {"text": "6", "correct": true}
+                ],
+                "explanation": "In a standard cube, the face opposite the top (face 1) is the bottom. If faces are numbered 1 to 6, the opposite of face 1 is face 6, so face 6 is on the bottom."
+            },
+            {
+                "id": 3,
+                "text": "A 3x3 grid has a missing cell in the bottom-right corner. If the pattern alternates between black and white cells starting with black in the top-left, what color is the missing cell?",
+                "options": [
+                    {"text": "Black", "correct": true},
+                    {"text": "White", "correct": false},
+                    {"text": "Gray", "correct": false},
+                    {"text": "Cannot be determined", "correct": false}
+                ],
+                "explanation": "The 3x3 grid alternates colors: top row (black, white, black), middle row (white, black, white), bottom row (black, white, ?). The pattern continues, so the bottom-right cell is black."
+            },
+            {
+                "id": 4,
+                "text": "If a triangle is reflected over its vertical axis, what happens to its leftmost vertex?",
+                "options": [
+                    {"text": "It becomes the rightmost vertex", "correct": true},
+                    {"text": "It remains the leftmost vertex", "correct": false},
+                    {"text": "It moves to the top", "correct": false},
+                    {"text": "It moves to the bottom", "correct": false}
+                ],
+                "explanation": "Reflecting a triangle over its vertical axis swaps left and right sides. Thus, the leftmost vertex becomes the rightmost vertex."
+            },
+            {
+                "id": 5,
+                "text": "A flat square sheet is folded in half vertically and then in half horizontally. What shape is the result?",
+                "options": [
+                    {"text": "Square", "correct": true},
+                    {"text": "Rectangle", "correct": false},
+                    {"text": "Triangle", "correct": false},
+                    {"text": "Circle", "correct": false}
+                ],
+                "explanation": "Folding a square vertically creates a rectangle, and folding that rectangle horizontally results in a smaller square, as both dimensions are halved."
+            },
+            {
+                "id": 6,
+                "text": "Which shape completes the pattern: circle, square, triangle, circle, square, __?",
+                "options": [
+                    {"text": "Circle", "correct": false},
+                    {"text": "Square", "correct": false},
+                    {"text": "Triangle", "correct": true},
+                    {"text": "Hexagon", "correct": false}
+                ],
+                "explanation": "The pattern repeats every three shapes: circle, square, triangle. After circle, square, the next shape is triangle."
+            },
+            {
+                "id": 7,
+                "text": "A cube is painted red on all faces and cut into 8 smaller cubes. How many smaller cubes have exactly three faces painted red?",
+                "options": [
+                    {"text": "0", "correct": false},
+                    {"text": "4", "correct": false},
+                    {"text": "8", "correct": true},
+                    {"text": "6", "correct": false}
+                ],
+                "explanation": "A 2x2x2 cube (8 smaller cubes) has each corner cube with three faces painted. There are 8 corners, so all 8 smaller cubes have three faces painted red."
+            },
+            {
+                "id": 8,
+                "text": "If a rectangle is rotated 180 degrees, what happens to its top-left corner?",
+                "options": [
+                    {"text": "It becomes the top-right corner", "correct": false},
+                    {"text": "It becomes the bottom-left corner", "correct": false},
+                    {"text": "It becomes the bottom-right corner", "correct": true},
+                    {"text": "It remains the top-left corner", "correct": false}
+                ],
+                "explanation": "A 180-degree rotation flips the rectangle, moving the top-left corner to the bottom-right position."
+            },
+            {
+                "id": 9,
+                "text": "In a 4x4 grid, the top row has 4 stars, the second row has 3 stars, the third row has 2 stars, and the fourth row has 1 star. How many stars are in the grid?",
+                "options": [
+                    {"text": "8", "correct": false},
+                    {"text": "10", "correct": true},
+                    {"text": "12", "correct": false},
+                    {"text": "16", "correct": false}
+                ],
+                "explanation": "Sum the stars: 4 (first row) + 3 (second row) + 2 (third row) + 1 (fourth row) = 10 stars."
+            },
+            {
+                "id": 10,
+                "text": "A flat piece of paper in the shape of a cross is folded to form a cube. Which face of the cube is opposite the center of the cross?",
+                "options": [
+                    {"text": "The face formed by one of the cross arms", "correct": false},
+                    {"text": "The face formed by the center of the cross", "correct": false},
+                    {"text": "The face opposite the center of the cross", "correct": true},
+                    {"text": "Cannot be determined", "correct": false}
+                ],
+                "explanation": "In a cross-shaped net for a cube, the center square forms one face, and the opposite face is formed by the square opposite the center in the folded cube."
+            },
+            {
+                "id": 11,
+                "text": "A 3x3 grid has numbers 1 to 9 in a spiral pattern starting from the top-left and moving clockwise inward. What number is in the center?",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "9", "correct": false}
+                ],
+                "explanation": "The spiral pattern is: 1, 2, 3, 8, 9, 4, 7, 6, 5. The center of the 3x3 grid is 5."
+            },
+            {
+                "id": 12,
+                "text": "If a triangle is rotated 120 degrees clockwise, what happens to its vertices?",
+                "options": [
+                    {"text": "They remain in the same positions", "correct": false},
+                    {"text": "They shift one position clockwise", "correct": true},
+                    {"text": "They shift one position counterclockwise", "correct": false},
+                    {"text": "They swap positions randomly", "correct": false}
+                ],
+                "explanation": "A 120-degree clockwise rotation of a triangle moves each vertex to the position of the next vertex in a clockwise direction."
+            },
+            {
+                "id": 13,
+                "text": "A cube has a blue dot on one face. If the cube is rolled forward once and then right once, where is the blue dot?",
+                "options": [
+                    {"text": "On the top face", "correct": false},
+                    {"text": "On the bottom face", "correct": false},
+                    {"text": "On a side face", "correct": true},
+                    {"text": "Cannot be determined", "correct": false}
+                ],
+                "explanation": "Rolling forward moves the dot to an adjacent face, and rolling right moves it to another side face, keeping it on a side face."
+            },
+            {
+                "id": 14,
+                "text": "Which shape completes the pattern: square, circle, square, circle, square, __?",
+                "options": [
+                    {"text": "Square", "correct": false},
+                    {"text": "Circle", "correct": true},
+                    {"text": "Triangle", "correct": false},
+                    {"text": "Hexagon", "correct": false}
+                ],
+                "explanation": "The pattern alternates between square and circle. After square, the next shape is circle."
+            },
+            {
+                "id": 15,
+                "text": "A flat sheet is folded into a triangular pyramid (tetrahedron). How many faces does the resulting shape have?",
+                "options": [
+                    {"text": "3", "correct": false},
+                    {"text": "4", "correct": true},
+                    {"text": "5", "correct": false},
+                    {"text": "6", "correct": false}
+                ],
+                "explanation": "A tetrahedron has 4 triangular faces, formed by folding a net with 4 triangles."
+            },
+            {
+                "id": 16,
+                "text": "A 2x2 grid has a black top-left cell, white top-right, white bottom-left, and a missing bottom-right cell. What color completes the pattern?",
+                "options": [
+                    {"text": "Black", "correct": true},
+                    {"text": "White", "correct": false},
+                    {"text": "Gray", "correct": false},
+                    {"text": "Cannot be determined", "correct": false}
+                ],
+                "explanation": "The pattern alternates colors diagonally: black (top-left) and white (top-right), white (bottom-left) and black (bottom-right)."
+            },
+            {
+                "id": 17,
+                "text": "If a cube is cut into 27 smaller cubes (3x3x3), how many smaller cubes have at least one face exposed?",
+                "options": [
+                    {"text": "8", "correct": false},
+                    {"text": "19", "correct": false},
+                    {"text": "26", "correct": true},
+                    {"text": "27", "correct": false}
+                ],
+                "explanation": "In a 3x3x3 cube, only the center cube (1 cube) has no exposed faces. Thus, 27 - 1 = 26 cubes have at least one face exposed."
+            },
+            {
+                "id": 18,
+                "text": "A square is divided into four equal triangles. How many lines are drawn to create these triangles?",
+                "options": [
+                    {"text": "1", "correct": false},
+                    {"text": "2", "correct": true},
+                    {"text": "3", "correct": false},
+                    {"text": "4", "correct": false}
+                ],
+                "explanation": "Drawing the two diagonals of a square divides it into four equal triangles, requiring 2 lines."
+            },
+            {
+                "id": 19,
+                "text": "If a pentagon is rotated 72 degrees clockwise, what happens to its vertices?",
+                "options": [
+                    {"text": "They shift one position clockwise", "correct": true},
+                    {"text": "They shift two positions clockwise", "correct": false},
+                    {"text": "They remain in place", "correct": false},
+                    {"text": "They shift one position counterclockwise", "correct": false}
+                ],
+                "explanation": "A pentagon has 5 vertices, and a 72-degree rotation (360 ÷ 5) moves each vertex to the next position clockwise."
+            },
+            {
+                "id": 20,
+                "text": "A 3x3 grid has a pattern where the first column is red, the second column is blue, and the third column is green. What color is the cell in the second row, third column?",
+                "options": [
+                    {"text": "Red", "correct": false},
+                    {"text": "Blue", "correct": false},
+                    {"text": "Green", "correct": true},
+                    {"text": "Yellow", "correct": false}
+                ],
+                "explanation": "The third column is green, so the cell in the second row, third column is green."
+            },
+            {
+                "id": 21,
+                "text": "A cube has a red face on top and a blue face on the front. If it is rolled left once, what color is on top?",
+                "options": [
+                    {"text": "Red", "correct": false},
+                    {"text": "Blue", "correct": false},
+                    {"text": "The color of the original right face", "correct": true},
+                    {"text": "The color of the original bottom face", "correct": false}
+                ],
+                "explanation": "Rolling left moves the right face to the top, the top to the left, and so on. Thus, the original right face’s color is now on top."
+            },
+            {
+                "id": 22,
+                "text": "Which shape completes the pattern: triangle, square, pentagon, triangle, square, __?",
+                "options": [
+                    {"text": "Triangle", "correct": false},
+                    {"text": "Square", "correct": false},
+                    {"text": "Pentagon", "correct": true},
+                    {"text": "Circle", "correct": false}
+                ],
+                "explanation": "The pattern repeats every three shapes: triangle, square, pentagon. After triangle, square, the next is pentagon."
+            },
+            {
+                "id": 23,
+                "text": "A flat rectangular sheet is folded in half along its longer side. What is the shape of the resulting figure?",
+                "options": [
+                    {"text": "Rectangle", "correct": true},
+                    {"text": "Square", "correct": false},
+                    {"text": "Triangle", "correct": false},
+                    {"text": "Circle", "correct": false}
+                ],
+                "explanation": "Folding a rectangle along its longer side halves the longer dimension, resulting in a narrower rectangle."
+            },
+            {
+                "id": 24,
+                "text": "A 3x3 grid has a diagonal pattern of stars from top-left to bottom-right. How many stars are in the grid?",
+                "options": [
+                    {"text": "3", "correct": true},
+                    {"text": "4", "correct": false},
+                    {"text": "5", "correct": false},
+                    {"text": "9", "correct": false}
+                ],
+                "explanation": "The diagonal from top-left to bottom-right includes cells (1,1), (2,2), (3,3), so there are 3 stars."
+            },
+            {
+                "id": 25,
+                "text": "If a cube is painted blue on one face and rolled twice forward, where is the blue face?",
+                "options": [
+                    {"text": "On the top", "correct": false},
+                    {"text": "On the bottom", "correct": true},
+                    {"text": "On a side", "correct": false},
+                    {"text": "Cannot be determined", "correct": false}
+                ],
+                "explanation": "Two forward rolls return the cube to its original orientation, with the blue face (originally on top) back on the bottom."
+            },
+            {
+                "id": 26,
+                "text": "A square is divided into 9 equal smaller squares (3x3 grid). If the center square is shaded, how many smaller squares share an edge with it?",
+                "options": [
+                    {"text": "2", "correct": false},
+                    {"text": "4", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": false}
+                ],
+                "explanation": "The center square in a 3x3 grid shares edges with the squares above, below, left, and right, totaling 4 squares."
+            },
+            {
+                "id": 27,
+                "text": "A flat net of a cube has 6 squares in a cross shape. If the center square is red, which square is opposite it when folded into a cube?",
+                "options": [
+                    {"text": "The top arm of the cross", "correct": false},
+                    {"text": "The bottom arm of the cross", "correct": true},
+                    {"text": "The left arm of the cross", "correct": false},
+                    {"text": "The right arm of the cross", "correct": false}
+                ],
+                "explanation": "In a cross-shaped net, the center square’s opposite face is the square at the bottom of the cross when folded."
+            },
+            {
+                "id": 28,
+                "text": "A 4x4 grid has a pattern where every second cell in each row is shaded, starting with the second cell. How many cells are shaded?",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "8", "correct": true},
+                    {"text": "12", "correct": false},
+                    {"text": "16", "correct": false}
+                ],
+                "explanation": "Each row has 4 cells, with cells 2 and 4 shaded (2 per row). With 4 rows, total shaded cells = 2 × 4 = 8."
+            },
+            {
+                "id": 29,
+                "text": "If a hexagon is rotated 60 degrees clockwise, what happens to its vertices?",
+                "options": [
+                    {"text": "They shift one position clockwise", "correct": true},
+                    {"text": "They shift two positions clockwise", "correct": false},
+                    {"text": "They remain in place", "correct": false},
+                    {"text": "They shift one position counterclockwise", "correct": false}
+                ],
+                "explanation": "A hexagon has 6 vertices, and a 60-degree rotation (360 ÷ 6) moves each vertex to the next position clockwise."
+            },
+            {
+                "id": 30,
+                "text": "A cube has a green dot on its front face and is rolled right once, then backward once. Where is the green dot?",
+                "options": [
+                    {"text": "On the front face", "correct": false},
+                    {"text": "On the back face", "correct": true},
+                    {"text": "On the top face", "correct": false},
+                    {"text": "On a side face", "correct": false}
+                ],
+                "explanation": "Rolling right moves the front to the left, and rolling backward moves the left to the back, so the green dot is on the back face."
+            },
+            {
+                "id": 31,
+                "text": "Which shape completes the pattern: pentagon, hexagon, heptagon, pentagon, hexagon, __?",
+                "options": [
+                    {"text": "Pentagon", "correct": false},
+                    {"text": "Hexagon", "correct": false},
+                    {"text": "Heptagon", "correct": true},
+                    {"text": "Octagon", "correct": false}
+                ],
+                "explanation": "The pattern repeats every three shapes: pentagon, hexagon, heptagon. After pentagon, hexagon, the next is heptagon."
+            },
+            {
+                "id": 32,
+                "text": "A 3x3 grid has a pattern where the border cells are black and the center cell is white. How many black cells are there?",
+                "options": [
+                    {"text": "4", "correct": false},
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": true},
+                    {"text": "9", "correct": false}
+                ],
+                "explanation": "The border of a 3x3 grid includes all cells except the center: 3 (top) + 2 (middle sides) + 3 (bottom) = 8 black cells."
+            },
+            {
+                "id": 33,
+                "text": "A flat sheet is folded into a cylinder. How many edges does the resulting shape have?",
+                "options": [
+                    {"text": "0", "correct": false},
+                    {"text": "1", "correct": false},
+                    {"text": "2", "correct": true},
+                    {"text": "4", "correct": false}
+                ],
+                "explanation": "A cylinder has two circular edges (top and bottom) formed by folding a rectangular sheet along one dimension."
+            },
+            {
+                "id": 34,
+                "text": "A square is reflected over its horizontal axis. What happens to its top-left corner?",
+                "options": [
+                    {"text": "It becomes the top-right corner", "correct": false},
+                    {"text": "It becomes the bottom-left corner", "correct": true},
+                    {"text": "It becomes the bottom-right corner", "correct": false},
+                    {"text": "It remains the top-left corner", "correct": false}
+                ],
+                "explanation": "Reflecting a square over its horizontal axis flips it vertically, so the top-left corner becomes the bottom-left corner."
+            },
+            {
+                "id": 35,
+                "text": "A 3x3 grid has a pattern where the first row is red, the second row is blue, and the third row is green. What color is the cell in the third row, second column?",
+                "options": [
+                    {"text": "Red", "correct": false},
+                    {"text": "Blue", "correct": false},
+                    {"text": "Green", "correct": true},
+                    {"text": "Yellow", "correct": false}
+                ],
+                "explanation": "The third row is green, so the cell in the third row, second column is green."
+            },
+            {
+                "id": 36,
+                "text": "A cube is painted yellow on two adjacent faces. How many smaller cubes in a 2x2x2 cut would have exactly two faces painted yellow?",
+                "options": [
+                    {"text": "2", "correct": false},
+                    {"text": "4", "correct": true},
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": false}
+                ],
+                "explanation": "In a 2x2x2 cube, the edge between two adjacent painted faces has 4 smaller cubes, each with two faces painted yellow."
+            },
+            {
+                "id": 37,
+                "text": "If a rectangle is rotated 90 degrees counterclockwise, what happens to its longer sides?",
+                "options": [
+                    {"text": "They become vertical", "correct": true},
+                    {"text": "They remain horizontal", "correct": false},
+                    {"text": "They become diagonal", "correct": false},
+                    {"text": "They swap with the shorter sides", "correct": false}
+                ],
+                "explanation": "A 90-degree counterclockwise rotation turns horizontal longer sides into vertical ones."
+            },
+            {
+                "id": 38,
+                "text": "A 4x4 grid has a checkerboard pattern starting with a black cell in the top-left. How many black cells are there?",
+                "options": [
+                    {"text": "6", "correct": false},
+                    {"text": "8", "correct": true},
+                    {"text": "10", "correct": false},
+                    {"text": "12", "correct": false}
+                ],
+                "explanation": "A 4x4 grid has 16 cells. A checkerboard pattern alternates colors, with 8 black and 8 white cells."
+            },
+            {
+                "id": 39,
+                "text": "A flat net of a triangular pyramid (tetrahedron) has 4 triangles. If one triangle is shaded, how many faces of the folded tetrahedron are shaded?",
+                "options": [
+                    {"text": "1", "correct": true},
+                    {"text": "2", "correct": false},
+                    {"text": "3", "correct": false},
+                    {"text": "4", "correct": false}
+                ],
+                "explanation": "Shading one triangle in the net results in one face of the folded tetrahedron being shaded."
+            },
+            {
+                "id": 40,
+                "text": "A cube has a star on its top face and is rolled forward once, then left once. Where is the star?",
+                "options": [
+                    {"text": "On the top face", "correct": false},
+                    {"text": "On the bottom face", "correct": false},
+                    {"text": "On a side face", "correct": true},
+                    {"text": "On the back face", "correct": false}
+                ],
+                "explanation": "Rolling forward moves the star to the front, and rolling left moves it to a side face."
+            }
+        ]
+    }
+}
