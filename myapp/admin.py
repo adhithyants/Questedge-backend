@@ -10,16 +10,19 @@ class AttemptInline(admin.TabularInline):
 
 @admin.register(UserDetail)
 class UserDetailAdmin(admin.ModelAdmin):
-    list_display = ('name', 'user_email', 'average_score', 'created_at')
+    list_display = ('name', 'user_email', 'avg_technical_score', 'avg_aptitude_score', 'total_score', 'average_score', 'created_at')
     list_filter = ('created_at',)
     search_fields = ('name', 'user__email')
-    ordering = ('-created_at',)
+    ordering = ('-total_score',)
     fieldsets = (
         (None, {
             'fields': ('user', 'name')
         }),
+        ('Scores', {
+            'fields': ('avg_technical_score', 'avg_aptitude_score', 'total_score')
+        }),
     )
-    readonly_fields = ('created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at', 'avg_technical_score', 'avg_aptitude_score', 'total_score')
     inlines = [AttemptInline]
 
     def user_email(self, obj):
@@ -28,7 +31,7 @@ class UserDetailAdmin(admin.ModelAdmin):
 
 @admin.register(Attempt)
 class AttemptAdmin(admin.ModelAdmin):
-    list_display = ('user', 'technical_marks', 'aptitude_marks', 'attempt_date')
+    list_display = ('user', 'technical_marks', 'aptitude_marks', 'marks', 'attempt_date')
     list_filter = ('attempt_date',)
     search_fields = ('user__name', 'user__user__email')
     ordering = ('-attempt_date',)
