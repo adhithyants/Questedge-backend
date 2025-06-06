@@ -13,7 +13,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
-from django.contrib.auth import authenticate    
+from django.contrib.auth import authenticate
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated    
 
 logger = logging.getLogger(__name__)
 
@@ -178,3 +180,51 @@ class LoginView(APIView):
             {"error": "Invalid email or password"},
             status=status.HTTP_401_UNAUTHORIZED
         )
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+class SubmitAptitudeScore(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        try:
+            score = request.data.get('score')
+            category = request.data.get('category')
+            
+            if score is None or category is None:
+                return Response({
+                    'error': 'Score and category are required'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            # Get the user's UserDetail
+            try:
+                user_detail = UserDetail.objects.get(user=request.user)
+            except UserDetail.DoesNotExist:
+                return Response({
+                    'error': 'UserDetail not found'
+                }, status=status.HTTP_404_NOT_FOUND)
+
+            # Create a new attempt with the aptitude score
+            attempt = Attempt.objects.create(
+                user=user_detail,
+                auth_user_id=request.user,
+                technical_marks=0,  # Set to 0 for aptitude-only attempts
+                aptitude_marks=score
+            )
+
+            # Update user's scores
+            user_detail.update_scores()
+
+            return Response({
+                'message': 'Score submitted successfully',
+                'score': score,
+                'category': category,
+                'average_score': user_detail.average_score(),
+                'avg_aptitude_score': user_detail.avg_aptitude_score
+            }, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            logger.error(f"Error submitting score: {str(e)}")
+            return Response({
+                'error': 'Failed to submit score',
+                'details': str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
