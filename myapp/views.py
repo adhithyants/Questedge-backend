@@ -13,9 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
-from django.contrib.auth import authenticate
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated    
+from rest_framework.decorators import api_view, permission_classes  
 
 logger = logging.getLogger(__name__)
 
@@ -105,49 +103,11 @@ class SubmitAttempt(APIView):
             return Response({"message": "Attempt recorded successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class Leaderboard(APIView):
-    def get(self, request):
-        try:
-            # Verify the relationship and field exist
-            if not hasattr(UserDetail, 'attempts'):
-                raise AttributeError("UserDetail model has no 'attempts' relation")
-            
-            # Safely build the queryset with proper field references
-            users = UserDetail.objects.annotate(
-                average_score=Avg('attempts__marks'),
-                attempt_count=Count('attempts')
-            ).filter(
-                attempt_count__gt=0
-            ).order_by('-average_score')[:100]
-
-            serializer = UserDetailSerializer(users, many=True)
-            
-            leaderboard_data = []
-            for index, user_data in enumerate(serializer.data, start=1):
-                user_data['rank'] = index
-                leaderboard_data.append(user_data)
-            
-            logger.info(f"Successfully fetched leaderboard with {len(leaderboard_data)} entries")
-            return Response({
-                'success': True,
-                'data': leaderboard_data,
-                'message': 'Leaderboard retrieved successfully'
-            }, status=status.HTTP_200_OK)
-            
-        except AttributeError as e:
-            logger.error(f"Model configuration error: {str(e)}")
-            return Response({
-                'success': False,
-                'error': 'Database configuration error',
-                'message': str(e)
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        except Exception as e:
-            logger.exception("Error fetching leaderboard")
-            return Response({
-                'success': False,
-                'error': 'Server error',
-                'message': 'Failed to fetch leaderboard data'
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+@api_view(['GET'])
+def leaderboard_view(request):
+    users = UserDetail.objects.order_by('-total_score')  # Top scorers first
+    serializer = UserDetailSerializer(users, many=True)
+    return Response(serializer.data)
         
 class AttemptListView(generics.ListAPIView):
     queryset = Attempt.objects.all()
@@ -180,51 +140,68 @@ class LoginView(APIView):
             {"error": "Invalid email or password"},
             status=status.HTTP_401_UNAUTHORIZED
         )
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-class SubmitAptitudeScore(APIView):
-    permission_classes = [IsAuthenticated]
+    
 
+
+class SubmitAptitudeScore(APIView):
     def post(self, request):
         try:
             score = request.data.get('score')
             category = request.data.get('category')
-            
-            if score is None or category is None:
+            email = request.data.get('email')  # Retrieve email from request body
+
+            if not score or not category or not email:
                 return Response({
-                    'error': 'Score and category are required'
+                    'error': 'Score, category, and email are required'
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-            # Get the user's UserDetail
             try:
-                user_detail = UserDetail.objects.get(user=request.user)
+                user_detail = UserDetail.objects.get(user__email=email)
             except UserDetail.DoesNotExist:
+                return Response({'error': 'UserDetail not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            # Determine which field to update based on category
+            attempt_data = {
+                'user': user_detail,
+                'auth_user_id': user_detail.user,
+                'category': category
+            }
+            if category.lower() == 'technical':
+                attempt_data['technical_marks'] = score
+                attempt_data['aptitude_marks'] = 0
+            elif category.lower() == 'aptitude':
+                attempt_data['aptitude_marks'] = score
+                attempt_data['technical_marks'] = 0
+            else:
                 return Response({
-                    'error': 'UserDetail not found'
-                }, status=status.HTTP_404_NOT_FOUND)
+                    'error': 'Invalid category. Must be "technical" or "aptitude"'
+                }, status=status.HTTP_400_BAD_REQUEST)
 
-            # Create a new attempt with the aptitude score
-            attempt = Attempt.objects.create(
-                user=user_detail,
-                auth_user_id=request.user,
-                technical_marks=0,  # Set to 0 for aptitude-only attempts
-                aptitude_marks=score
-            )
-
-            # Update user's scores
-            user_detail.update_scores()
+            # Create attempt
+            Attempt.objects.create(**attempt_data)
 
             return Response({
                 'message': 'Score submitted successfully',
                 'score': score,
                 'category': category,
-                'average_score': user_detail.average_score(),
-                'avg_aptitude_score': user_detail.avg_aptitude_score
+                'total_aptitude_score': user_detail.avg_aptitude_score,  # Adjust if renamed to total_aptitude_score
+                'total_technical_score': user_detail.avg_technical_score,  # Adjust if renamed to total_technical_score
+                'total_score': user_detail.total_score
             }, status=status.HTTP_201_CREATED)
 
         except Exception as e:
             logger.error(f"Error submitting score: {str(e)}")
-            return Response({
-                'error': 'Failed to submit score',
-                'details': str(e)
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'error': 'Server error', 'details': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+class UserEmailView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        try:
+            email = request.user.email
+            if not email:
+                return Response({'error': 'No email associated with this user'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'email': email}, status=status.HTTP_200_OK)
+        except Exception as e:
+            logger.error(f"Error fetching user email: {str(e)}")
+            return Response({'error': 'Server error', 'details': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Avg
 
 class UserDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_detail')
@@ -8,8 +7,8 @@ class UserDetail(models.Model):
     name = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    avg_technical_score = models.FloatField(default=0)
-    avg_aptitude_score = models.FloatField(default=0)
+    avg_technical_score = models.FloatField(default=0)  # Renamed to total_technical_score for clarity
+    avg_aptitude_score = models.FloatField(default=0)  # Renamed to total_aptitude_score for clarity
     total_score = models.FloatField(default=0)
 
     def __str__(self):
@@ -18,15 +17,12 @@ class UserDetail(models.Model):
     def update_scores(self):
         attempts = self.attempts.all()
         if attempts:
-            # Calculate averages
-            self.avg_technical_score = attempts.aggregate(Avg('technical_marks'))['technical_marks__avg'] or 0
-            self.avg_aptitude_score = attempts.aggregate(Avg('aptitude_marks'))['aptitude_marks__avg'] or 0
-            # Calculate total score
+        # Sum all technical and aptitude marks
+            self.avg_technical_score = sum(attempt.technical_marks for attempt in attempts) or 0
+            self.avg_aptitude_score = sum(attempt.aptitude_marks for attempt in attempts) or 0
+        # Calculate total score as the sum of technical and aptitude scores
             self.total_score = self.avg_technical_score + self.avg_aptitude_score
             self.save()
-
-    def average_score(self):
-        return round((self.avg_technical_score + self.avg_aptitude_score) / 2, 2) if (self.avg_technical_score + self.avg_aptitude_score) > 0 else 0
 
     class Meta:
         verbose_name = "User Detail"
@@ -39,11 +35,12 @@ class Attempt(models.Model):
     aptitude_marks = models.IntegerField(help_text="Aptitude marks")
     marks = models.IntegerField(help_text="Total marks (auto-calculated)", null=True, blank=True)
     attempt_date = models.DateTimeField(auto_now_add=True)
+    category = models.CharField(max_length=100)
 
     def save(self, *args, **kwargs):
         self.marks = self.technical_marks + self.aptitude_marks
         super().save(*args, **kwargs)
-        # Update user's average scores after saving attempt
+        # Update user's total scores after saving attempt
         self.user.update_scores()
 
     def __str__(self):
@@ -51,4 +48,4 @@ class Attempt(models.Model):
 
     class Meta:
         verbose_name = "Attempt"
-        verbose_name_plural = "Attempts"    
+        verbose_name_plural = "Attempts"

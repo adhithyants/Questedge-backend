@@ -1,4 +1,3 @@
-# myapp/admin.py
 from django.contrib import admin
 from .models import UserDetail, Attempt
 
@@ -10,7 +9,7 @@ class AttemptInline(admin.TabularInline):
 
 @admin.register(UserDetail)
 class UserDetailAdmin(admin.ModelAdmin):
-    list_display = ('name', 'user_email', 'avg_technical_score', 'avg_aptitude_score', 'total_score', 'average_score', 'created_at')
+    list_display = ('name', 'user_email', 'avg_technical_score', 'avg_aptitude_score', 'total_score', 'created_at')
     list_filter = ('created_at',)
     search_fields = ('name', 'user__email')
     ordering = ('-total_score',)
