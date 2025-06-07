@@ -1,4 +1,3 @@
-# myapp/serializers.py
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import UserDetail, Attempt
@@ -12,13 +11,13 @@ class UserDetailSerializer(serializers.ModelSerializer):
         write_only=True,
         required=False
     )
-    average_score = serializers.FloatField(read_only=True)
     username = serializers.CharField(source='user.username', read_only=True)
     user_id = serializers.IntegerField(source='user.id', read_only=True)
 
     class Meta:
         model = UserDetail
-        fields = ['user_id', 'username', 'name', 'email', 'password', 'confirm_password', 'quiz_type', 'average_score', 'auth_user_id']
+        fields = ['user_id', 'username', 'name', 'email', 'password', 'confirm_password', 'quiz_type', 'avg_technical_score', 'avg_aptitude_score', 'total_score', 'auth_user_id']
+        read_only_fields = ['user_id', 'username', 'avg_technical_score', 'avg_aptitude_score', 'total_score', 'auth_user_id']
 
     def validate(self, data):
         if data['password'] != data['confirm_password']:
@@ -51,7 +50,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
 class AttemptSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attempt
-        fields = ['id', 'user', 'auth_user_id', 'technical_marks', 'aptitude_marks', 'marks', 'attempt_date']
+        fields = ['id', 'user', 'auth_user_id', 'technical_marks', 'aptitude_marks', 'marks', 'attempt_date', 'category']
         read_only_fields = ['id', 'user', 'auth_user_id', 'marks', 'attempt_date']
 
     def validate(self, data):
@@ -62,15 +61,6 @@ class AttemptSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-        # Set user to the authenticated user's UserDetail
-        request = self.context.get('request')
-        if not request or not request.user.is_authenticated:
-            raise serializers.ValidationError("Authenticated user required.")
-        try:
-            user_detail = UserDetail.objects.get(user=request.user)
-        except UserDetail.DoesNotExist:
-            raise serializers.ValidationError("UserDetail not found for this user.")
-        
-        validated_data['user'] = user_detail
-        validated_data['auth_user_id'] = request.user
+        validated_data['user'] = UserDetail.objects.get(user__email=validated_data['email'])
+        validated_data['auth_user_id'] = validated_data['user'].user
         return super().create(validated_data)
