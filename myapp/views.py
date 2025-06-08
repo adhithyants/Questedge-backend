@@ -15,6 +15,9 @@ from django.db.models import Avg, Count, Q
 from rest_framework import generics
 from rest_framework.decorators import api_view, permission_classes  
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://questedge.serveo.net"
+]
 logger = logging.getLogger(__name__)
 
 def load_quiz_data(filename):
@@ -45,6 +48,12 @@ def quiz_view(request, quiz_type):
         'quantitative': 'quantitative_quiz.json',
         'technical': 'technical_quiz.json',
         'spatial-reasoning': 'spatial_reasoning_quiz.json',
+        'pythoncode':'python_code.json',
+        'javacode':'java_code.json',
+        'javascriptcode':'javascript_code.json',
+        'sqlcode':'sql_code.json',
+        'htmlcode':'html_code.json',
+        'grammar':'Grammer.json',
     }
 
     filename = quiz_files.get(quiz_type)

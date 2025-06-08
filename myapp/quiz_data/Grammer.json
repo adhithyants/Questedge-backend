@@ -1,0 +1,487 @@
+{
+    "quiz": {
+        "title": "Grammar Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the correct article? Read this sentence: ___ apple is on the table.",
+                "correct_answer": "An",
+                "explanation": "The article 'an' is used before a singular noun starting with a vowel sound, like 'apple'.",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "An", "correct": true},
+                    {"text": "The", "correct": false},
+                    {"text": "No article", "correct": false}
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Use the present simple tense. Read: I ___ to school every day.",
+                "correct_answer": "Go",
+                "explanation": "The present simple tense for the pronoun 'I' uses the base form of the verb, so 'go' is correct.",
+                "options": [
+                    {"text": "Go", "correct": true},
+                    {"text": "Went", "correct": false},
+                    {"text": "Going", "correct": false},
+                    {"text": "Am going", "correct": false}
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Complete with the correct preposition. Read: She lives ___ Paris.",
+                "correct_answer": "In",
+                "explanation": "The preposition 'in' is used for cities or large areas, so 'in Paris' is correct.",
+                "options": [
+                    {"text": "At", "correct": false},
+                    {"text": "In", "correct": true},
+                    {"text": "On", "correct": false},
+                    {"text": "By", "correct": false}
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Use the past simple tense. Read: Yesterday, I ___ a book.",
+                "correct_answer": "Read",
+                "explanation": "The past simple tense of 'read' is 'read' (pronounced /rɛd/), used for actions completed in the past.",
+                "options": [
+                    {"text": "Read", "correct": true},
+                    {"text": "Reading", "correct": false},
+                    {"text": "Have read", "correct": false},
+                    {"text": "Was reading", "correct": false}
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Form a question. Read: ___ is the capital of Japan?",
+                "correct_answer": "What",
+                "explanation": "The question word 'what' is used to ask about things, like the name of a capital city.",
+                "options": [
+                    {"text": "What", "correct": true},
+                    {"text": "Where", "correct": false},
+                    {"text": "When", "correct": false},
+                    {"text": "Who", "correct": false}
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Use the future tense. Read: Tomorrow, I ___ visit my friend.",
+                "correct_answer": "Will",
+                "explanation": "The future tense is formed with 'will' followed by the base verb, so 'will visit' is correct.",
+                "options": [
+                    {"text": "Will", "correct": true},
+                    {"text": "Would", "correct": false},
+                    {"text": "Am visiting", "correct": false},
+                    {"text": "Visit", "correct": false}
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Correct the subject-verb agreement. Read: The dog ___ in the park.",
+                "correct_answer": "Runs",
+                "explanation": "The singular subject 'dog' requires the third-person singular verb 'runs' in the present simple tense.",
+                "options": [
+                    {"text": "Run", "correct": false},
+                    {"text": "Runs", "correct": true},
+                    {"text": "Running", "correct": false},
+                    {"text": "Is run", "correct": false}
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Use a conditional. Read: If it rains, I ___ stay home.",
+                "correct_answer": "Will",
+                "explanation": "In a first conditional sentence, the present simple ('rains') is followed by 'will' plus the base verb.",
+                "options": [
+                    {"text": "Will", "correct": true},
+                    {"text": "Would", "correct": false},
+                    {"text": "Stay", "correct": false},
+                    {"text": "Staying", "correct": false}
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Complete with an article. Read: ___ sun rises in the east.",
+                "correct_answer": "The",
+                "explanation": "The definite article 'the' is used for unique nouns like 'sun'.",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "An", "correct": false},
+                    {"text": "The", "correct": true},
+                    {"text": "No article", "correct": false}
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Use present continuous. Read: Right now, she ___ a song.",
+                "correct_answer": "Is singing",
+                "explanation": "The present continuous tense uses 'is' plus the verb with '-ing' for actions happening now.",
+                "options": [
+                    {"text": "Sings", "correct": false},
+                    {"text": "Is singing", "correct": true},
+                    {"text": "Sang", "correct": false},
+                    {"text": "Has sung", "correct": false}
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Choose the correct preposition. Read: I go to school ___ bus.",
+                "correct_answer": "By",
+                "explanation": "The preposition 'by' is used to indicate the means of transport, like 'by bus'.",
+                "options": [
+                    {"text": "By", "correct": true},
+                    {"text": "On", "correct": false},
+                    {"text": "In", "correct": false},
+                    {"text": "With", "correct": false}
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Use past continuous. Read: Last night, we ___ dinner.",
+                "correct_answer": "Were eating",
+                "explanation": "The past continuous tense uses 'were' plus the verb with '-ing' for ongoing past actions.",
+                "options": [
+                    {"text": "Were eating", "correct": true},
+                    {"text": "Ate", "correct": false},
+                    {"text": "Are eating", "correct": false},
+                    {"text": "Have eaten", "correct": false}
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Form a negative sentence. Read: I ___ like coffee.",
+                "correct_answer": "Don’t",
+                "explanation": "The negative of the present simple with 'I' uses 'don’t' followed by the base verb.",
+                "options": [
+                    {"text": "Do", "correct": false},
+                    {"text": "Don’t", "correct": true},
+                    {"text": "Doesn’t", "correct": false},
+                    {"text": "Not", "correct": false}
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Use a modal verb. Read: You ___ finish your homework.",
+                "correct_answer": "Must",
+                "explanation": "The modal verb 'must' indicates obligation, fitting the context of completing homework.",
+                "options": [
+                    {"text": "Must", "correct": true},
+                    {"text": "Can", "correct": false},
+                    {"text": "Should", "correct": false},
+                    {"text": "Might", "correct": false}
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Complete with an article. Read: I saw ___ elephant at the zoo.",
+                "correct_answer": "An",
+                "explanation": "The article 'an' is used before a singular noun starting with a vowel sound, like 'elephant'.",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "An", "correct": true},
+                    {"text": "The", "correct": false},
+                    {"text": "No article", "correct": false}
+                ]
+            },
+            {
+                "id": 16,
+                "text": "Use present perfect. Read: I ___ just finished my work.",
+                "correct_answer": "Have",
+                "explanation": "The present perfect tense uses 'have' plus the past participle for recent actions.",
+                "options": [
+                    {"text": "Have", "correct": true},
+                    {"text": "Had", "correct": false},
+                    {"text": "Am", "correct": false},
+                    {"text": "Was", "correct": false}
+                ]
+            },
+            {
+                "id": 17,
+                "text": "Choose the correct connector. Read: I was tired, ___ I went to bed.",
+                "correct_answer": "So",
+                "explanation": "The connector 'so' indicates a result, linking tiredness to going to bed.",
+                "options": [
+                    {"text": "So", "correct": true},
+                    {"text": "But", "correct": false},
+                    {"text": "And", "correct": false},
+                    {"text": "Because", "correct": false}
+                ]
+            },
+            {
+                "id": 18,
+                "text": "Use a comparative. Read: This book is ___ than that one.",
+                "correct_answer": "Better",
+                "explanation": "The comparative form of 'good' is 'better', used to compare two items.",
+                "options": [
+                    {"text": "Better", "correct": true},
+                    {"text": "Good", "correct": false},
+                    {"text": "Best", "correct": false},
+                    {"text": "More good", "correct": false}
+                ]
+            },
+            {
+                "id": 19,
+                "text": "Form a question. Read: ___ does the train leave?",
+                "correct_answer": "When",
+                "explanation": "The question word 'when' is used to ask about time, such as a train's departure.",
+                "options": [
+                    {"text": "When", "correct": true},
+                    {"text": "Where", "correct": false},
+                    {"text": "What", "correct": false},
+                    {"text": "Who", "correct": false}
+                ]
+            },
+            {
+                "id": 20,
+                "text": "Use a superlative. Read: Mount Everest is ___ mountain in the world.",
+                "correct_answer": "The highest",
+                "explanation": "The superlative 'the highest' is used to describe the top degree of a quality among many items.",
+                "options": [
+                    {"text": "The highest", "correct": true},
+                    {"text": "Higher", "correct": false},
+                    {"text": "High", "correct": false},
+                    {"text": "Most high", "correct": false}
+                ]
+            },
+            {
+                "id": 21,
+                "text": "Complete with a preposition. Read: The cat is ___ the table.",
+                "correct_answer": "On",
+                "explanation": "The preposition 'on' is used for surfaces, like a table.",
+                "options": [
+                    {"text": "On", "correct": true},
+                    {"text": "In", "correct": false},
+                    {"text": "At", "correct": false},
+                    {"text": "By", "correct": false}
+                ]
+            },
+            {
+                "id": 22,
+                "text": "Use past perfect. Read: She ___ left before I arrived.",
+                "correct_answer": "Had",
+                "explanation": "The past perfect tense uses 'had' plus the past participle for actions completed before another past action.",
+                "options": [
+                    {"text": "Had", "correct": true},
+                    {"text": "Has", "correct": false},
+                    {"text": "Was", "correct": false},
+                    {"text": "Is", "correct": false}
+                ]
+            },
+            {
+                "id": 23,
+                "text": "Use a conditional. Read: If I ___ rich, I would travel.",
+                "correct_answer": "Were",
+                "explanation": "In a second conditional, 'were' is used with 'I' for hypothetical situations.",
+                "options": [
+                    {"text": "Were", "correct": true},
+                    {"text": "Was", "correct": false},
+                    {"text": "Am", "correct": false},
+                    {"text": "Will be", "correct": false}
+                ]
+            },
+            {
+                "id": 24,
+                "text": "Correct the verb form. Read: They ___ playing football now.",
+                "correct_answer": "Are",
+                "explanation": "The present continuous for the plural subject 'they' uses 'are' plus the verb with '-ing'.",
+                "options": [
+                    {"text": "Are", "correct": true},
+                    {"text": "Is", "correct": false},
+                    {"text": "Were", "correct": false},
+                    {"text": "Was", "correct": false}
+                ]
+            },
+            {
+                "id": 25,
+                "text": "Use an article. Read: ___ moon is bright tonight.",
+                "correct_answer": "The",
+                "explanation": "The definite article 'the' is used for unique nouns like 'moon'.",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "An", "correct": false},
+                    {"text": "The", "correct": true},
+                    {"text": "No article", "correct": false}
+                ]
+            },
+            {
+                "id": 26,
+                "text": "Form a negative. Read: She ___ going to the party.",
+                "correct_answer": "Isn’t",
+                "explanation": "The negative of the present continuous for 'she' uses 'isn't' (is not) plus the verb with '-ing'.",
+                "options": [
+                    {"text": "Isn’t", "correct": true},
+                    {"text": "Is", "correct": false},
+                    {"text": "Wasn’t", "correct": false},
+                    {"text": "Not", "correct": false}
+                ]
+            },
+            {
+                "id": 27,
+                "text": "Use a modal. Read: I ___ swim when I was five.",
+                "correct_answer": "Could",
+                "explanation": "The modal 'could' indicates past ability, suitable for describing swimming at age five.",
+                "options": [
+                    {"text": "Could", "correct": true},
+                    {"text": "Can", "correct": false},
+                    {"text": "Should", "correct": false},
+                    {"text": "Might", "correct": false}
+                ]
+            },
+            {
+                "id": 28,
+                "text": "Complete with a preposition. Read: We meet ___ Sunday mornings.",
+                "correct_answer": "On",
+                "explanation": "The preposition 'on' is used for specific days, like 'Sunday mornings'.",
+                "options": [
+                    {"text": "On", "correct": true},
+                    {"text": "In", "correct": false},
+                    {"text": "At", "correct": false},
+                    {"text": "By", "correct": false}
+                ]
+            },
+            {
+                "id": 29,
+                "text": "Use future continuous. Read: Tomorrow, I ___ studying.",
+                "correct_answer": "Will be",
+                "explanation": "The future continuous tense uses 'will be' plus the verb with '-ing' for ongoing future actions.",
+                "options": [
+                    {"text": "Will be", "correct": true},
+                    {"text": "Will", "correct": false},
+                    {"text": "Am", "correct": false},
+                    {"text": "Was", "correct": false}
+                ]
+            },
+            {
+                "id": 30,
+                "text": "Use a connector. Read: I studied hard, ___ I passed the test.",
+                "correct_answer": "So",
+                "explanation": "The connector 'so' indicates a result, linking studying to passing the test.",
+                "options": [
+                    {"text": "So", "correct": true},
+                    {"text": "But", "correct": false},
+                    {"text": "And", "correct": false},
+                    {"text": "Because", "correct": false}
+                ]
+            },
+            {
+                "id": 31,
+                "text": "Form a question. Read: ___ is your favorite color?",
+                "correct_answer": "What",
+                "explanation": "The question word 'what' is used to ask about preferences, like a favorite color.",
+                "options": [
+                    {"text": "What", "correct": true},
+                    {"text": "Where", "correct": false},
+                    {"text": "When", "correct": false},
+                    {"text": "Who", "correct": false}
+                ]
+            },
+            {
+                "id": 32,
+                "text": "Use a comparative. Read: This car is ___ than that one.",
+                "correct_answer": "Faster",
+                "explanation": "The comparative form of 'fast' is 'faster', used to compare two items.",
+                "options": [
+                    {"text": "Faster", "correct": true},
+                    {"text": "Fast", "correct": false},
+                    {"text": "Fastest", "correct": false},
+                    {"text": "More fast", "correct": false}
+                ]
+            },
+            {
+                "id": 33,
+                "text": "Correct the verb. Read: The children ___ in the garden.",
+                "correct_answer": "Are playing",
+                "explanation": "The present continuous for the plural subject 'children' uses 'are' plus the verb with '-ing'.",
+                "options": [
+                    {"text": "Are playing", "correct": true},
+                    {"text": "Is playing", "correct": false},
+                    {"text": "Play", "correct": false},
+                    {"text": "Were playing", "correct": false}
+                ]
+            },
+            {
+                "id": 34,
+                "text": "Use an article. Read: I need ___ umbrella today.",
+                "correct_answer": "An",
+                "explanation": "The article 'an' is used before a singular noun starting with a vowel sound, like 'umbrella'.",
+                "options": [
+                    {"text": "A", "correct": false},
+                    {"text": "An", "correct": true},
+                    {"text": "The", "correct": false},
+                    {"text": "No article", "correct": false}
+                ]
+            },
+            {
+                "id": 35,
+                "text": "Use present perfect continuous. Read: I ___ working all day.",
+                "correct_answer": "Have been",
+                "explanation": "The present perfect continuous uses 'have been' plus the verb with '-ing' for ongoing actions.",
+                "options": [
+                    {"text": "Have been", "correct": true},
+                    {"text": "Have", "correct": false},
+                    {"text": "Was", "correct": false},
+                    {"text": "Am", "correct": false}
+                ]
+            },
+            {
+                "id": 36,
+                "text": "Use a preposition. Read: The book is ___ the shelf.",
+                "correct_answer": "On",
+                "explanation": "The preposition 'on' is used for surfaces, like a shelf.",
+                "options": [
+                    {"text": "On", "correct": true},
+                    {"text": "In", "correct": false},
+                    {"text": "At", "correct": false},
+                    {"text": "By", "correct": false}
+                ]
+            },
+            {
+                "id": 37,
+                "text": "Form a negative. Read: He ___ like to travel.",
+                "correct_answer": "Doesn’t",
+                "explanation": "The negative of the present simple for 'he' uses 'doesn’t' followed by the base verb.",
+                "options": [
+                    {"text": "Doesn’t", "correct": true},
+                    {"text": "Don’t", "correct": false},
+                    {"text": "Not", "correct": false},
+                    {"text": "Is not", "correct": false}
+                ]
+            },
+            {
+                "id": 38,
+                "text": "Use a modal. Read: You ___ be careful on the road.",
+                "correct_answer": "Should",
+                "explanation": "The modal 'should' indicates advice, suitable for being careful on the road.",
+                "options": [
+                    {"text": "Should", "correct": true},
+                    {"text": "Can", "correct": false},
+                    {"text": "Must", "correct": false},
+                    {"text": "Might", "correct": false}
+                ]
+            },
+            {
+                "id": 39,
+                "text": "Use a superlative. Read: This is ___ day of my life.",
+                "correct_answer": "The best",
+                "explanation": "The superlative 'the best' is used to describe the top degree of a quality among many.",
+                "options": [
+                    {"text": "The best", "correct": true},
+                    {"text": "Better", "correct": false},
+                    {"text": "Good", "correct": false},
+                    {"text": "Most good", "correct": false}
+                ]
+            },
+            {
+                "id": 40,
+                "text": "Form a question. Read: ___ are you going tomorrow?",
+                "correct_answer": "Where",
+                "explanation": "The question word 'where' is used to ask about a location or destination.",
+                "options": [
+                    {"text": "Where", "correct": true},
+                    {"text": "What", "correct": false},
+                    {"text": "When", "correct": false},
+                    {"text": "Who", "correct": false}
+                ]
+            }
+        ]
+    }
+}

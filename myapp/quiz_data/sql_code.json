@@ -1,0 +1,247 @@
+{
+    "quiz": {
+        "title": "SQL Programming Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the output of this SQL query (assume table 'users' with columns id, name)?\n```sql\nSELECT name FROM users WHERE id = 1;\n```",
+                "correct_answer": "The name of the user with id 1",
+                "explanation": "The query selects the name column where id equals 1."
+            },
+            {
+                "id": 2,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users WHERE name = 'John' AND age = 25\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The query is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 3,
+                "text": "Complete this SQL query to select all columns from a table named 'products':\n```sql\nSELECT * FROM products;\n```",
+                "correct_answer": "All columns from the products table",
+                "explanation": "SELECT * retrieves all columns from the specified table."
+            },
+            {
+                "id": 4,
+                "text": "What is the output of this SQL query (assume table 'employees' with columns id, salary)?\n```sql\nSELECT MAX(salary) FROM employees;\n```",
+                "correct_answer": "The highest salary",
+                "explanation": "MAX(salary) returns the highest value in the salary column."
+            },
+            {
+                "id": 5,
+                "text": "Find the error in this SQL query:\n```sql\nINSERT INTO users (name, age) VALUES ('Alice', '30');\n```",
+                "correct_answer": "TypeError",
+                "explanation": "The value '30' for age should not be a string; it should be an integer: 30."
+            },
+            {
+                "id": 6,
+                "text": "Complete this SQL query to insert a record into 'students':\n```sql\nINSERT INTO students (name, grade) VALUES ('Bob', 85);\n```",
+                "correct_answer": "Inserts a student named Bob with grade 85",
+                "explanation": "The INSERT INTO statement adds a new row to the students table."
+            },
+            {
+                "id": 7,
+                "text": "What is the output of this SQL query (assume table 'orders' with columns order_id, amount)?\n```sql\nSELECT COUNT(*) FROM orders WHERE amount > 100;\n```",
+                "correct_answer": "The number of orders with amount greater than 100",
+                "explanation": "COUNT(*) counts rows matching the condition."
+            },
+            {
+                "id": 8,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT name FROM users WHERE age > 18 ORDER BY name DESC\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The query is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 9,
+                "text": "Complete this SQL query to update a record in 'employees':\n```sql\nUPDATE employees SET salary = 50000 WHERE id = 1;\n```",
+                "correct_answer": "Updates the salary of employee with id 1 to 50000",
+                "explanation": "The UPDATE statement modifies the salary for the specified row."
+            },
+            {
+                "id": 10,
+                "text": "What is the output of this SQL query (assume table 'products' with columns id, price)?\n```sql\nSELECT AVG(price) FROM products;\n```",
+                "correct_answer": "The average price of all products",
+                "explanation": "AVG(price) computes the mean of the price column."
+            },
+            {
+                "id": 11,
+                "text": "Find the error in this SQL query:\n```sql\nDELETE FROM users WHERE id = '1';\n```",
+                "correct_answer": "TypeError",
+                "explanation": "The id value '1' should be an integer, not a string."
+            },
+            {
+                "id": 12,
+                "text": "Complete this SQL query to delete records from 'orders':\n```sql\nDELETE FROM orders WHERE amount < 50;\n```",
+                "correct_answer": "Deletes orders with amount less than 50",
+                "explanation": "The DELETE statement removes rows matching the condition."
+            },
+            {
+                "id": 13,
+                "text": "What is the output of this SQL query (assume table 'users' with columns id, name, age)?\n```sql\nSELECT name, age FROM users WHERE age BETWEEN 20 AND 30;\n```",
+                "correct_answer": "Names and ages of users aged 20 to 30",
+                "explanation": "The BETWEEN operator selects values in the specified range."
+            },
+            {
+                "id": 14,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM products WHERE name LIKE %apple%;\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The LIKE pattern '%apple%' must be in quotes: '%apple%'."
+            },
+            {
+                "id": 15,
+                "text": "Complete this SQL query to select names starting with 'A':\n```sql\nSELECT name FROM users WHERE name LIKE 'A%';\n```",
+                "correct_answer": "Names starting with 'A'",
+                "explanation": "LIKE 'A%' matches names beginning with 'A'."
+            },
+            {
+                "id": 16,
+                "text": "What is the output of this SQL query (assume table 'sales' with columns sale_id, amount)?\n```sql\nSELECT SUM(amount) FROM sales;\n```",
+                "correct_answer": "The total amount of all sales",
+                "explanation": "SUM(amount) calculates the sum of the amount column."
+            },
+            {
+                "id": 17,
+                "text": "Find the error in this SQL query:\n```sql\nCREATE TABLE users (id INT, name VARCHAR(50), age INT\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The CREATE TABLE statement is missing a closing parenthesis )."
+            },
+            {
+                "id": 18,
+                "text": "Complete this SQL query to create a table 'books':\n```sql\nCREATE TABLE books (id INT, title VARCHAR(100), price DECIMAL(5,2));\n```",
+                "correct_answer": "Creates a table with id, title, and price columns",
+                "explanation": "The CREATE TABLE statement defines a table with specified columns."
+            },
+            {
+                "id": 19,
+                "text": "What is the output of this SQL query (assume table 'employees' with columns id, name, department)?\n```sql\nSELECT department, COUNT(*) FROM employees GROUP BY department;\n```",
+                "correct_answer": "Number of employees per department",
+                "explanation": "GROUP BY groups rows by department, and COUNT(*) counts rows per group."
+            },
+            {
+                "id": 20,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users JOIN orders ON users.id = orders.user_id WHERE orders.id = 1\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The query is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 21,
+                "text": "Complete this SQL query to join two tables:\n```sql\nSELECT users.name, orders.amount FROM users JOIN orders ON users.id = orders.user_id;\n```",
+                "correct_answer": "Names and order amounts for matching users and orders",
+                "explanation": "The JOIN combines rows from users and orders based on matching id and user_id."
+            },
+            {
+                "id": 22,
+                "text": "What is the output of this SQL query (assume table 'products' with columns id, name, stock)?\n```sql\nSELECT name FROM products WHERE stock IS NULL;\n```",
+                "correct_answer": "Names of products with null stock",
+                "explanation": "IS NULL filters rows where the stock column is null."
+            },
+            {
+                "id": 23,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users WHERE age = NULL;\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "Use IS NULL instead of = NULL to check for null values."
+            },
+            {
+                "id": 24,
+                "text": "Complete this SQL query to select distinct values:\n```sql\nSELECT DISTINCT department FROM employees;\n```",
+                "correct_answer": "Unique department names",
+                "explanation": "DISTINCT removes duplicate department values."
+            },
+            {
+                "id": 25,
+                "text": "What is the output of this SQL query (assume table 'orders' with columns order_id, date)?\n```sql\nSELECT order_id FROM orders WHERE YEAR(date) = 2023;\n```",
+                "correct_answer": "Order IDs from 2023",
+                "explanation": "YEAR(date) extracts the year, filtering orders from 2023."
+            },
+            {
+                "id": 26,
+                "text": "Find the error in this SQL query:\n```sql\nALTER TABLE users ADD email VARCHAR(100)\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The ALTER TABLE statement is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 27,
+                "text": "Complete this SQL query to add a column:\n```sql\nALTER TABLE products ADD stock INT;\n```",
+                "correct_answer": "Adds a stock column to products",
+                "explanation": "ALTER TABLE ADD adds a new column to the table."
+            },
+            {
+                "id": 28,
+                "text": "What is the output of this SQL query (assume table 'users' with columns id, name)?\n```sql\nSELECT name FROM users ORDER BY name ASC;\n```",
+                "correct_answer": "Names in alphabetical order",
+                "explanation": "ORDER BY name ASC sorts names in ascending order."
+            },
+            {
+                "id": 29,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users WHERE name = 'Alice' OR 'Bob';\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The OR condition is incomplete; it should be name = 'Alice' OR name = 'Bob'."
+            },
+            {
+                "id": 30,
+                "text": "Complete this SQL query to select top 5 records:\n```sql\nSELECT * FROM products LIMIT 5;\n```",
+                "correct_answer": "First 5 rows from products",
+                "explanation": "LIMIT 5 restricts the output to the first 5 rows."
+            },
+            {
+                "id": 31,
+                "text": "What is the output of this SQL query (assume table 'sales' with columns sale_id, region, amount)?\n```sql\nSELECT region, SUM(amount) FROM sales GROUP BY region HAVING SUM(amount) > 1000;\n```",
+                "correct_answer": "Regions with total sales amount over 1000",
+                "explanation": "HAVING filters groups where the sum of amount exceeds 1000."
+            },
+            {
+                "id": 32,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users WHERE id IN (1, 2, '3');\n```",
+                "correct_answer": "TypeError",
+                "explanation": "The value '3' should be an integer, not a string, for the id column."
+            },
+            {
+                "id": 33,
+                "text": "Complete this SQL query to select records with specific IDs:\n```sql\nSELECT name FROM users WHERE id IN (1, 2, 3);\n```",
+                "correct_answer": "Names of users with IDs 1, 2, or 3",
+                "explanation": "IN (1, 2, 3) filters rows with the specified IDs."
+            },
+            {
+                "id": 34,
+                "text": "What is the output of this SQL query (assume table 'employees' with columns id, name, salary)?\n```sql\nSELECT name FROM employees WHERE salary IS NOT NULL;\n```",
+                "correct_answer": "Names of employees with non-null salaries",
+                "explanation": "IS NOT NULL filters rows where salary is not null."
+            },
+            {
+                "id": 35,
+                "text": "Find the error in this SQL query:\n```sql\nDROP TABLE users\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The DROP TABLE statement is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 36,
+                "text": "Complete this SQL query to drop a table:\n```sql\nDROP TABLE temp;\n```",
+                "correct_answer": "Drops the temp table",
+                "explanation": "DROP TABLE removes the specified table from the database."
+            },
+            {
+                "id": 37,
+                "text": "What is the output of this SQL query (assume table 'products' with columns id, name, category)?\n```sql\nSELECT category, COUNT(*) FROM products GROUP BY category;\n```",
+                "correct_answer": "Number of products per category",
+                "explanation": "GROUP BY groups rows by category, and COUNT(*) counts rows per group."
+            },
+            {
+                "id": 38,
+                "text": "Find the error in this SQL query:\n```sql\nSELECT * FROM users WHERE name LIKE 'A%' AND age = 25\n```",
+                "correct_answer": "SyntaxError",
+                "explanation": "The query is missing a semicolon (;) at the end."
+            },
+            {
+                "id": 39,
+                "text": "Complete this SQL query to select names ending with 'son':\n```sql\nSELECT name FROM users WHERE name LIKE '%son';\n```",
+                "correct_answer": "Names ending with 'son'",
+                "explanation": "LIKE '%son' matches names ending with 'son'."
+            },
+            {
+                "id": 40,
+                "text": "What is the output of this SQL query (assume table 'orders' with columns order_id, customer_id, amount)?\n```sql\nSELECT customer_id, MAX(amount) FROM orders GROUP BY customer_id;\n```",
+                "correct_answer": "Maximum order amount per customer",
+                "explanation": "GROUP BY customer_id groups orders, and MAX(amount) finds the highest amount per customer."
+            }
+        ]
+    }
+}
