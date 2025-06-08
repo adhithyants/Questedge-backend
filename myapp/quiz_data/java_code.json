@@ -1,0 +1,248 @@
+{
+    "quiz": {
+        "title": "Java Programming Quiz",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(3 + 5 * 2);\n    }\n}\n```",
+                "correct_answer": "13",
+                "explanation": "Multiplication has higher precedence, so 5 * 2 = 10, then 3 + 10 = 13."
+            },
+            {
+                "id": 2,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3};\n        arr[3] = 4;\n    }\n}\n```",
+                "correct_answer": "ArrayIndexOutOfBoundsException",
+                "explanation": "The array has indices 0 to 2, so accessing index 3 throws an exception."
+            },
+            {
+                "id": 3,
+                "text": "Complete this Java code to print 'Even' if x is even:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 4;\n        if (x % 2 == 0) {\n            System.out.println(\"Even\");\n        }\n    }\n}\n```",
+                "correct_answer": "Even",
+                "explanation": "x % 2 == 0 checks if x is even, so for x = 4, it prints 'Even'."
+            },
+            {
+                "id": 4,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"Java\";\n        System.out.println(s.substring(1, 3));\n    }\n}\n```",
+                "correct_answer": "av",
+                "explanation": "substring(1, 3) extracts characters from index 1 to 2 (exclusive)."
+            },
+            {
+                "id": 5,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        System.out.println(X);\n    }\n}\n```",
+                "correct_answer": "Compilation Error",
+                "explanation": "Java is case-sensitive; 'X' is undefined, only 'x' is defined."
+            },
+            {
+                "id": 6,
+                "text": "Complete this Java code to return the square of a number:\n```java\npublic class Main {\n    public static int square(int num) {\n        return num * num;\n    }\n    public static void main(String[] args) {\n        System.out.println(square(4));\n    }\n}\n```",
+                "correct_answer": "16",
+                "explanation": "The square method returns 4 * 4 = 16."
+            },
+            {
+                "id": 7,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3};\n        System.out.println(arr.length);\n    }\n}\n```",
+                "correct_answer": "3",
+                "explanation": "The length property returns the size of the array, which is 3."
+            },
+            {
+                "id": 8,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++)\n            System.out.println(i);\n    }\n}\n```",
+                "correct_answer": "Compilation Error",
+                "explanation": "The for loop is missing an opening brace { after the condition."
+            },
+            {
+                "id": 9,
+                "text": "Complete this Java code to concatenate strings:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = \"World\";\n        System.out.println(s1 + s2);\n    }\n}\n```",
+                "correct_answer": "HelloWorld",
+                "explanation": "The '+' operator concatenates the strings 'Hello' and 'World'."
+            },
+            {
+                "id": 10,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        x += 3;\n        System.out.println(x);\n    }\n}\n```",
+                "correct_answer": "13",
+                "explanation": "x += 3 adds 3 to x, so 10 + 3 = 13."
+            },
+            {
+                "id": 11,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = null;\n        System.out.println(s.length());\n    }\n}\n```",
+                "correct_answer": "NullPointerException",
+                "explanation": "Calling length() on a null string causes a NullPointerException."
+            },
+            {
+                "id": 12,
+                "text": "Complete this Java code to check if an array contains 5:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] nums = {1, 3, 5, 7};\n        for (int n : nums) {\n            if (n == 5) {\n                System.out.println(\"Found\");\n                break;\n            }\n        }\n    }\n}\n```",
+                "correct_answer": "Found",
+                "explanation": "The loop finds 5 in the array and prints 'Found'."
+            },
+            {
+                "id": 13,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            int x = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Error\");\n        }\n    }\n}\n```",
+                "correct_answer": "Error",
+                "explanation": "Division by zero throws an ArithmeticException, caught by the catch block."
+            },
+            {
+                "id": 14,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = Integer.parseInt(\"abc\");\n    }\n}\n```",
+                "correct_answer": "NumberFormatException",
+                "explanation": "Parsing 'abc' as an integer throws a NumberFormatException."
+            },
+            {
+                "id": 15,
+                "text": "Complete this Java code to find the maximum of two numbers:\n```java\npublic class Main {\n    public static int max(int a, int b) {\n        return a > b ? a : b;\n    }\n    public static void main(String[] args) {\n        System.out.println(max(7, 3));\n    }\n}\n```",
+                "correct_answer": "7",
+                "explanation": "The max method returns 7 since 7 > 3."
+            },
+            {
+                "id": 16,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String[] arr = {\"a\", \"b\", \"c\"};\n        System.out.println(arr[2]);\n    }\n}\n```",
+                "correct_answer": "c",
+                "explanation": "arr[2] accesses the third element, 'c'."
+            },
+            {
+                "id": 17,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void Main(String[] args) {\n        System.out.println(\"Hello\");\n    }\n}\n```",
+                "correct_answer": "Compilation Error",
+                "explanation": "The main method must be lowercase 'main', not 'Main'."
+            },
+            {
+                "id": 18,
+                "text": "Complete this Java code to print numbers 0 to 2:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++) {\n            System.out.println(i);\n        }\n    }\n}\n```",
+                "correct_answer": "0\n1\n2",
+                "explanation": "The for loop iterates from 0 to 2, printing each number."
+            },
+            {
+                "id": 19,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        boolean b = true;\n        System.out.println(!b);\n    }\n}\n```",
+                "correct_answer": "false",
+                "explanation": "The ! operator negates true to false."
+            },
+            {
+                "id": 20,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<int> list = new ArrayList<>();\n    }\n}\n```",
+                "correct_answer": "Compilation Error",
+                "explanation": "ArrayList cannot use primitive types; use Integer instead of int."
+            },
+            {
+                "id": 21,
+                "text": "Complete this Java code to add an element to an ArrayList:\n```java\nimport java.util.ArrayList;\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<Integer> list = new ArrayList<>();\n        list.add(5);\n        System.out.println(list);\n    }\n}\n```",
+                "correct_answer": "[5]",
+                "explanation": "The add method appends 5 to the ArrayList, printed as [5]."
+            },
+            {
+                "id": 22,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"Hello\";\n        System.out.println(s.toUpperCase());\n    }\n}\n```",
+                "correct_answer": "HELLO",
+                "explanation": "toUpperCase() converts the string to uppercase."
+            },
+            {
+                "id": 23,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5 / 0;\n    }\n}\n```",
+                "correct_answer": "ArithmeticException",
+                "explanation": "Division by zero throws an ArithmeticException."
+            },
+            {
+                "id": 24,
+                "text": "Complete this Java code to create a class with a method:\n```java\npublic class MyClass {\n    public int doubleNum(int x) {\n        return x * 2;\n    }\n    public static void main(String[] args) {\n        MyClass obj = new MyClass();\n        System.out.println(obj.doubleNum(3));\n    }\n}\n```",
+                "correct_answer": "6",
+                "explanation": "The doubleNum method returns 3 * 2 = 6."
+            },
+            {
+                "id": 25,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        System.out.println(x++);\n    }\n}\n```",
+                "correct_answer": "5",
+                "explanation": "Post-increment (x++) prints x (5) before incrementing."
+            },
+            {
+                "id": 26,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"123\";\n        System.out.println(s + 4);\n    }\n}\n```",
+                "correct_answer": "Noinstruments error",
+                "explanation": "String concatenation with 4 results in '1234', not an error."
+            },
+    
+            {
+                "id": 27,
+                "text": "Complete this Java code to check if a string is empty:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"\";\n        System.out.println(s.isEmpty());\n    }\n}\n```",
+                "correct_answer": "true",
+                "explanation": "The isEmpty() method returns true if the string length is 0."
+            },
+            {
+                "id": 28,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        double x = 5.5;\n        System.out.println((int)x);\n    }\n}\n```",
+                "correct_answer": "5",
+                "explanation": "Casting double to int truncates the decimal part, so 5.5 becomes 5."
+            },
+            {
+                "id": 29,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = \"10\";\n    }\n}\n```",
+                "correct_answer": "Compilation Error",
+                "explanation": "A String cannot be assigned to an int variable."
+            },
+            {
+                "id": 30,
+                "text": "Complete this Java code to create a loop that sums 1 to 5:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int sum = 0;\n        for (int i = 1; i <= 5; i++) {\n            sum += i;\n        }\n        System.out.println(sum);\n    }\n}\n```",
+                "correct_answer": "15",
+                "explanation": "The loop adds 1 + 2 + 3 + 4 + 5 = 15."
+            },
+            {
+                "id": 31,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"hello\";\n        System.out.println(s.charAt(1));\n    }\n}\n```",
+                "correct_answer": "e",
+                "explanation": "charAt(1) returns the character at index 1, which is 'e'."
+            },
+            {
+                "id": 32,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        Integer x = null;\n        int y = x;\n    }\n}\n```",
+                "correct_answer": "NullPointerException",
+                "explanation": "Unboxing a null Integer to int causes a NullPointerException."
+            },
+            {
+                "id": 33,
+                "text": "Complete this Java code to create a class with a constructor:\n```java\npublic class Person {\n    String name;\n    public Person(String name) {\n        this.name = name;\n    }\n    public static void main(String[] args) {\n        Person p = new Person(\"Alice\");\n        System.out.println(p.name);\n    }\n}\n```",
+                "correct_answer": "Alice",
+                "explanation": "The constructor sets the name field to 'Alice'."
+            },
+            {
+                "id": 34,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 3;\n        System.out.println(x > 2 ? \"Yes\" : \"No\");\n    }\n}\n```",
+                "correct_answer": "Yes",
+                "explanation": "The ternary operator returns 'Yes' since 3 > 2."
+            },
+            {
+                "id": 35,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(1 / 0);\n    }\n}\n```",
+                "correct_answer": "ArithmeticException",
+                "explanation": "Division by zero throws an ArithmeticException."
+            },
+            {
+                "id": 36,
+                "text": "Complete this Java code to reverse an array:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3};\n        for (int i = arr.length - 1; i >= 0; i--) {\n            System.out.print(arr[i] + \" \");\n        }\n    }\n}\n```",
+                "correct_answer": "3 2 1 ",
+                "explanation": "The loop prints the array elements in reverse order."
+            },
+            {
+                "id": 37,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s = \"Java\";\n        System.out.println(s.length());\n    }\n}\n```",
+                "correct_answer": "4",
+                "explanation": "length() returns the number of characters in 'Java'."
+            },
+            {
+                "id": 38,
+                "text": "Find the error in this Java code:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[3];\n        arr[3] = 5;\n    }\n}\n```",
+                "correct_answer": "ArrayIndexOutOfBoundsException",
+                "explanation": "The array has indices 0 to 2, so index 3 is out of bounds."
+            },
+            {
+                "id": 39,
+                "text": "Complete this Java code to check equality of strings:\n```java\npublic class Main {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = \"Hello\";\n        System.out.println(s1.equals(s2));\n    }\n}\n```",
+                "correct_answer": "true",
+                "explanation": "equals() checks if the strings have the same content."
+            },
+            {
+                "id": 40,
+                "text": "What is the output of this Java code?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        System.out.println(++x);\n    }\n}\n```",
+                "correct_answer": "6",
+                "explanation": "Pre-increment (++x) increments x before printing, so 5 becomes 6."
+            }
+        ]
+    }
+}
