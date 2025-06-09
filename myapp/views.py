@@ -87,7 +87,10 @@ def quiz_view(request, quiz_type):
 
 class SignupUser(APIView):
     def post(self, request):
-        serializer = UserDetailSerializer(data=request.data)
+        data = request.data.copy()
+        if 'username' not in data:
+            data['username'] = data.get('email', '')
+        serializer = UserDetailSerializer(data=data)
         if serializer.is_valid():
             user_detail = serializer.save()
             refresh = RefreshToken.for_user(user_detail.user)
