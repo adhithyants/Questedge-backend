@@ -3,7 +3,7 @@ services:
     name: questedge-backend
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn myproject.wsgi
+    startCommand: gunicorn Questedge-backend.myproject.wsgi
     envVars:
       - key: SECRET_KEY
         fromSecret: SECRET_KEY
