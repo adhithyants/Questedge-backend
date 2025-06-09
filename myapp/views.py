@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
-from rest_framework.decorators import api_view, permission_classes 
+from rest_framework.decorators import api_view, permission_classes  
 from django.contrib.auth import authenticate 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -87,10 +87,7 @@ def quiz_view(request, quiz_type):
 
 class SignupUser(APIView):
     def post(self, request):
-        data = request.data.copy()
-        if 'username' not in data:
-            data['username'] = data.get('email', '')
-        serializer = UserDetailSerializer(data=data)
+        serializer = UserDetailSerializer(data=request.data)
         if serializer.is_valid():
             user_detail = serializer.save()
             refresh = RefreshToken.for_user(user_detail.user)
