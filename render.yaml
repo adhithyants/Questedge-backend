@@ -7,7 +7,7 @@ services:
       python manage.py collectstatic --noinput
       python manage.py makemigrations
       python manage.py migrate
-startCommand: gunicorn myproject.wsgi:application
+startCommand: python manage.py migrate && gunicorn myproject.wsgi:application
     envVars:
       - key: DEBUG
         value: False
