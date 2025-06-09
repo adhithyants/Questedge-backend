@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
-from rest_framework.decorators import api_view, permission_classes  
+from rest_framework.decorators import api_view, permission_classes 
 from django.contrib.auth import authenticate 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -87,7 +87,10 @@ def quiz_view(request, quiz_type):
 
 class SignupUser(APIView):
     def post(self, request):
-        serializer = UserDetailSerializer(data=request.data)
+        data = request.data.copy()
+        if 'username' not in data:
+            data['username'] = data.get('email', '')
+        serializer = UserDetailSerializer(data=data)
         if serializer.is_valid():
             user_detail = serializer.save()
             refresh = RefreshToken.for_user(user_detail.user)
@@ -133,23 +136,34 @@ class SignupView(APIView):
 
 class LoginView(APIView):
     def post(self, request):
-        email = request.data.get('email')
-        password = request.data.get('password')
-        if not email or not password:
+        try:
+            logger.info(f"Login request data: {request.data}")
+            email = request.data.get('email')
+            password = request.data.get('password')
+            if not email or not password:
+                return Response(
+                    {"error": "Email and password are required"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            user = authenticate(username=email, password=password)
+            if user:
+                # Check if user has a related UserDetail
+                try:
+                    name = user.user_detail.name
+                except Exception as e:
+                    logger.error(f"UserDetail missing for user {user.id}: {str(e)}")
+                    name = ""
+                return Response(
+                    {"message": "Login successful", "user_id": user.id, "name": name},
+                    status=status.HTTP_200_OK
+                )
             return Response(
-                {"error": "Email and password are required"},
-                status=status.HTTP_400_BAD_REQUEST
+                {"error": "Invalid email or password"},
+                status=status.HTTP_401_UNAUTHORIZED
             )
-        user = authenticate(username=email, password=password)
-        if user:
-            return Response(
-                {"message": "Login successful", "user_id": user.id, "name": user.user_detail.name},
-                status=status.HTTP_200_OK
-            )
-        return Response(
-            {"error": "Invalid email or password"},
-            status=status.HTTP_401_UNAUTHORIZED
-        )
+        except Exception as e:
+            logger.error(f"Login error: {str(e)}")
+            return Response({"error": "Server error", "details": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
 
 
@@ -215,3 +229,8 @@ class UserEmailView(APIView):
         except Exception as e:
             logger.error(f"Error fetching user email: {str(e)}")
             return Response({'error': 'Server error', 'details': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    # Add custom backend if you have one for email login
+]
