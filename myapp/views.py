@@ -13,7 +13,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
-from rest_framework.decorators import api_view, permission_classes  
+from rest_framework.decorators import api_view, permission_classes 
+from django.contrib.auth import authenticate 
 
 CSRF_TRUSTED_ORIGINS = [
     "https://questedge.serveo.net"
