@@ -2,12 +2,17 @@ services:
   - type: web
     name: questedge-backend
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
     startCommand: gunicorn myproject.wsgi:application
     envVars:
-      - key: SECRET_KEY
-        fromSecret: SECRET_KEY
       - key: DEBUG
-        fromSecret: DEBUG
-      - key: DATABASE_URL
-        fromSecret: DATABASE_URL
+        value: False
+      - key: SECRET_KEY
+        value: your-secret-key
+      - key: ALLOWED_HOSTS
+        value: questedge-backend.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://questedge-backend.onrender.com
