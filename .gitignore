@@ -1,0 +1,30 @@
+# Virtual environment
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Django database
+db.sqlite3
+
+# Logs
+*.log
+
+# Local settings (if you ever create these)
+local_settings.py
+
+# Static & media (optional if served separately)
+static/
+staticfiles/
+media/
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# OS system files
+.DS_Store
+
+# Environment variables
+.env
