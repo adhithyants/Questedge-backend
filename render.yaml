@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: questedge-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn myproject.wsgi
+    envVars:
+      - key: SECRET_KEY
+        fromSecret: SECRET_KEY
+      - key: DEBUG
+        fromSecret: DEBUG
+      - key: DATABASE_URL
+        fromSecret: DATABASE_URL

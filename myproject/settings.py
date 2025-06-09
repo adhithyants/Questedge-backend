@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret')
+SECRET_KEY = os.getenv('SECRET_KEY', '21XHCFszDV6ARGKP8TNUJFTDla3rNdhOzE02Lk76F6ktDepo0kjEG4MS4Ra4JAd70zY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
