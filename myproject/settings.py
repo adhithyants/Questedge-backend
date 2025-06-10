@@ -97,13 +97,25 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
+import os
+import dj_database_url
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Database configuration
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('postgresql://questedge_db_user:1Q6PZAL7NI5V9OmXugWho8TUCxS0Hygy@dpg-d13evbc9c44c7398r8jg-a/questedge_db')
+        default=os.getenv('DATABASE_URL', 'postgresql://questedge_db_user:1Q6PZAL7NI5V9OmXugWho8TUCxS0Hygy@dpg-d13evbc9c44c7398r8jg-a.oregon-postgres.render.com/questedge_db'),
+        conn_max_age=600,  # Keep connections alive for 10 minutes
+        ssl_require=True   # Enable SSL for Render PostgreSQL
     )
 }
 
+# Raise an error if DATABASES is empty
+if not DATABASES['default']:
+    raise ValueError("No database configuration found. Please set DATABASE_URL environment variable.")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
