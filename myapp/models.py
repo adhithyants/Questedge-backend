@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import uuid
 
 class UserDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_detail')
@@ -49,3 +50,18 @@ class Attempt(models.Model):
     class Meta:
         verbose_name = "Attempt"
         verbose_name_plural = "Attempts"
+
+class Room(models.Model):
+    room_code = models.CharField(max_length=10, unique=True, editable=False)
+    category = models.CharField(max_length=50)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_rooms')
+    created_at = models.DateTimeField(auto_now_add=True)
+    participants = models.ManyToManyField(User, related_name='joined_rooms', blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.room_code:
+            self.room_code = str(uuid.uuid4())[:8].upper()  # 8-character uppercase code
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.category} Room - {self.room_code}"

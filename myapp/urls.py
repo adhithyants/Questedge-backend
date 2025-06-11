@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import quiz_view, SignupView, SubmitAttempt, AttemptListView, LoginView, SubmitAptitudeScore, leaderboard_view, UserEmailView, SignupUser
+from .views import quiz_view, SignupView, SubmitAttempt, AttemptListView, LoginView, SubmitAptitudeScore, leaderboard_view, UserEmailView, SignupUser,CreateRoomView, JoinRoomView
 
 app_name = 'myapp'
 
@@ -13,4 +13,6 @@ urlpatterns = [
     path('api/leaderboard/', leaderboard_view, name='leaderboard-api'),
     path('api/attempts/', AttemptListView.as_view(), name='attempt-list'),
     path('api/user-email/', UserEmailView.as_view(), name='user_email'),  # Added for UserEmailView
+    path('create-room/', CreateRoomView.as_view(), name='create_room'),
+    path('join-room/', JoinRoomView.as_view(), name='join_room'),
 ]

@@ -7,14 +7,18 @@ import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import UserDetail, Attempt
-from .serializers import UserDetailSerializer, AttemptSerializer
+from .models import UserDetail, Attempt,Room
+from .serializers import UserDetailSerializer, AttemptSerializer,RoomSerializer, JoinRoomSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
 from rest_framework import generics
 from rest_framework.decorators import api_view, permission_classes 
 from django.contrib.auth import authenticate 
+from django.core.validators import EmailValidator
+from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://questedge.serveo.net"
@@ -229,8 +233,127 @@ class UserEmailView(APIView):
         except Exception as e:
             logger.error(f"Error fetching user email: {str(e)}")
             return Response({'error': 'Server error', 'details': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
 
+
+class CreateRoomView(APIView):
+    def post(self, request):
+        try:
+            category = request.data.get('category')
+            email = request.data.get('email')
+            name = request.data.get('name')
+
+            # Validate inputs
+            if not category:
+                logger.error("Missing category in request")
+                return Response({'error': 'Category is required'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            if not email:
+                logger.error("Missing email in request")
+                return Response({'error': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            if not name:
+                logger.error("Missing name in request")
+                return Response({'error': 'Name is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+            valid_categories = ['Logical', 'Verbal', 'Quantitative', 'Spatial', 'Abstract', 'Technical','Python','Java','Sql','HTML','JavaScript',]
+            if category not in valid_categories:
+                logger.error(f"Invalid category: {category}")
+                return Response(
+                    {'error': f"Invalid category. Must be one of {valid_categories}"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            # Validate email format
+            try:
+                EmailValidator()(email)
+            except ValidationError:
+                logger.error(f"Invalid email format: {email}")
+                return Response({'error': 'Invalid email format'}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Fetch or create user
+            try:
+                user, created = User.objects.get_or_create(
+                    username=email,  # Use username for lookup
+                    defaults={'email': email, 'first_name': name}
+                )
+                if not created:
+                    # Update name if different
+                    if name and name != user.first_name:
+                        user.first_name = name
+                        user.save()
+                    # Ensure email is set
+                    if not user.email:
+                        user.email = email
+                        user.save()
+                logger.info(f"User {'created' if created else 'fetched'}: {email}")
+            except Exception as e:
+                logger.error(f"Error creating/fetching user with email {email}: {str(e)}")
+                return Response(
+                    {'error': 'Failed to create or fetch user', 'details': str(e)},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            # Create room
+            try:
+                room = Room.objects.create(
+                    category=category,
+                    creator=user
+                )
+                room.participants.add(user)
+            except Exception as e:
+                logger.error(f"Error creating room for category {category}: {str(e)}")
+                return Response(
+                    {'error': 'Failed to create room', 'details': str(e)},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                )
+
+            serializer = RoomSerializer(room)
+            return Response(
+                {'room_code': room.room_code, 'category': room.category},
+                status=status.HTTP_201_CREATED
+            )
+
+        except Exception as e:
+            logger.error(f"Unexpected error in CreateRoomView: {str(e)}")
+            return Response(
+                {'error': 'Server error', 'details': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        
+class JoinRoomView(APIView):
+    def post(self, request):
+        serializer = JoinRoomSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        room_code = serializer.validated_data['room_code']
+        name = request.data.get('name')
+        email = request.data.get('email')
+
+        if not email or not name:
+            return Response(
+                {'error': 'Email and name are required'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            room = Room.objects.get(room_code=room_code)
+        except Room.DoesNotExist:
+            return Response({'error': 'Room not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        user, created = User.objects.get_or_create(email=email, defaults={'first_name': name, 'username': email})
+        if name and name != user.first_name:
+            user.first_name = name
+            user.save()
+
+        room.participants.add(user)
+
+        return Response({'category': room.category}, status=status.HTTP_200_OK)
+    
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     # Add custom backend if you have one for email login
 ]
+
+
