@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserDetail, Attempt
+from .models import UserDetail, Attempt,Room
 
 class UserDetailSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(write_only=True)
@@ -64,3 +64,15 @@ class AttemptSerializer(serializers.ModelSerializer):
         validated_data['user'] = UserDetail.objects.get(user__email=validated_data['email'])
         validated_data['auth_user_id'] = validated_data['user'].user
         return super().create(validated_data)
+    
+
+
+
+class RoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = ['room_code', 'category', 'creator', 'created_at']
+        read_only_fields = ['room_code', 'creator', 'created_at']
+
+class JoinRoomSerializer(serializers.Serializer):
+    room_code = serializers.CharField(max_length=10)
