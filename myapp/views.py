@@ -357,3 +357,12 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
+
+
+
+
+# in views.py
+from django.http import HttpResponse
+
+def loaderio_verification(request):
+    return HttpResponse("loaderio-c506d955ab929b70b648697296775de0", content_type="text/plain")
