@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import quiz_view, SignupView, SubmitAttempt, AttemptListView, LoginView, SubmitAptitudeScore, leaderboard_view, UserEmailView, SignupUser,CreateRoomView, JoinRoomView
+from .views import quiz_view, SignupView, SubmitAttempt, AttemptListView, LoginView, SubmitAptitudeScore, leaderboard_view, UserEmailView, SignupUser,CreateRoomView, JoinRoomView ,loaderio_verification
 
 app_name = 'myapp'
 
@@ -15,11 +15,6 @@ urlpatterns = [
     path('api/user-email/', UserEmailView.as_view(), name='user_email'),  # Added for UserEmailView
     path('create-room/', CreateRoomView.as_view(), name='create_room'),
     path('join-room/', JoinRoomView.as_view(), name='join_room'),
-]
 
-
-from .views import loaderio_verification
-
-urlpatterns = [
     path('loaderio-c506d955ab929b70b648697296775de0.txt', loaderio_verification),
 ]
