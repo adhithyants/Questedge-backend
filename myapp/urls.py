@@ -16,3 +16,10 @@ urlpatterns = [
     path('create-room/', CreateRoomView.as_view(), name='create_room'),
     path('join-room/', JoinRoomView.as_view(), name='join_room'),
 ]
+
+
+from .views import loaderio_verification
+
+urlpatterns = [
+    path('loaderio-c506d955ab929b70b648697296775de0.txt', loaderio_verification),
+]
