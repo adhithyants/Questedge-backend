@@ -7,8 +7,8 @@ import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import UserDetail, Attempt,Room
-from .serializers import UserDetailSerializer, AttemptSerializer,RoomSerializer, JoinRoomSerializer
+from .models import UserDetail, Attempt, Room
+from .serializers import UserDetailSerializer, AttemptSerializer, RoomSerializer, JoinRoomSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
@@ -53,12 +53,12 @@ def quiz_view(request, quiz_type):
         'quantitative': 'quantitative_quiz.json',
         'technical': 'technical_quiz.json',
         'spatial-reasoning': 'spatial_reasoning_quiz.json',
-        'pythoncode':'python_code.json',
-        'javacode':'java_code.json',
-        'javascriptcode':'javascript_code.json',
-        'sqlcode':'sql_code.json',
-        'htmlcode':'html_code.json',
-        'grammar':'Grammer.json',
+        'pythoncode': 'python_code.json',
+        'javacode': 'java_code.json',
+        'javascriptcode': 'javascript_code.json',
+        'sqlcode': 'sql_code.json',
+        'htmlcode': 'html_code.json',
+        'grammar': 'Grammer.json',
     }
 
     filename = quiz_files.get(quiz_type)
@@ -169,8 +169,6 @@ class LoginView(APIView):
             logger.error(f"Login error: {str(e)}")
             return Response({"error": "Server error", "details": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
-
-
 class SubmitAptitudeScore(APIView):
     def post(self, request):
         try:
@@ -234,8 +232,6 @@ class UserEmailView(APIView):
             logger.error(f"Error fetching user email: {str(e)}")
             return Response({'error': 'Server error', 'details': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
-
-
 class CreateRoomView(APIView):
     def post(self, request):
         try:
@@ -351,9 +347,60 @@ class JoinRoomView(APIView):
 
         return Response({'category': room.category}, status=status.HTTP_200_OK)
     
+class RoomLeaderboardView(APIView):
+    def get(self, request, room_code):
+        try:
+            # Fetch the room
+            room = Room.objects.get(room_code=room_code)
+        except Room.DoesNotExist:
+            logger.error(f"Room with code {room_code} not found")
+            return Response({'error': 'Room not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # Get participants of the room
+        participants = room.participants.all()
+        if not participants:
+            logger.info(f"No participants found for room {room_code}")
+            return Response({'message': 'No participants in this room'}, status=status.HTTP_200_OK)
+
+        # Fetch UserDetails for participants and filter attempts by room category
+        user_details = UserDetail.objects.filter(user__in=participants)
+        serializer = UserDetailSerializer(user_details, many=True)
+
+        # Customize the response to include only relevant scores for the room's category
+        leaderboard_data = []
+        for user_detail in serializer.data:
+            user_id = user_detail['user_id']
+            try:
+                # Filter attempts by the room's category
+                attempts = Attempt.objects.filter(
+                    auth_user_id=user_id,
+                    category__iexact=room.category
+                )
+                # Calculate total score for the specific category
+                total_category_score = sum(
+                    attempt.technical_marks + attempt.aptitude_marks
+                    for attempt in attempts
+                )
+                leaderboard_data.append({
+                    'user_id': user_detail['user_id'],
+                    'name': user_detail['name'],
+                    'category_score': total_category_score,
+                    'category': room.category
+                })
+            except Exception as e:
+                logger.error(f"Error processing attempts for user {user_id}: {str(e)}")
+                continue
+
+        # Sort by category_score in descending order
+        leaderboard_data = sorted(leaderboard_data, key=lambda x: x['category_score'], reverse=True)
+
+        return Response({
+            'room_code': room_code,
+            'category': room.category,
+            'leaderboard': leaderboard_data
+        }, status=status.HTTP_200_OK)
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     # Add custom backend if you have one for email login
 ]
-
-
