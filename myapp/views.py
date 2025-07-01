@@ -7,12 +7,12 @@ import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import UserDetail, Attempt,Room
-from .serializers import UserDetailSerializer, AttemptSerializer,RoomSerializer, JoinRoomSerializer
+from .models import UserDetail, Attempt,Room, RoomResult
+from .serializers import UserDetailSerializer, AttemptSerializer,RoomSerializer, JoinRoomSerializer, RoomResultSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Avg, Count, Q
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.decorators import api_view, permission_classes 
 from django.contrib.auth import authenticate 
 from django.core.validators import EmailValidator
@@ -366,3 +366,64 @@ from django.http import HttpResponse
 
 def loaderio_verification(request):
     return HttpResponse("loaderio-c506d955ab929b70b648697296775de0", content_type="text/plain")
+
+class RoomLeaderboardView(APIView):
+    def get(self, request, room_code):
+        try:
+            room = Room.objects.get(room_code=room_code)
+        except Room.DoesNotExist:
+            return Response({'error': 'Room not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        participants = room.participants.all()
+        if not participants:
+            return Response({'message': 'No participants in this room'}, status=status.HTTP_200_OK)
+
+        user_details = UserDetail.objects.filter(user__in=participants)
+        serializer = UserDetailSerializer(user_details, many=True)
+
+        leaderboard_data = []
+        for user_detail in serializer.data:
+            user_id = user_detail['user_id']
+            try:
+                attempts = Attempt.objects.filter(
+                    auth_user_id=user_id,
+                    category__iexact=room.category
+                )
+                total_category_score = sum(
+                    attempt.technical_marks + attempt.aptitude_marks
+                    for attempt in attempts
+                )
+                leaderboard_data.append({
+                    'user_id': user_detail['user_id'],
+                    'name': user_detail['name'],
+                    'category_score': total_category_score,
+                    'category': room.category
+                })
+            except Exception as e:
+                continue
+
+        leaderboard_data = sorted(leaderboard_data, key=lambda x: x['category_score'], reverse=True)
+
+        return Response({
+            'room_code': room_code,
+            'category': room.category,
+            'leaderboard': leaderboard_data
+        }, status=status.HTTP_200_OK)
+
+class RoomResultListCreateView(generics.ListCreateAPIView):
+    queryset = RoomResult.objects.all()
+    serializer_class = RoomResultSerializer
+    permission_classes = [permissions.AllowAny]
+
+class RoomResultDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = RoomResult.objects.all()
+    serializer_class = RoomResultSerializer
+    permission_classes = [permissions.AllowAny]
+
+class RoomResultsByRoomView(generics.ListAPIView):
+    serializer_class = RoomResultSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        room_id = self.kwargs['room_id']
+        return RoomResult.objects.filter(room_id=room_id)

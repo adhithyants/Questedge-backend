@@ -65,3 +65,15 @@ class Room(models.Model):
 
     def __str__(self):
         return f"{self.category} Room - {self.room_code}"
+
+class RoomResult(models.Model):
+    room = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='results')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    username = models.CharField(max_length=150)
+    marks = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = ('room', 'user')  # Each user can have only one result per room
+
+    def __str__(self):
+        return f"{self.username} in {self.room.room_code}: {self.marks} marks"
