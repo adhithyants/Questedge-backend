@@ -34,3 +34,7 @@ class AttemptAdmin(admin.ModelAdmin):
     list_filter = ('attempt_date',)
     search_fields = ('user__name', 'user__user__email')
     ordering = ('-attempt_date',)
+
+admin.site.site_header = "QuestEdge Admin"
+admin.site.site_title = "QuestEdge Admin Portal"
+admin.site.index_title = "Welcome QuestEdge Admin"

@@ -1,0 +1,239 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        /* Reset & base */
+        body, #container, #content, #header, #footer {
+            background: #f8fafc;
+            font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+            color: #111827;
+        }
+
+        /* Header */
+        #header {
+            background: rgb(70, 100, 102);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-bottom: none;
+        }
+        #header h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        /* Remove sidebar */
+        #nav-sidebar {
+            display: none !important;
+        }
+        #content {
+            margin-left: 0 !important;
+            width: 100% !important;
+        }
+
+        /* Buttons */
+        .button,
+        input[type=submit],
+        .submit-row input {
+            background: rgb(70, 100, 102);
+            color: #fff !important;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .button:hover,
+        input[type=submit]:hover,
+        .submit-row input:hover {
+            background: rgba(70, 100, 102, 0.9);
+        }
+
+        /* Forms */
+        input, select, textarea {
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 10px 12px;
+            width: 100%;
+            background: #fff;
+            color: #111827;
+            font-size: 15px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: rgb(70, 100, 102);
+            box-shadow: 0 0 0 2px rgba(70,100,102,0.2);
+        }
+
+        /* Footer */
+        #footer {
+            background: #f1f5f9;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #475569;
+        }
+/* Cards grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive */
+    gap: 10rem;  /* spacing between cards */
+    margin-top: 5rem;
+    padding: 1rem; /* prevents edge overlap */
+}
+
+/* Admin card */
+.admin-card {
+    background: #fff;
+    border-radius: 24px; /* slightly smaller so they don’t touch */
+    padding: 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    font-size: 1.2rem;
+
+    /* remove fixed size */
+    width: 100%;
+    height: auto;
+    min-height: 220px; /* keep them balanced */
+}
+
+        .admin-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+
+        .admin-card h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: rgb(70, 100, 102);
+        }
+
+        .admin-card p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #475569;
+        }
+
+        .admin-card .button {
+            display: inline-block;
+            background: rgb(70, 100, 102);
+            color: #fff !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .admin-card .button:hover {
+            background: rgba(70, 100, 102, 0.85);
+        }
+
+        /* Chat layout */
+        #chat-container {
+            display: flex;
+            height: 80vh;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        /* Sidebar */
+        #chat-sidebar {
+            width: 30%;
+            background: #f1f5f9;
+            border-right: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 1rem;
+            font-weight: 600;
+            background: #e2e8f0;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .chat-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .chat-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .chat-item:hover {
+            background: rgba(70, 100, 102, 0.1);
+        }
+
+        /* Main chat */
+        #chat-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+
+        .chat-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            background: rgb(70, 100, 102);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            background: #f8fafc;
+        }
+
+        .chat-input input {
+            flex: 1;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+        }
+
+        .chat-input button {
+            margin-left: 0.5rem;
+            background: rgb(70, 100, 102);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background: rgba(70, 100, 102, 0.85);
+        }
+
+        #content h1, 
+#content-main h1, 
+.dashboard #content h1 {
+    font-size: 3rem !important;   /* much bigger */
+    font-weight: 800 !important;  /* extra bold */
+    text-align: center !important;
+    margin: 2rem 0 !important;
+    color: rgb(70, 100, 102) !important; /* your theme */
+}
+    </style>
+{% endblock %}
