@@ -9,6 +9,8 @@
             background: #f8fafc;
             font-family: "Inter", "Segoe UI", Roboto, sans-serif;
             color: #111827;
+            margin: 0;
+            padding: 0;
         }
 
         /* Header */
@@ -30,6 +32,7 @@
         #content {
             margin-left: 0 !important;
             width: 100% !important;
+            padding: 1rem;
         }
 
         /* Buttons */
@@ -75,49 +78,43 @@
             font-size: 0.85rem;
             color: #475569;
         }
-/* Cards grid */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive */
-    gap: 10rem;  /* spacing between cards */
-    margin-top: 5rem;
-    padding: 1rem; /* prevents edge overlap */
-}
 
-/* Admin card */
-.admin-card {
-    background: #fff;
-    border-radius: 24px; /* slightly smaller so they don’t touch */
-    padding: 2rem;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
-    font-size: 1.2rem;
+        /* Cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 1rem;
+        }
 
-    /* remove fixed size */
-    width: 100%;
-    height: auto;
-    min-height: 220px; /* keep them balanced */
-}
-
+        /* Admin card */
+        .admin-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            font-size: 1.1rem;
+            width: 100%;
+            min-height: 200px;
+        }
         .admin-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 28px rgba(0,0,0,0.15);
         }
-
         .admin-card h2 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: rgb(70, 100, 102);
         }
-
         .admin-card p {
             margin-bottom: 1rem;
             font-size: 1rem;
             color: #475569;
         }
-
         .admin-card .button {
             display: inline-block;
             background: rgb(70, 100, 102);
@@ -128,7 +125,6 @@
             text-decoration: none;
             transition: background 0.2s;
         }
-
         .admin-card .button:hover {
             background: rgba(70, 100, 102, 0.85);
         }
@@ -136,6 +132,7 @@
         /* Chat layout */
         #chat-container {
             display: flex;
+            flex-direction: row;
             height: 80vh;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
@@ -146,31 +143,28 @@
         /* Sidebar */
         #chat-sidebar {
             width: 30%;
+            min-width: 250px;
             background: #f1f5f9;
             border-right: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
         }
-
         .sidebar-header {
             padding: 1rem;
             font-weight: 600;
             background: #e2e8f0;
             border-bottom: 1px solid #cbd5e1;
         }
-
         .chat-list {
             flex: 1;
             overflow-y: auto;
         }
-
         .chat-item {
             padding: 1rem;
             border-bottom: 1px solid #e5e7eb;
             cursor: pointer;
             transition: background 0.2s;
         }
-
         .chat-item:hover {
             background: rgba(70, 100, 102, 0.1);
         }
@@ -182,7 +176,6 @@
             flex-direction: column;
             background: #fff;
         }
-
         .chat-header {
             padding: 1rem;
             border-bottom: 1px solid #e5e7eb;
@@ -190,28 +183,24 @@
             color: #fff;
             font-weight: 600;
         }
-
         .chat-messages {
             flex: 1;
             padding: 1rem;
             overflow-y: auto;
             background: #fafafa;
         }
-
         .chat-input {
             display: flex;
             border-top: 1px solid #e5e7eb;
             padding: 0.75rem;
             background: #f8fafc;
         }
-
         .chat-input input {
             flex: 1;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             padding: 0.5rem 0.75rem;
         }
-
         .chat-input button {
             margin-left: 0.5rem;
             background: rgb(70, 100, 102);
@@ -221,19 +210,62 @@
             padding: 0.5rem 1rem;
             cursor: pointer;
         }
-
         .chat-input button:hover {
             background: rgba(70, 100, 102, 0.85);
         }
 
+        /* Heading override */
         #content h1, 
-#content-main h1, 
-.dashboard #content h1 {
-    font-size: 3rem !important;   /* much bigger */
-    font-weight: 800 !important;  /* extra bold */
-    text-align: center !important;
-    margin: 2rem 0 !important;
-    color: rgb(70, 100, 102) !important; /* your theme */
-}
+        #content-main h1, 
+        .dashboard #content h1 {
+            font-size: 2.5rem !important;
+            font-weight: 800 !important;
+            text-align: center !important;
+            margin: 1.5rem 0 !important;
+            color: rgb(70, 100, 102) !important;
+        }
+
+        /* ---------------- Responsive ---------------- */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 1.5rem;
+            }
+            #chat-container {
+                flex-direction: column;
+                height: auto;
+            }
+            #chat-sidebar {
+                width: 100%;
+                min-width: unset;
+                height: 200px;
+            }
+            #chat-main {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #header h1 {
+                font-size: 1.2rem;
+            }
+            .admin-card {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            .admin-card h2 {
+                font-size: 1.1rem;
+            }
+            #content h1 {
+                font-size: 2rem !important;
+            }
+            .chat-input {
+                flex-direction: column;
+            }
+            .chat-input button {
+                margin: 0.5rem 0 0 0;
+                width: 100%;
+            }
+        }
     </style>
 {% endblock %}
