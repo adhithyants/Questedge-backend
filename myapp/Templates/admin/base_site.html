@@ -6,7 +6,7 @@
     <style>
         /* Reset & base */
         body, #container, #content, #header, #footer {
-            background: #f8fafc;
+            background: #576f88;
             font-family: "Inter", "Segoe UI", Roboto, sans-serif;
             color: #111827;
             margin: 0;
@@ -16,13 +16,33 @@
         /* Header */
         #header {
             background: rgb(70, 100, 102);
-            color: #fff;
+            color: #922020;
             padding: 1rem 2rem;
             border-bottom: none;
+            display: flex !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
         }
         #header h1 {
             font-size: 1.6rem;
             font-weight: 600;
+        }
+        #header .button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+            border-radius: 50px;
+        }
+        #user-tools {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        #user-links-container {
+            margin-left: auto;
         }
 
         /* Remove sidebar */
@@ -40,7 +60,7 @@
         input[type=submit],
         .submit-row input {
             background: rgb(70, 100, 102);
-            color: #fff !important;
+            color: #0c0b35 !important;
             border: none;
             border-radius: 8px;
             padding: 10px 18px;
@@ -81,43 +101,43 @@
 
         /* Cards grid */
         .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            text-align: center;
             padding: 1rem;
         }
 
         /* Admin card */
         .admin-card {
-            background: #fff;
+            display: inline-block;
+            width: 280px; /* giving a fixed width */
+            margin: 1rem; /* for spacing */
+            background: #50125f;
             border-radius: 24px;
             padding: 2rem;
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
             transition: transform 0.2s, box-shadow 0.2s;
             text-align: center;
             font-size: 1.1rem;
-            width: 100%;
             min-height: 200px;
+            vertical-align: top;
         }
         .admin-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 28px rgba(0,0,0,0.15);
         }
         .admin-card h2 {
-            font-size: 1.3rem;
+            font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: rgb(70, 100, 102);
+            color: rgb(8, 8, 8);
         }
         .admin-card p {
             margin-bottom: 1rem;
             font-size: 1rem;
-            color: #475569;
+            color: #070808;
         }
         .admin-card .button {
             display: inline-block;
-            background: rgb(70, 100, 102);
+            background: rgb(148, 62, 41);
             color: #fff !important;
             padding: 0.6rem 1.2rem;
             border-radius: 8px;
@@ -218,11 +238,11 @@
         #content h1, 
         #content-main h1, 
         .dashboard #content h1 {
-            font-size: 2.5rem !important;
+            font-size: 4rem !important;
             font-weight: 800 !important;
             text-align: center !important;
             margin: 1.5rem 0 !important;
-            color: rgb(70, 100, 102) !important;
+            color: rgb(1, 10, 10) !important;
         }
 
         /* ---------------- Responsive ---------------- */
@@ -268,4 +288,17 @@
             }
         }
     </style>
+{% endblock %}
+
+{% block userlinks %}
+    {% load i18n %}
+    <div id="user-links-container">
+        {% if site_url %}
+            <a href="{{ site_url }}" class="button">{% trans 'View site' %}</a>
+        {% endif %}
+        {% if user.has_usable_password %}
+            <a href="{% url 'admin:password_change' %}" class="button">{% trans 'Change password' %}</a>
+        {% endif %}
+        <a href="{% url 'admin:logout' %}" class="button">{% trans 'Log out' %}</a>
+    </div>
 {% endblock %}
