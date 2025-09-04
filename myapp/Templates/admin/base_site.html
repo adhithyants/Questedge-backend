@@ -44,6 +44,13 @@
         #user-links-container {
             margin-left: auto;
         }
+        #logout-form {
+            display: inline;
+            margin-left: 0.5rem;
+        }
+        #logout-form .button {
+            margin-left: 0;
+        }
 
         /* Remove sidebar */
         #nav-sidebar {
@@ -92,11 +99,7 @@
 
         /* Footer */
         #footer {
-            background: #f1f5f9;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #475569;
+            display: none;
         }
 
         /* Cards grid */
@@ -128,7 +131,7 @@
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: rgb(8, 8, 8);
+            color: rgb(240, 240, 240);
         }
         .admin-card p {
             margin-bottom: 1rem;
@@ -242,7 +245,7 @@
             font-weight: 800 !important;
             text-align: center !important;
             margin: 1.5rem 0 !important;
-            color: rgb(1, 10, 10) !important;
+            color: rgb(7, 8, 8) !important;
         }
 
         /* ---------------- Responsive ---------------- */
@@ -290,6 +293,13 @@
     </style>
 {% endblock %}
 
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Questedge Administration</a></h1>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
 {% block userlinks %}
     {% load i18n %}
     <div id="user-links-container">
@@ -299,6 +309,9 @@
         {% if user.has_usable_password %}
             <a href="{% url 'admin:password_change' %}" class="button">{% trans 'Change password' %}</a>
         {% endif %}
-        <a href="{% url 'admin:logout' %}" class="button">{% trans 'Log out' %}</a>
+        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="button">{% trans 'Log out' %}</button>
+        </form>
     </div>
 {% endblock %}

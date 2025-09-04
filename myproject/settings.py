@@ -120,6 +120,12 @@ CSRF_TRUSTED_ORIGINS = [
     "https://questedge.serveo.net"
 ]
 
+# Logout redirect
+LOGOUT_REDIRECT_URL = '/admin/login/'
+
+# Login redirect
+LOGIN_REDIRECT_URL = '/admin/'
+
 # Debug helper (optional - can remove)
 print("📦 DB:", os.getenv("DB_NAME"))
 print("🧑 USER:", os.getenv("DB_USER"))
