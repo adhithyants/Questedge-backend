@@ -2,23 +2,21 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
 
 # Base Directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-fallback-secret-key')
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']  # Change this for production
+ALLOWED_HOSTS = ['*']  # OK for Render, change later
 
 # Application definition
 INSTALLED_APPS = [
-    'myapp',  # your Django app
+    'myapp',
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
@@ -33,6 +31,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ← CRITICAL FOR RENDER
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -43,10 +42,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myproject.urls'
 
+# TEMPLATES — FIXED PATH
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'myapp' / 'Templates'],
+        'DIRS': [BASE_DIR / 'templates'],  # ← CORRECT: root/templates/
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -60,7 +60,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
-# Database configuration (PostgreSQL - Supabase)
+# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -80,14 +80,14 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# JWT Authentication
+# JWT
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
 
-# CORS settings (adjust based on your development IPs or domains)
+# CORS
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8081',
     'http://127.0.0.1:8000',
@@ -98,7 +98,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://192.168.1.5:8000',
     'http://192.168.43.21:8000',
 ]
-
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']
 
 # Internationalization
@@ -107,20 +106,21 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
-STATIC_URL = 'static/'
+# STATIC FILES — FIXED FOR RENDER
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']           # ← Your static/ folder
+STATIC_ROOT = BASE_DIR / 'staticfiles'             # ← Render collects here
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Default primary key field type
+# Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CSRF trusted origins (for public tunnel like Serveo or others)
-CSRF_TRUSTED_ORIGINS = [
-    "https://questedge.serveo.net"
-]
+# CSRF
+CSRF_TRUSTED_ORIGINS = ["https://questedge.serveo.net"]
 
-# Debug helper (optional - can remove)
-print("📦 DB:", os.getenv("DB_NAME"))
-print("🧑 USER:", os.getenv("DB_USER"))
-print("🔐 PASSWORD:", os.getenv("DB_PASSWORD"))
-print("🌐 HOST:", os.getenv("DB_HOST"))
-print("🔌 PORT:", os.getenv("DB_PORT"))
+# Debug DB
+print("DB:", os.getenv("DB_NAME"))
+print("USER:", os.getenv("DB_USER"))
+print("PASSWORD:", os.getenv("DB_PASSWORD"))
+print("HOST:", os.getenv("DB_HOST"))
+print("PORT:", os.getenv("DB_PORT"))
