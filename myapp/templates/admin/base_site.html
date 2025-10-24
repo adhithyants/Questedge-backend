@@ -1,19 +1,76 @@
-{% extends "admin/base.html" %}
-{% load static %}
+/* professional_admin.css */
 
-{% block title %}{{ title }} | QuestEdge Admin{% endblock %}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-{% block branding %}
-<div class="flex items-center space-x-3">
-    <img src="{% static 'admin/img/logo.png' %}" alt="Logo" class="h-9 rounded" onerror="this.style.display='none'">
-    <div>
-        <div class="text-xl font-bold text-white">QuestEdge</div>
-        <div class="text-xs text-slate-300">Assessment Portal</div>
-    </div>
-</div>
-{% endblock %}
+.admin-section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-{% block extrastyle %}
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'admin/css/white_professional_admin.css' %}">
-{% endblock %}
+.admin-section h2 {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+/* Color schemes based on the image */
+.dark-jungle-green {
+    background-color: #1A2421;
+}
+
+.william-hookers-green {
+    background-color: #49796B;
+}
+
+.pistachio {
+    background-color: #9DC209;
+}
+
+.light-gray {
+    background-color: #D3D3D3;
+    color: #333; /* Dark text for contrast */
+}
+
+.pewter-blue {
+    background-color: #8BA8B7;
+}
+
+/* Additional styling for directory/file list */
+.directory-tree {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.directory-tree ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.directory-tree li {
+    margin: 5px 0;
+}
+
+.directory-tree a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.directory-tree a:hover {
+    text-decoration: underline;
+}
+
+/* Highlight for selected item */
+.directory-tree .selected {
+    background-color: #e0e0e0;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
