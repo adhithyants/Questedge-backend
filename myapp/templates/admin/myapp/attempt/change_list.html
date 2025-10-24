@@ -1,0 +1,13 @@
+{% extends "admin/change_list.html" %}
+{% load admin_list i18n %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <style>
+        .results th:nth-child(5),
+        .results td:nth-child(5) {
+            text-align: right;
+            font-weight: 600;
+        }
+    </style>
+{% endblock %}

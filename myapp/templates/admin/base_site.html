@@ -1,0 +1,34 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | QuestEdge Admin{% endblock %}
+
+{% block branding %}
+<div class="flex items-center space-x-3">
+    <img src="{% static 'admin/img/logo.png' %}" alt="Logo" class="h-9" onerror="this.style.display='none'">
+    <h1 class="text-xl font-semibold text-white">QuestEdge Admin</h1>
+</div>
+{% endblock %}
+
+{% block extrastyle %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'admin/css/professional_admin.css' %}">
+{% endblock %}
+
+{% block extrahead %}
+<style>
+    :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --sidebar: #1e293b;
+        --sidebar-hover: #334155;
+        --card: #ffffff;
+        --border: #e2e8f0;
+        --text: #1e293b;
+        --text-light: #64748b;
+    }
+    body { font-family: 'Inter', sans-serif; }
+</style>
+{% endblock %}
