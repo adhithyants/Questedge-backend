@@ -31,7 +31,11 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+  admin_style
     'whitenoise.middleware.WhiteNoiseMiddleware',  # ← CRITICAL FOR RENDER
+=======
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+ main
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -106,11 +110,17 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+ admin_style
 # STATIC FILES — FIXED FOR RENDER
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']           # ← Your static/ folder
 STATIC_ROOT = BASE_DIR / 'staticfiles'             # ← Render collects here
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+=======
+# Static files
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+main
 
 # Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -118,9 +128,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CSRF
 CSRF_TRUSTED_ORIGINS = ["https://questedge.serveo.net"]
 
+admin_style
 # Debug DB
 print("DB:", os.getenv("DB_NAME"))
 print("USER:", os.getenv("DB_USER"))
 print("PASSWORD:", os.getenv("DB_PASSWORD"))
 print("HOST:", os.getenv("DB_HOST"))
 print("PORT:", os.getenv("DB_PORT"))
+=======
+# Logout redirect
+LOGOUT_REDIRECT_URL = '/admin/login/'
+
+# Login redirect
+LOGIN_REDIRECT_URL = '/admin/'
+
+# Debug helper (optional - can remove)
+print("📦 DB:", os.getenv("DB_NAME"))
+print("🧑 USER:", os.getenv("DB_USER"))
+print("🔐 PASSWORD:", os.getenv("DB_PASSWORD"))
+print("🌐 HOST:", os.getenv("DB_HOST"))
+print("🔌 PORT:", os.getenv("DB_PORT"))
+main

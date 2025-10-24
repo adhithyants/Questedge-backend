@@ -1,0 +1,317 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        /* Reset & base */
+        body, #container, #content, #header, #footer {
+            background: #576f88;
+            font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+            color: #111827;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        #header {
+            background: rgb(70, 100, 102);
+            color: #922020;
+            padding: 1rem 2rem;
+            border-bottom: none;
+            display: flex !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+        }
+        #header h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        #header .button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            margin-left: 0.5rem;
+            border-radius: 50px;
+        }
+        #user-tools {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        #user-links-container {
+            margin-left: auto;
+        }
+        #logout-form {
+            display: inline;
+            margin-left: 0.5rem;
+        }
+        #logout-form .button {
+            margin-left: 0;
+        }
+
+        /* Remove sidebar */
+        #nav-sidebar {
+            display: none !important;
+        }
+        #content {
+            margin-left: 0 !important;
+            width: 100% !important;
+            padding: 1rem;
+        }
+
+        /* Buttons */
+        .button,
+        input[type=submit],
+        .submit-row input {
+            background: rgb(70, 100, 102);
+            color: #0c0b35 !important;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .button:hover,
+        input[type=submit]:hover,
+        .submit-row input:hover {
+            background: rgba(70, 100, 102, 0.9);
+        }
+
+        /* Forms */
+        input, select, textarea {
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 10px 12px;
+            width: 100%;
+            background: #fff;
+            color: #111827;
+            font-size: 15px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: rgb(70, 100, 102);
+            box-shadow: 0 0 0 2px rgba(70,100,102,0.2);
+        }
+
+        /* Footer */
+        #footer {
+            display: none;
+        }
+
+        /* Cards grid */
+        .cards-grid {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Admin card */
+        .admin-card {
+            display: inline-block;
+            width: 280px; /* giving a fixed width */
+            margin: 1rem; /* for spacing */
+            background: #50125f;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            font-size: 1.1rem;
+            min-height: 200px;
+            vertical-align: top;
+        }
+        .admin-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+        .admin-card h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: rgb(240, 240, 240);
+        }
+        .admin-card p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #070808;
+        }
+        .admin-card .button {
+            display: inline-block;
+            background: rgb(148, 62, 41);
+            color: #fff !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .admin-card .button:hover {
+            background: rgba(70, 100, 102, 0.85);
+        }
+
+        /* Chat layout */
+        #chat-container {
+            display: flex;
+            flex-direction: row;
+            height: 80vh;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        /* Sidebar */
+        #chat-sidebar {
+            width: 30%;
+            min-width: 250px;
+            background: #f1f5f9;
+            border-right: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            padding: 1rem;
+            font-weight: 600;
+            background: #e2e8f0;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        .chat-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .chat-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .chat-item:hover {
+            background: rgba(70, 100, 102, 0.1);
+        }
+
+        /* Main chat */
+        #chat-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        .chat-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            background: rgb(70, 100, 102);
+            color: #fff;
+            font-weight: 600;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            background: #f8fafc;
+        }
+        .chat-input input {
+            flex: 1;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+        }
+        .chat-input button {
+            margin-left: 0.5rem;
+            background: rgb(70, 100, 102);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .chat-input button:hover {
+            background: rgba(70, 100, 102, 0.85);
+        }
+
+        /* Heading override */
+        #content h1, 
+        #content-main h1, 
+        .dashboard #content h1 {
+            font-size: 4rem !important;
+            font-weight: 800 !important;
+            text-align: center !important;
+            margin: 1.5rem 0 !important;
+            color: rgb(7, 8, 8) !important;
+        }
+
+        /* ---------------- Responsive ---------------- */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 1.5rem;
+            }
+            #chat-container {
+                flex-direction: column;
+                height: auto;
+            }
+            #chat-sidebar {
+                width: 100%;
+                min-width: unset;
+                height: 200px;
+            }
+            #chat-main {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            #header h1 {
+                font-size: 1.2rem;
+            }
+            .admin-card {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            .admin-card h2 {
+                font-size: 1.1rem;
+            }
+            #content h1 {
+                font-size: 2rem !important;
+            }
+            .chat-input {
+                flex-direction: column;
+            }
+            .chat-input button {
+                margin: 0.5rem 0 0 0;
+                width: 100%;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Questedge Administration</a></h1>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block userlinks %}
+    {% load i18n %}
+    <div id="user-links-container">
+        {% if site_url %}
+            <a href="{{ site_url }}" class="button">{% trans 'View site' %}</a>
+        {% endif %}
+        {% if user.has_usable_password %}
+            <a href="{% url 'admin:password_change' %}" class="button">{% trans 'Change password' %}</a>
+        {% endif %}
+        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="button">{% trans 'Log out' %}</button>
+        </form>
+    </div>
+{% endblock %}

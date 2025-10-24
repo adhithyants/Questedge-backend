@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div id="content-main">
+    <div class="cards-grid">
+        {% for app in app_list %}
+            {% for model in app.models %}
+                <div class="admin-card">
+                    <h2>{{ model.name }}</h2>
+                    <p>
+                        <a href="{{ model.admin_url }}">📂 Manage {{ model.name }}</a>
+                    </p>
+                    {% if model.add_url %}
+                        <a class="button" href="{{ model.add_url }}">➕ Add New</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
