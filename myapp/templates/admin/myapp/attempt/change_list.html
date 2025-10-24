@@ -1,13 +1,11 @@
-{% extends "admin/change_list.html" %}
-{% load admin_list i18n %}
+{% extends "admin/base_site.html" %}
+{% load static %}
 
-{% block extrahead %}
-    {{ block.super }}
-    <style>
-        .results th:nth-child(5),
-        .results td:nth-child(5) {
-            text-align: right;
-            font-weight: 600;
-        }
-    </style>
+{% block content %}
+    <div class="admin-section pistachio" style="display: inline-block; margin: 10px;">
+        <h2>Attempts</h2>
+        <p><a href="{% url 'admin:myapp_attempt_changelist' %}">Manage Attempts</a></p>
+        <button>+ Add New</button>
+        {{ block.super }} <!-- Include default change_list content -->
+    </div>
 {% endblock %}

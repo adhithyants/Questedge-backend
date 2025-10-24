@@ -1,76 +1,22 @@
-/* professional_admin.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.admin-section {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.admin-section h2 {
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-}
-
-/* Color schemes based on the image */
-.dark-jungle-green {
-    background-color: #1A2421;
-}
-
-.william-hookers-green {
-    background-color: #49796B;
-}
-
-.pistachio {
-    background-color: #9DC209;
-}
-
-.light-gray {
-    background-color: #D3D3D3;
-    color: #333; /* Dark text for contrast */
-}
-
-.pewter-blue {
-    background-color: #8BA8B7;
-}
-
-/* Additional styling for directory/file list */
-.directory-tree {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-
-.directory-tree ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.directory-tree li {
-    margin: 5px 0;
-}
-
-.directory-tree a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-.directory-tree a:hover {
-    text-decoration: underline;
-}
-
-/* Highlight for selected item */
-.directory-tree .selected {
-    background-color: #e0e0e0;
-    padding: 2px 5px;
-    border-radius: 3px;
-}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}QuestEdge Admin{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'admin/css/professional_admin.css' %}">
+    {% block extrastyle %}{% endblock %}
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    <div class="admin-section pewter-blue" style="text-align: center;">
+        <h2>Welcome QuestEdge Admin</h2>
+    </div>
+    {% block content %}
+        {% block nav-global %}{% endblock %}
+        {% block content-title %}{% endblock %}
+        {% block object-tools %}{% endblock %}
+        {% block content-main %}{% endblock %}
+    {% endblock %}
+    {% block footer %}{% endblock %}
+</body>
+</html>
