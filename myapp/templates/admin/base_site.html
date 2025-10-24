@@ -1,22 +1,22 @@
+{% extends "admin/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% block title %}QuestEdge Admin{% endblock %}</title>
+
+{% block extrastyle %}
     <link rel="stylesheet" href="{% static 'admin/css/professional_admin.css' %}">
-    {% block extrastyle %}{% endblock %}
-    {% block extrahead %}{% endblock %}
-</head>
-<body>
-    <div class="admin-section pewter-blue" style="text-align: center;">
-        <h2>Welcome QuestEdge Admin</h2>
-    </div>
-    {% block content %}
-        {% block nav-global %}{% endblock %}
-        {% block content-title %}{% endblock %}
-        {% block object-tools %}{% endblock %}
-        {% block content-main %}{% endblock %}
-    {% endblock %}
-    {% block footer %}{% endblock %}
-</body>
-</html>
+{% endblock %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% include 'admin/includes/custom_header.html' %}
+    {{ block.super }}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
